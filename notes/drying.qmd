@@ -1,0 +1,101 @@
+---
+title: Drying
+slide-format: revealjs
+css: ../styles.css
+execute:
+  echo: false
+search: false
+---
+---
+
+## Introduction
+
+Drying involves a substantial removal of water from a food.
+While evaporation can increase the solids of a liquid feed to 50-60%, drying can achieve further increases to 90-95%.
+In other words, a powder will typically have a final moisture content of approximately 5-10%.
+
+The drying of food products results in a significant increase in shelf-life and a range of other practical benefits, including reduced weight, which reduces transit requirements.
+For export-led food industries — like Ireland's — the powder format is a critical output.
+While you might be familiar with powders from the supermarket (e.g., milk powder, cocoa powder), massive quantities of powder are also traded between companies; for example, one company might supply cocoa powder to a second who uses it to make cake products.
+
+## Dried Foods and Powders
+
+Drying yields a low-moisture product.
+The reduction in moisture is so significant that the structure of the food is typically altered.
+For example, raisins do not resemble the grapes they are dried from and present a very different sensory experience.
+That drying results in such a transformation in structure can be considered a distinguishing feature relative to the operation of evaporation.
+
+Dried foods like powders are inherently flexible, in that it is trivial for the user to alter concentration.
+For example, while milk contains protein it is difficult to use milk as a method of increasing the protein content of a food, because the addition of milk introduces a substantial quantity of water also.
+On the other hand, addition of milk powder can dramatically alter the protein content (and sugar content) of a product by varying its addition levels.
+
+## Water Activity
+
+Most scientists do not consider drying to succeed as a method of shelf-life control due to its reduction in moisture content, but rather due to its reduction in water activity ($a_w$).
+Informally, water in a food system can be considered as either *free* or *bound*.
+Free water is equivalent to the pure water found in a glass and is expected to exert the same vapor pressure as that pure water.
+Bound water — on the other hand — is tightly associated with other food components (like proteins), which makes those bound water molecules less likely to vaporise (and thereby contribute to vapor pressure).
+
+As a general observation then, pure water has a high vapor pressure while food systems have a relatively low vapor pressure; however, different food systems will have dramatically different vapor pressures, some close to water and some far from water.
+Water activity can then be defined based on vapor pressure ($V_p$) as:
+
+$$a_w = \frac{V_p \ of \ food}{V_p \ of \ pure \ water}$$
+
+with:
+
+$$0 < a_w < 1$$
+
+The drying of food can significantly reduce water activity (bring $a_w$ closer to zero, which improves shelf-life).
+This can be thought of as reducing the amount of free water that would otherwise be available to support undesirable events, such as microbial growth and chemical changes.
+
+For example, fresh meat has a water activity of 0.99 (close to water) while beef jerky has a value of <0.80.
+Liquid milk has a value of ~0.99 while milk powder has a value of <0.30.
+Water activity is a more reliable predictor of shelf-life than moisture content and it is known that some foods with the same moisture content can have dramatically different shelf-lives, due to their differing water activities.
+
+In general, the rates of reactions and the extent of microbial growth increase with increasing water activity.
+It is also well known, however, that there are thresholds of water activity beyond which certain reactions or bacterial growth occur to a negligible degree.
+For example, there is limited bacterial growth when water activity is maintained below 0.9, while molds will not grow below 0.7.
+Notably, however, some chemical reactions can still proceed at very low water activity, such as browning (>0.2).
+
+A hygienically-produced powder then, with a water activity at least as low as 0.3, is far below the level where the growth of microorganisms can be expected; however, two important things should be noted at this point:
+
+1. Powders can still exhibit significant chemical changes during storage
+2. Powder prone to absorbing moisture from the air (e.g., high sugar) can exhibit increased water activity over time
+
+Despite these caveats, a well-manufactured powder should have a shelf-life of 12-24 months, especially if carefully packaged and stored.
+
+## Drying
+
+Some industrial drying systems resemble a common kitchen oven.
+The *tray drier* consists of heating elements, fans, food trays and an exhaust.
+The fan draws air into the drier, with the air being heated by the elements, before passing over the food, initiating evaporation of moisture.
+Moist vapor is then removed in the exhaust.
+Such systems can be augmented to optimise drying performance; for example, a vacuum pump can be used to reduce pressure in the drier and thereby decrease the temperatures the food needs to be expose to in order for drying to occur.
+Such a system is a batch method of drying and is not suitable for liquids.
+
+For the continuous drying of liquid feeds the spray-drier is common.
+A spray drier consists of a large cylindrical chamber that tapers into a conical section at the bottom.
+Feed (typically concentrated feed from an evaporator) is pumped to the top of the vessel and through a nozzle.
+As the liquid passes through the nozzle it is transformed into a fine mist.
+This phenomenon is known as "atomisation" and dramatically increases the surface area of the material to be dried.
+Hot air is simultaneously fed into the chamber, and the high temperature difference between the liquid and the air,
+combined with the large surface area of the droplets, results in rapid evaporation.
+
+The exact temperatures vary according to the processor and the product, but generally the temperature of air at the inlet of the drier can be as high as 130°C, while the temperature at the outlet can be as low as 65°C.
+This difference reflects the impact of evaporative cooling, which occurs when heat energy contained in liquid water is lost in the vapor during evaporation.
+The impact of evaporative cooling also means — importantly — that the liquid being dried does not itself reach temperatures approaching the inlet temperature (which could cause significant quality degradation); in this regard, the outlet temperature (a much lower value) is more reflective of the moderate temperatures to which the components in the liquid are exposed.
+
+The powder and exhaust typically pass into a cyclone where the (heavy) powder is separated from the (light) exhaust.
+In the exhaust will be entrained "fines", which are tiny powder particles. These fine particles may be recycled back into the drier (known as "fines return") to achieve agglomeration of particles — this works by forcing collisions between fine dry particles and wet atomised droplets, which results in the formation of clusters (or "agglomerates") that are dried into large porous particles (usually with better functionality).
+
+## Powder Functionality
+
+In most cases (there are some exceptions) powders are expected to be soluble.
+In addition, they are expected to flow easily out of containers and to be stable/useable for extended periods.
+
+Unfortunately, these quality criteria are not always met and are the subject of continued research that aims to ensure that quality standards are maintained, especially in more recently-developed powders (e.g., new protein isolates).
+
+The composition of a powder can affect its functionality, with high fat powders tending to be more sticky.
+Furthermore, if a powder tends to absorb moisture from the air, then that powder can also become sticky over time.
+
+Designing spray-driers to achieve agglomeration, which can involve "fines return" (described above), which increases both the size and porosity of powders, is a common strategy to improve both solubility and flowability.

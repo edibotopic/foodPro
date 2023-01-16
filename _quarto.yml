@@ -1,0 +1,80 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Food Process Design & Optimisation"
+  page-footer: "Copyright 2023, Shane Crowley" 
+  reader-mode: false
+  page-navigation: true
+  sidebar:
+    style: 'floating'
+    search: true
+    contents:
+      - section: "Introduction"
+        contents:
+          - index.qmd
+      - section: "Food Physics"
+        # contents:
+        #   - notes/properties.qmd 
+        #   - notes/dimensions.qmd 
+      # - section: "Fluid Statics"
+      #   contents:
+      #     - notes/pressure.qmd
+      #     - notes/stokes-law.qmd
+      # - section: "Fluid Dynamics"
+      #   contents:
+      #     - notes/flow.qmd
+      #     - notes/turbulence.qmd
+      #     - notes/mixing.qmd
+      #     - notes/viscosity.qmd
+      # - section: "Separation Science"
+      #   contents:
+      #     - notes/dead-end.qmd
+      #     - notes/cross-flow.qmd
+      # - section: "Concentration & Drying"
+      #   contents:
+      #     - notes/concentration.qmd
+      #     - notes/drying.qmd
+      # - section: "Bulk Solids Science"
+      #   contents:
+      #     - notes/powder-technology.qmd
+      #     - notes/flowability.qmd
+      # - section: "Bulk Solids Science"
+      #   contents:
+      #     - notes/powder-technology.qmd
+      #     - notes/flowability.qmd
+      # - section: "Integrated Processes"
+      #   contents:
+      #     - notes/process-flow.qmd
+      #     - notes/formulation.qmd
+      # - section: "Sustainable processing"
+      #   contents:
+      #     - notes/concept.qmd
+      #     - notes/implementation.qmd
+      # - section: "Advanced Topics"
+      #   contents:
+      #     - notes/digestion.qmd
+      #     - notes/scale.qmd
+      - section: "Appendix"
+        contents:
+          - notes/slides.qmd
+          # - notes/review.qmd
+          # - notes/reflections.qmd
+          # - notes/interactions.qmd
+          # - notes/syllabus.qmd
+      # - notes/about.qmd
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            url: https://github.com/edibotopic/foodPro
+          - text: Report a Bug
+            url: https://github.com/edibotopic/foodPro/issues
+
+
+format:
+  html:
+    theme: 
+      light: [theme.scss]
+      dark: [superhero]

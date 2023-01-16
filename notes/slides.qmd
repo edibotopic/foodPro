@@ -1,0 +1,10 @@
+---
+title: Slides 
+slide-format: revealjs
+execute:
+  echo: false
+---
+
+This page will be populated with a list of all slides used during the course.
+
+[Introduction](https://edibotopic.github.io/lecture-slides/FS2006_0.html)

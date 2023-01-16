@@ -1,0 +1,135 @@
+---
+title: Dimensions
+slide-format: revealjs
+css: ../styles.css
+execute:
+  echo: false
+search: false
+---
+
+## Unit Confusion
+
+Physical units are a common source of error in student work.
+Given the number of units that are used it is somewhat unsurprising.
+For example, length can be measured in:
+
+- inches
+- feet
+- meters
+
+and many others.
+Every pair of units will then have some conversion factor.
+Keeping track of all of the units and their inter-conversions quickly becomes confusing.
+
+## Dimensions to the Rescue
+
+Many problems in life are simplified by reducing them to smaller pieces.
+The same is true of using correct units for specific quantities.
+
+Here is the idea:
+
+> we can use one unit for each quantity and this unit has a straightforward dimensional form
+
+For our purposes every quantity has the following set of building blocks:
+
+- $[M]$ for the dimension of Mass
+- $[L]$ for the dimension of Length
+- $[T]$ for the dimension of Time
+
+These fundamental dimensions can be combined to form complex dimensions.
+For example:
+
+$$[L] \times [L] = [L^2]$$
+
+and:
+
+$$[L^2] \times [L] = [L^3]$$
+
+Dimensions can also be divided, like so:
+
+$$[L^3] \cdot [T^{-1}]$$
+
+Now, any times we want to make physical sense of these dimensions we
+can convert them to units using the following substitutions:
+
+- $[L] \to m(eter)$
+- $[M] \to k(ilo)g(ram)$
+- $[T] \to s(econd)$
+
+In order of appearance, the three formulae above become:
+
+1. $m^2$: area
+2. $m^3$: volume
+3. $m^3 s^{-1}$: volumetric flow-rate
+
+::: {.callout-note}
+
+Some students get confused about units like $m^3 s^{-1}$.
+This is just equivalent to writing $m^3/s$.
+
+The first way of doing things is often easier when
+cancelling dimensions/units.
+
+:::
+
+## Why Can't I just Write N or Pa?
+
+Science has a long history of honoring scientists by
+assigning their name to units.
+
+For example, the Newton is a unit of force and the Pascal a unit of pressure.
+Writing $N$ instead of $kg \cdot m s^{-2}$ looks far more simple.
+
+However, there are benefits to the more complex-looking version.
+Firstly, it follows directly from the equation that defines the quantity.
+In this case, force is defined as:
+
+$$F = ma$$
+
+As you will see in later lectures, it is also helpful when simplifying or re-arranging equations.
+
+Lastly, students do funny things with these simpler units.
+For example, in an equation with $Pa$ above the line and $a$ below
+the line a student will decide that the $a$ cancels, even though
+the $a$ in $Pa$ does not stand for acceleration.
+The student is then left with $P$ for pressure, but $Pa$ also
+originally stood for pressure?
+
+## Educated Guessing with Dimensions
+
+Dimensions are also very useful for guessing the correct form of an equation.
+A very important equation in food science is Stoke's Law, which can be written
+**incorrectly** as:
+
+$$v = \frac{D \cdot \Delta \rho \cdot g}{18 \mu}$$
+
+A student who is trying to remember this equation in an exam might recall
+that one of the terms was raised to a power.
+To find out you need to know what must be changed to ensure that the equation
+returns the dimensions of velocity ($v$), which is on the left.
+The dimensions of velocity are $L T^{-1}$ but the equation has dimensions of $T^{-1}$.
+
+What is the simplest thing we could do to make the dimensions correct without adding new terms?
+We need an extra $[L]$ dimension on top so we could simply square the $D$.
+
+This yields the correct formula:
+
+$$v = \frac{D^2 \cdot \Delta \rho \cdot g}{18 \mu}$$
+
+## Useful Exercises
+
+You should be comfortable deriving dimensions and units for
+quantities like force, pressure and energy.
+
+This requires you to know equations taught in introductory physics.
+For example, that pressure is force divided by area.
+
+It is also important to become familiar with common quantities in
+food processing and why they are important.
+
+For example, density is not the same as viscosity.
+Both of these are important properties that must be understood.
+
+## Advanced
+
+TODO

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.197">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Food Process Design &amp; Optimisation - Mixing</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Mixing</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Food Process Design &amp; Optimisation</a> 
+        <div class="sidebar-tools-main">
+    <a href="" title="" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-github"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/edibotopic/foodPro">
+          Source Code
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/edibotopic/foodPro/issues">
+          Report a Bug
+          </a>
+        </li>
+    </ul>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Introduction</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Overview</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">Food Physics</span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Appendix</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/slides.html" class="sidebar-item-text sidebar-link">Slides</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Mixing</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<hr>
+<section id="foods-as-complex-systems" class="level2">
+<h2 class="anchored" data-anchor-id="foods-as-complex-systems">Foods as Complex Systems</h2>
+<p>Foods are <em>complex</em> in the sense that they consist of many parts related to each other in different ways (one thing might be <em>dispersed in</em> another thing, for example). When food scientists refer to “food structure” they usually mean the totality of these relationships. We do not need to go into detailed chemistry or physics to explore these structures.</p>
+<p>Consider the three basic phases of matter: gas (G), liquid (L) and solid (S). In a given food system each can be dispersed in the other. When we say that a gas is <em>dispersed in</em> a solid we mean that the solid is continuous while the gas is present as discrete regions separate from each other (e.g., bubbles). In abbreviated form we can represent this as G/S.</p>
+<p>Now consider this table:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th>G</th>
+<th>L</th>
+<th>S</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>G</td>
+<td>G/G</td>
+<td>L/G</td>
+<td>S/G</td>
+</tr>
+<tr class="even">
+<td>L</td>
+<td>G/L</td>
+<td>L/L</td>
+<td>S/L</td>
+</tr>
+<tr class="odd">
+<td>S</td>
+<td>G/S</td>
+<td>L/S</td>
+<td>S/S</td>
+</tr>
+</tbody>
+</table>
+<p>Each pair represents a structure, of particular interest are:</p>
+<ul>
+<li>G/L: liquid foam (e.g., beer froth)</li>
+<li>G/S: solid foam (e.g., bread)</li>
+<li>L/L: emulsion (e.g., milk)</li>
+<li>L/S: gel (e.g., yoghurt)</li>
+<li>S/G: powder (e.g., soy protein concentrate)</li>
+<li>S/L: liquid suspension (e.g., fruit juice with bits)</li>
+<li>S/S: solid suspension (e.g., chocolate)</li>
+</ul>
+<p>There are important functional benefits to these various possible structures. For example, the incorporation of air into a food can be effective at both reducing caloric density as well as material costs. However, anecdotal evidence suggests that foaminess in a beverage is perceived positively or negatively depending on the region of the world in which it is consumed.</p>
+<p>We have already spoken about emulsions at length. It is easy to forget that the presence of both an oil and a water phase is necessary for the co-existence of oil- and water-soluble nutrients (as well as flavours).</p>
+<p>Formulating foods involves combining the <em>right</em> ingredients at the <em>right</em> levels to form the <em>right</em> structure. In most cases a formulated food will be mixed until the resultant mixture is “stable”, although this does not necessarily mean that everything is dissolved. The <em>wrong</em> structure here is one that stratifies quickly into different layers with different compositions.</p>
+<p>Homogenisation — covered previously — is a high-shear process used to reduce already microscopic particles to close to sub-microscopic sizes. “Mixing” typically refers to lower-intensity operations in which ingredients are combined (which may subsequently be homogenised).</p>
+</section>
+<section id="ingredient-characteristics" class="level2">
+<h2 class="anchored" data-anchor-id="ingredient-characteristics">Ingredient Characteristics</h2>
+<p>While most food processes are <em>continuous</em>, many begin with a <em>batch</em> operation called mixing. During this operation one or more powders are combined with a liquid phase. The purpose of the operation is to promote the dissolution and/or dispersion of the powders.</p>
+<p>How mixing proceeds depends to a great extent on the nature of the ingredients. Consider the case of a formulated nutritional beverage, which might contain the following ingredients (at an absolute minimum!):</p>
+<ul>
+<li><strong>Sucrose</strong>: soluble in water</li>
+<li><strong>Whey protein</strong>: soluble in water but slightly hydrophobic</li>
+<li><strong>Calcium citrate</strong>: insoluble in water (at non-acidic pH)</li>
+<li><strong>Potassium chloride</strong>: soluble in water</li>
+<li><strong>Vitamins (various)</strong>: soluble in water or oil</li>
+<li><strong>Vegetable oil</strong>: immiscible in water</li>
+</ul>
+<p>Sucrose is a dense crystalline structure that will sink quickly and dissolve. Whey protein powders contain pockets or air and the hydrophobicity of the proteins tends to result in them floating at the liquid surface. Calcium citrate will not dissolve in a milk-like product but will dissolve in a juice-like product. It is therefore possible that at the end of a mixing process — depending on the product and ingredients — there may still be materials that are not fully dissolved.</p>
+<p>Regardless of the exact nature of what is happening during mixing, the goal is typically to mix the ingredients as quickly and effectively as possible. A prudent company will have at least one method to determine if the mixing has been effective; for example, if a product is supposed to have 10% protein but a sample of the mixture after a few minutes of ambient storage shows that it has 7% protein there may be a mixing problem that needs to be addressed.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mixing is an operation that is often <em>assumed</em> to be working when it may — in fact — not be working.</p>
+<p>I have heard anecdotes where the level of a nutrient could vary by 45% across samples taken from a dry-mixed product.</p>
+</div>
+</div>
+</section>
+<section id="mixer-design" class="level2">
+<h2 class="anchored" data-anchor-id="mixer-design">Mixer Design</h2>
+<p>The design of a basic mixer is simple and consists of:</p>
+<ul>
+<li>An open vessel that allows ingredients to be added and the volume to be held</li>
+<li>A paddle attached to a shaft that can be rotated by a motor</li>
+</ul>
+<p>In this section we will gradually add other components to this design to allow greater control.</p>
+<p>Just like in the previous section, <strong>turbulence</strong> has an important role to play in promoting mixing. The equation for turbulence in a mixer is very similar to what you have seen before; however, the motion is provided by the rotation of the paddle rather than the flow of a liquid through a pipe, which is reflected in the equation:</p>
+<p><span class="math display">\[Re = \frac{D^{2} \cdot N \cdot \rho}{\mu}\]</span></p>
+<p>Instead of <span class="math inline">\(D\)</span> representing the diameter of a pipe it represents the diameter of the paddle. Instead of the velocity of liquid flow we have the number (<span class="math inline">\(N\)</span>) of paddle rotations per second.</p>
+<p>An effective mixing operation requires us to maximise the collisions that occur between particles and other particles, as well as particles and the equipment. To do this we must maximise <span class="math inline">\(Re\)</span>.</p>
+<p>Once we have a specific paddle and a specific set of ingredients there is little that we can do to alter <span class="math inline">\(D\)</span> (assume we are stuck with the paddle the company bought) or <span class="math inline">\(\rho\)</span> (density is an intrinsic property of a liquid and varies little).</p>
+<p>So we can increase <span class="math inline">\(N\)</span> by adjusting the speed of the motor and we can adjust <span class="math inline">\(\mu\)</span> by changing temperature.</p>
+<p>To control temperature the mixing vessel needs to be jacketed, which allows warm water to be circulated in the walls of the vessel, thereby warming the mixture inside (to 40-60°C).</p>
+<p>By increasing mixing speed and reducing mixture viscosity the mixing operation proceeds at a faster rate, at least in theory.</p>
+</section>
+<section id="vortices-and-baffles" class="level2">
+<h2 class="anchored" data-anchor-id="vortices-and-baffles">Vortices and Baffles</h2>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These descriptions are far easier to understand with accompanying diagrams.</p>
+<hr>
+<p>Such diagrams are provided in the lectures and it might be useful for you to connect them with the appropriate points in the notes.</p>
+</div>
+</div>
+<p>If you have ever mixed anything in a laboratory you are familiar the <strong>vortex</strong>.</p>
+<p>You might even assume that a big vortex is evidence that things are mixing well. This is — in fact — false.</p>
+<p>The presence of a vortex if bad for two reasons:</p>
+<ol type="1">
+<li>It reduces the active volume inside the vessel</li>
+<li>It is evidence of non-chaotic mixing (laminar)</li>
+</ol>
+<p>A simple approach to solving this problem is to <em>break the vortex</em> using <strong>baffles</strong>.</p>
+<p>If you create a vortex in a beaker and then submerge a pen in the vortex the vortex will disappear — this is because turbulence is created when liquid in motion encounters a static obstacle (this was observed/sketched by Leonardo Da Vinci and has been known for a very long time).</p>
+<p>It is inconvenient (and unsanitary) for an operator to have to insert an object into the vessel so baffles are typically built in to the mixer design; hence, it is common to see baffles radiating from the inner walls of industrial mixers.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Scaling Up
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A common issue in product development is scale-up.</p>
+<p>Let’s say the product developers have made something interesting in a beaker.</p>
+<p>The developers meet with the marketers and get excited about the concept, so they decide to plan a large production trial.</p>
+<p>Even though <em>the exact same ingredients</em> are used the production run turns out to be a failure. The idea might be abandoned at this point.</p>
+<p>In such cases it is greatly important to ensure that the mixers at different scales are <em>as similar as possible</em>.</p>
+<p>This notion of <em>similarity</em> is complex but can include things like:</p>
+<ul>
+<li>If the mixing is turbulent at lab-scale it needs to be turbulent at the larger scale also</li>
+<li>The ratio of the paddle diameter to the vessel diameter should be equivalent</li>
+<li>Temperatures and times should be equal</li>
+<li>Mixing pattern (axial/radial) should be equivalent</li>
+</ul>
+<p>New ideas can be saved from the rubbish heap by ensuring consistency across scales (it’s not just a matter of using the same ingredients).</p>
+</div>
+</div>
+</section>
+<section id="paddle-shape-and-flow-pattern" class="level2">
+<h2 class="anchored" data-anchor-id="paddle-shape-and-flow-pattern">Paddle Shape and Flow Pattern</h2>
+<p>If you mix some dye into a mixer you tend to observe two distinct patterns of mixing:</p>
+<ul>
+<li>Radial: side-to-side motion</li>
+<li>Axial: up-and-down motion</li>
+</ul>
+<p>Specific mixer designs promote one over the other.</p>
+<p>In general, the more aligned the paddle is with the vertical axis the more <em>radial</em> the mixing pattern, while the more slanted the paddle the more <em>axial</em> the mixing pattern.</p>
+<p>Axial flow mixers tend to be preferred when there is a significant risk that particles will separate from the mixture (e.g., the sedimentation of calcium citrate).</p>
+<p>Radial flow mixers often perform better in high viscosity products that require more shear; however, due to the hydrodynamics of their shape, they tend to require greater energy input to move through the liquid.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example of a Formulated Nutrition Product: Soylent
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>An interesting product case-study in formulated nutrition is <a href="https://soylent.com/">the meal-replacer Soylent</a>. Soylent was initially developed by a software engineer — Rob Rhinehart — who ran a popular blog that described his experiments. He wanted to create a beverage that would replace the requirement to shop for and prepare different meals every week. His readers — many from Silicon Valley and with a similar focus on productivity and minimalism — shared his vision for the meal-replacer.</p>
+<p>Early prototypes of the product were largely assembled from powders sourced from Amazon that were then combined at levels to meet the nutritional requirements of an adult male (his case). The product was further refined and Rhinehart successfully attracted (crowd)funding to build a Soylent business. The path for Soylent has been rocky but it is now considering expanding outside its main market in North America (without Rhinehart as CEO).</p>
+<p>I refer to Soylent as an “interesting” food product. It’s interesting for a variety of reasons:</p>
+<ul>
+<li>It was initially promoted as a complete meal-replacer (a rather ambitious and controversial claim)</li>
+<li>The name is taken from a 1970s Sci-Fi movie where “Soylent” is a protein-rich food that turns out to be made from people</li>
+<li>Its marketing focused on convenience (meal preparation is too labor-intensive), productivity (save time for what you really want to do) and sustainability (only drink what you need); the productivity focus is probably its most unique point of emphasis</li>
+<li>The concept attracted major criticism from (some) journalists and nutritional scientists when news of its development spread</li>
+<li>It is largely equivalent — in principle — to products that pre-date Soylent by many years (Abbott Ensure)</li>
+<li>The company repositioned itself recently to focus on “usage occasions” and expanded its range to include solid foods (the claim is no longer that the drink can replace all food)</li>
+<li>A significant proportion of its profits have historically been through e-commerce</li>
+<li>Two-thirds of their consumers are millenials or younger</li>
+<li>Its creator blogged extensively about its early development (some of these blogs are very thoughtful, especially when attempting to deal with the criticism)</li>
+<li>As a diet food it shares many problems with other meal-replacers (namely: taste fatigue)</li>
+</ul>
+<p>In the end, the product consists mostly of a combination of ingredients that are mixed, heated and bottled.</p>
+<p>The effectiveness of the mixing step is critical.</p>
+<hr>
+<p><em>References available on request.</em></p>
+</div>
+</div>
+</section>
+<section id="dry-mixing" class="level2">
+<h2 class="anchored" data-anchor-id="dry-mixing">Dry Mixing</h2>
+<p>There is an example on Canvas of two ingredients being dry-mixed (poorly). Dry-mixing is less well studied compared to wet-mixing and perhaps less common. However, dry-mixing is practiced in the food industry (as well as the pharmaceutical industry). The equipment used in dry-mixing and the underlying principles are quite different from wet-mixing, making it almost a separate field of study.</p>
+<p>The primary issue associated with dry-mixing is <strong>segregation</strong>, where different ingredients tend to become concentrated in specific regions. The reasons for segregation are complex, but usually arise when two ingredients have different sizes, shapes or densities. In the preparation of a nutrient powder or pharmaceutical tablet segregation can lead to dramatically inconsistent compositions, which can be a major problem from an efficacy perspective.</p>
+</section>
+<section id="other-uses-of-mixing" class="level2">
+<h2 class="anchored" data-anchor-id="other-uses-of-mixing">Other Uses of Mixing</h2>
+<p>The mixing describes here can be considered a kind of “formulation” (putting ingredients together to form a whole).</p>
+<p>Mixing is not always used to combine ingredients, however; for example, lactose is often separated from the byproduct of whey protein concentrate manufacture (“whey permeate”). To concentrate the lactose so that it can be dried it must first be crytallised. The crystallisation usually takes place in large mixing tanks with cooling jackets with very slow agitation to promote crystal growth.</p>
+<p>Lactose manufactured by such processes is used in a variety of applications, from sweeteners to infant formula and pharmaceutical tablets.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Copyright 2023, Shane Crowley</div>
+  </div>
+</footer>
+
+
+
+</body></html>

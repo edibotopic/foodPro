@@ -1,0 +1,68 @@
+---
+title: Properties
+slide-format: revealjs
+css: ../styles.css
+execute:
+  echo: false
+search: false
+---
+
+::: {.callout-warning}
+## Note
+
+If there are any errors, ambiguities or omissions in these notes please let me know.
+
+I can answer any questions you have in class or you can meet me during **office hours**.
+
+Keep in mind that you will likely need to revisit notes during the year as the material is covered. 
+
+:::
+
+Foods are complex biochemical systems.
+When processing foods it is often possible to *reduce* food to its physical properties.
+The following are some important physical properties:
+
+- Surface area
+- Density
+- Viscosity
+
+<div>
+```{=html}
+<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_1.html"></iframe>
+```
+</div>
+
+[📽️ Direct link to slides for this lecture](https://edibotopic.github.io/lecture-slides/FS2006_1.html)
+
+## Productive Difference
+
+When studying the world it is common to distinguish between qualities and quantities.
+Quality refers to food properties that are subjectively evaluated, whereas quantities
+are objectively counted or measured.
+Both are critical in food processing but we will largely restrict ourselves to quantity.
+
+This leads us to a further interesting distinction between intensive and extensive quantities.
+An extensive property is one that reduces in magnitude when the size of a food is decreased.
+On the other hand, if a hot food is split in two we do not expect the temperature of each half to be different.
+
+A curious fact is that differences in intensive properties often lead to change.
+These changes are often useful and are exploited in food processing.
+This can be referred to as a *productive difference*.
+
+## Transfer Equations
+
+This module involves some mathematics but not a lot.
+In general, mathematics is used to clarify a concept or provide a new way of thinking about an idea.
+
+When there is a productive difference a change occurs.
+This change usually involves some kind of transfer.
+
+Such events can be described using transfer equations
+of the following form, where $r$ can be taken as *transfer rate*:
+
+$$r \propto k \cdot \frac{Drive}{Resistance}$$
+
+We will encounter some equations of this form and the idea is simple:
+
+> there are properties to control that drive change and
+> properties to control that resist that change

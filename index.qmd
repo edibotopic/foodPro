@@ -1,0 +1,66 @@
+---
+title: Overview 
+slide-format: revealjs
+css: styles.css
+execute:
+  echo: false
+---
+
+This website contains notes and information for the module *Food Process Design & Optimisation*.
+
+## Lectures and Schedule
+
+This module involves two lectures each week.
+
+Lectures will be at **9 am Tuesday (CONN_S3)** and **2 pm Thursday (FSB_322)**.
+
+There are 7 laboratory practicals in this module, which will not start until **3 weeks into term**.
+More detail will be provided before the labs start.
+
+::: {.callout-note}
+## How You Will Be Assessed
+
+Assessment for the module is as follows:
+
+- 15%: in-class exam
+- 15%: lab reports
+- 70%: formal exam 
+:::
+
+## Notes and Slides
+
+The first set of slides are embedded below — you should be able to interact with them easily on your phone, tablet or computer.
+
+<div>
+```{=html}
+<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_0.html"></iframe>
+```
+</div>
+
+[📽️ Direct link to slides for this lecture](https://edibotopic.github.io/lecture-slides/FS2006_0.html)
+
+Notes and slides included here are <u>a framework only</u> and ideas will be developed in greater depth during labs and lectures. 
+
+:::{.callout-tip}
+Remember to take notes actively during lectures and contact me **early** if you are struggling with any particular topic.
+:::
+
+The content of the course has the following general structure:
+
+- **Food Physics**
+- **Fluid Statics**
+- **Fluid Dynamics**
+- **Separation Science**
+- **Thermal Processing**
+- **Evaporation & Drying**
+- **Bulk Solids Science**
+- **Sustainable Processing**
+
+Individual topics can take 2-4 lectures to complete, depending on class interest and progress.
+
+Some topics may not be covered if the class needs additional time on a specific topic.
+Only topics covered in lectures will be examined.
+
+::: {.callout-important}
+This website will be updated with notes and slides throughout the semester.
+:::
