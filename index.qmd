@@ -45,7 +45,7 @@ Notes and slides included here are <u>a framework only</u> and ideas will be dev
 Remember to take notes actively during lectures and contact me **early** if you are struggling with any particular topic.
 :::
 
-The content of the course has the following general structure:
+The content of the course has the following *general* structure:
 
 - **Food Physics**
 - **Fluid Statics**
@@ -55,6 +55,7 @@ The content of the course has the following general structure:
 - **Evaporation & Drying**
 - **Bulk Solids Science**
 - **Sustainable Processing**
+- **Topics in Engineering**
 
 Individual topics can take 2-4 lectures to complete, depending on class interest and progress.
 
@@ -62,5 +63,5 @@ Some topics may not be covered if the class needs additional time on a specific 
 Only topics covered in lectures will be examined.
 
 ::: {.callout-important}
-This website will be updated with notes and slides throughout the semester.
+This website will be continuously updated with notes and slides throughout the semester.
 :::
