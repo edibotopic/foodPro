@@ -1,0 +1,210 @@
+---
+title: Quantities 
+slide-format: revealjs
+css: ../styles.css
+execute:
+  echo: false
+search: true
+---
+
+Foods are complex systems.
+They are *biological* (they grow and die), *chemical* (they contain elements and compounds), *economic* (they are bought and sold) and *cultural* (they carry meaning for individuals and groups).
+In food processing, however, it is often sufficient to consider them as merely *physical* things.
+
+This usually requires us to talk about *physical quantities* — a physical characteristic with a magnitude that can be measured.
+
+<div>
+```{=html}
+<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_1.html"></iframe>
+```
+</div>
+
+[📽️ Direct link to slides for this lecture](https://edibotopic.github.io/lecture-slides/FS2006_1.html)
+
+## Kinds of Quantity
+
+Two kinds of quantities are often distinguished:
+
+- **Extensive**: magnitude is dependent on size (e.g., when a parent droplet splits into two child droplets the volume of the children is smaller than the parent)
+- **Intensive**: magnitude is independent of size (e.g., a parent droplet has the same density as its child droplets)
+
+Intensive quantities are often ratios of extensive quantities.
+For example, mass and volume are extensive quantities, but the ratio of mass to volume is an intensive quantity (density).
+Intensive properties often define — to an extent — the "quality" of a product.
+For example, balsamic vinegars that have been aged for many years often becomes more dense and may be labelled with their density value as a "mark of quality".
+
+## Productive Difference
+
+Interestingly, in a well-defined system a difference or gradient in the magnitude of an intensive property often results in change.
+Consider the following:
+
+- **Temperature difference** generates heat transfer (e.g., pasteurising beer)
+- **Pressure difference** generates material flow (e.g., pumping juice)
+- **Density difference** generates separation (e.g., cream separation from milk)
+
+Many processing operations are based on these productive differences.
+Transfer equations of the following form often characterise these operations:
+
+$$Transfer \ Rate = k \cdot \frac{Drive}{Resistance}$$
+
+For example, the transfer of heat from a hot liquid to a cold beverage through the wall of a heating machine can be written:
+
+$$Q = k \cdot \frac{\Delta T}{z}$$
+
+The rate of heat flow $Q$ is driven by the temperature difference $\Delta T$ and the resistance against the heat flow is given by the thickness of the plate $z$.
+The $k$ term represents the thermal conductivity of the wall, which depends on the material. 
+Many food operations can be described using such simple equations (what `drives`, what `resists` and what `material` properties are present?).
+Often the question is:
+
+> How can we maximise the speed of the operation given the constraints of the material and the resisting forces
+
+## Dimensions
+
+When processing a food product we will have a certain **mass** of an ingredient.
+That mass may need to travel along a certain **length** of conveyor belt.
+For the mass to get from one point to another will take a certain **time**.
+
+::: {.callout-note}
+
+In themselves, each of these quantities is obviously of practical importance.
+
+A mass indicates the *amount* of material that can be used, has to be handled, can be sold and so on.
+A length suggests how much space is required or available.
+A time determines how quickly something must be done.
+
+:::
+
+These are three different quantities, each with their own **dimension** (in square brackets):
+
+- Mass: $[M]$
+- Length: $[L]$
+- Time: $[T]$
+
+These dimensions are *fundamental*, as they can be used to generate *derived* dimensions.
+For example, multiplying a length by itself gives an area $[L^2]$,
+and multiplying an area by a length gives a volume $[L^3]$.
+Dividing a mass by a volume gives a density $[M L^{-3}]$.
+Dividing a length by a time gives a velocity $[L T^{-1}]$.
+
+Note, the dimensional formula for density $M L^{-3}$ corresponds to the equation for density ($\rho$):
+
+$$\rho = \frac{m}{V}$$
+
+As $V$ is below the line (i.e., in the "denominator") we write its dimensions as $L^{-3}$ rather than $L^3$.
+It might sometimes be convenient to write dimensions as $\frac{[M]}{[L^3]}$ but this gets confusing for more complex formulas.
+Keep in mind, however, that $\frac{[M]}{[L^3]} = M L^{-3}$.
+
+If you know the dimensions it is always very easy to write correct units.
+Generally, all you need to do is substitute $kg$ (kilogram) for $[M]$, $m$ (meter) for $[L]$ and $s$ (seconds) for $[T]$.
+The units of density are therefore $kg \ m^{-3}$.
+
+## Example: Pressure
+
+::: {.callout-important}
+
+Pressure comes up frequently in this module in a variety of contexts.
+
+It is a good idea to *start* getting familiar with it as a quantity.
+
+:::
+
+Consider pressure ($P$).
+The equation defining $P$ is:
+
+$$P = \frac{F}{A}$$
+
+meaning "force divided by area", where $F = m \cdot a$.
+
+Here is the dimensional formula corresponding to $P = \frac{F}{A}$:
+
+$$\frac{[M LT^{-2}]}{[L^2]}$$
+
+Note: we can keep the same structure as the formula for $P$ by placing the dimensions for area in the denominator.
+However, it can also be written on a single line in a form where the method to cancel units is more obvious:
+
+$$[M LT^{-2}]{[L^{-2}}]$$
+
+We can then cancel the two length $[L]$ terms to $[L^{-1}]$.
+
+::: {.callout}
+
+Here, $[L]$ could also be written $[L^1]$.
+
+It is usually not necessary, but this might help you understand the cancellation.
+
+:::
+
+So in this case $[L^1][L^{-2}] = [L^{1+(-2)}] = [L^{-1}]$, which leaves the simpler formula:
+
+$$[M L^{-1} T^{-2}]$$
+
+From this it can be determined that the units are: $kg \ m^{-1} \ s^{-2}$.
+This can then be converted to other units as needed; for example, $1 \ Pa = 1 \ kg \ m^{-1} \ s^{-2}$.
+
+::: {.callout-tip}
+When cancelling dimensions (or units) the rules of algebra apply.
+
+For example: $a^i \cdot a^j = a^{i+j}$
+and $\frac{a^i}{a^j} = a^{i-j}$.
+
+This is secondary school mathematics (not higher level) and such rules are easy to find online if you have forgotten.
+
+If in doubt, look them up.
+:::
+
+With practice this process becomes quite natural and is faster than it looks.
+One advantage of being able to derive dimensions like this is immediately obvious.
+Instead of needing to remember the equation for pressure *and* the units of pressure you simply need to remember the equation and then you can derive the units when you need.
+
+While it is common and convenient to use units like Newtons and Pascals,
+I advise against relying on them unless you understand first how to derive/express units using $kg$, $m$ and $s$.
+
+## Common Quantities
+
+Some of the most common and important quantities you will encounter in food physics are:
+
+- area
+- velocity
+- acceleration
+- density
+- pressure
+- viscosity
+
+We have discussed the importance of surface **area** in class.
+Generally, when some kind of change is happening in a food process it occurs at a greater rate when the surface area is maximised.
+
+Here are two examples of this effect:
+
+1. The transfer of heat is more rapid when the heat exchange surface has a large surface area
+2. The evaporation of water from a liquid is more rapid when the liquid is in the form of droplets
+
+Earlier, it was shown that productive differences in **temperature** (heat exchange) and **pressure** (flow) can drive change during food processes.
+
+Now think about **density**.
+First, consider that alcohol is less dense than water.
+Imagine you are designing some process where the ratio of alcohol to water is increasing.
+How might this process be monitored, so that we can track the change and know when to stop the process?
+
+Simple: *measure the density over time*.
+
+Now consider a second example where **density** is important.
+Oil is less dense than water — so oil droplets rise in water, *driven by the density difference*.
+What quantity would characterise the rate of the resultant change? **Velocity**.
+So we say that the rising velocity is proportional to the density difference.
+
+::: {.callout-note}
+
+## Question
+
+The Reynold's number ($Re$) is used to characterise the degree of turbulence in a flowing liquid.
+
+It is written as follows:
+
+$$Re = \frac{\rho v D}{\mu}$$
+
+Where $\rho$ is the density of the liquid, $v$ is the flow velocity and $D$ is the pipe diameter.
+The dimensions for viscosity are $[M L^{-1} T^{-1}]$ but you should know the rest.
+
+Can you show that $Re$ has no dimensions?
+
+:::

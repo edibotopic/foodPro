@@ -15,8 +15,8 @@ website:
         contents:
           - index.qmd
       - section: "Food Physics"
-        # contents:
-        #   - notes/properties.qmd 
+        contents:
+          - notes/quantities.qmd 
         #   - notes/dimensions.qmd 
       # - section: "Fluid Statics"
       #   contents:
