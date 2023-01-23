@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Food Process Design &amp; Optimisation - Formulation</title>
+<title>Food Process Design &amp; Optimisation - Quantities</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../notes/slides.html" rel="next">
+<link href="../index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,6 +63,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -71,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Formulation</h1>
+      <h1 class="quarto-secondary-nav-title">Quantities</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -135,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/quantities.html" class="sidebar-item-text sidebar-link">Quantities</a>
+  <a href="../notes/quantities.html" class="sidebar-item-text sidebar-link active">Quantities</a>
   </div>
 </li>
       </ul>
@@ -165,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Formulation</h1>
+<h1 class="title d-none d-lg-block">Quantities</h1>
 </div>
 
 
@@ -180,9 +183,165 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<hr>
+<p>Foods are complex systems. They are <em>biological</em> (they grow and die), <em>chemical</em> (they contain elements and compounds), <em>economic</em> (they are bought and sold) and <em>cultural</em> (they carry meaning for individuals and groups). In food processing, however, it is often sufficient to consider them as merely <em>physical</em> things.</p>
+<p>This usually requires us to talk about <em>physical quantities</em> — a physical characteristic with a magnitude that can be measured.</p>
+<div>
+<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_1.html"></iframe>
+</div>
+<p><a href="https://edibotopic.github.io/lecture-slides/FS2006_1.html">📽️ Direct link to slides for this lecture</a></p>
+<section id="kinds-of-quantity" class="level2">
+<h2 class="anchored" data-anchor-id="kinds-of-quantity">Kinds of Quantity</h2>
+<p>Two kinds of quantities are often distinguished:</p>
+<ul>
+<li><strong>Extensive</strong>: magnitude is dependent on size (e.g., when a parent droplet splits into two child droplets the volume of the children is smaller than the parent)</li>
+<li><strong>Intensive</strong>: magnitude is independent of size (e.g., a parent droplet has the same density as its child droplets)</li>
+</ul>
+<p>Intensive quantities are often ratios of extensive quantities. For example, mass and volume are extensive quantities, but the ratio of mass to volume is an intensive quantity (density). Intensive properties often define — to an extent — the “quality” of a product. For example, balsamic vinegars that have been aged for many years often becomes more dense and may be labelled with their density value as a “mark of quality”.</p>
+</section>
+<section id="productive-difference" class="level2">
+<h2 class="anchored" data-anchor-id="productive-difference">Productive Difference</h2>
+<p>Interestingly, in a well-defined system a difference or gradient in the magnitude of an intensive property often results in change. Consider the following:</p>
+<ul>
+<li><strong>Temperature difference</strong> generates heat transfer (e.g., pasteurising beer)</li>
+<li><strong>Pressure difference</strong> generates material flow (e.g., pumping juice)</li>
+<li><strong>Density difference</strong> generates separation (e.g., cream separation from milk)</li>
+</ul>
+<p>Many processing operations are based on these productive differences. Transfer equations of the following form often characterise these operations:</p>
+<p><span class="math display">\[Transfer \ Rate = k \cdot \frac{Drive}{Resistance}\]</span></p>
+<p>For example, the transfer of heat from a hot liquid to a cold beverage through the wall of a heating machine can be written:</p>
+<p><span class="math display">\[Q = k \cdot \frac{\Delta T}{z}\]</span></p>
+<p>The rate of heat flow <span class="math inline">\(Q\)</span> is driven by the temperature difference <span class="math inline">\(\Delta T\)</span> and the resistance against the heat flow is given by the thickness of the plate <span class="math inline">\(z\)</span>. The <span class="math inline">\(k\)</span> term represents the thermal conductivity of the wall, which depends on the material. Many food operations can be described using such simple equations (what <code>drives</code>, what <code>resists</code> and what <code>material</code> properties are present?). Often the question is:</p>
+<blockquote class="blockquote">
+<p>How can we maximise the speed of the operation given the constraints of the material and the resisting forces</p>
+</blockquote>
+</section>
+<section id="dimensions" class="level2">
+<h2 class="anchored" data-anchor-id="dimensions">Dimensions</h2>
+<p>When processing a food product we will have a certain <strong>mass</strong> of an ingredient. That mass may need to travel along a certain <strong>length</strong> of conveyor belt. For the mass to get from one point to another will take a certain <strong>time</strong>.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In themselves, each of these quantities is obviously of practical importance.</p>
+<p>A mass indicates the <em>amount</em> of material that can be used, has to be handled, can be sold and so on. A length suggests how much space is required or available. A time determines how quickly something must be done.</p>
+</div>
+</div>
+<p>These are three different quantities, each with their own <strong>dimension</strong> (in square brackets):</p>
+<ul>
+<li>Mass: <span class="math inline">\([M]\)</span></li>
+<li>Length: <span class="math inline">\([L]\)</span></li>
+<li>Time: <span class="math inline">\([T]\)</span></li>
+</ul>
+<p>These dimensions are <em>fundamental</em>, as they can be used to generate <em>derived</em> dimensions. For example, multiplying a length by itself gives an area <span class="math inline">\([L^2]\)</span>, and multiplying an area by a length gives a volume <span class="math inline">\([L^3]\)</span>. Dividing a mass by a volume gives a density <span class="math inline">\([M L^{-3}]\)</span>. Dividing a length by a time gives a velocity <span class="math inline">\([L T^{-1}]\)</span>.</p>
+<p>Note, the dimensional formula for density <span class="math inline">\(M L^{-3}\)</span> corresponds to the equation for density (<span class="math inline">\(\rho\)</span>):</p>
+<p><span class="math display">\[\rho = \frac{m}{V}\]</span></p>
+<p>As <span class="math inline">\(V\)</span> is below the line (i.e., in the “denominator”) we write its dimensions as <span class="math inline">\(L^{-3}\)</span> rather than <span class="math inline">\(L^3\)</span>. It might sometimes be convenient to write dimensions as <span class="math inline">\(\frac{[M]}{[L^3]}\)</span> but this gets confusing for more complex formulas. Keep in mind, however, that <span class="math inline">\(\frac{[M]}{[L^3]} = M L^{-3}\)</span>.</p>
+<p>If you know the dimensions it is always very easy to write correct units. Generally, all you need to do is substitute <span class="math inline">\(kg\)</span> (kilogram) for <span class="math inline">\([M]\)</span>, <span class="math inline">\(m\)</span> (meter) for <span class="math inline">\([L]\)</span> and <span class="math inline">\(s\)</span> (seconds) for <span class="math inline">\([T]\)</span>. The units of density are therefore <span class="math inline">\(kg \ m^{-3}\)</span>.</p>
+</section>
+<section id="example-pressure" class="level2">
+<h2 class="anchored" data-anchor-id="example-pressure">Example: Pressure</h2>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pressure comes up frequently in this module in a variety of contexts.</p>
+<p>It is a good idea to <em>start</em> getting familiar with it as a quantity.</p>
+</div>
+</div>
+<p>Consider pressure (<span class="math inline">\(P\)</span>). The equation defining <span class="math inline">\(P\)</span> is:</p>
+<p><span class="math display">\[P = \frac{F}{A}\]</span></p>
+<p>meaning “force divided by area”, where <span class="math inline">\(F = m \cdot a\)</span>.</p>
+<p>Here is the dimensional formula corresponding to <span class="math inline">\(P = \frac{F}{A}\)</span>:</p>
+<p><span class="math display">\[\frac{[M LT^{-2}]}{[L^2]}\]</span></p>
+<p>Note: we can keep the same structure as the formula for <span class="math inline">\(P\)</span> by placing the dimensions for area in the denominator. However, it can also be written on a single line in a form where the method to cancel units is more obvious:</p>
+<p><span class="math display">\[[M LT^{-2}]{[L^{-2}}]\]</span></p>
+<p>We can then cancel the two length <span class="math inline">\([L]\)</span> terms to <span class="math inline">\([L^{-1}]\)</span>.</p>
+<div class="callout callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Here, <span class="math inline">\([L]\)</span> could also be written <span class="math inline">\([L^1]\)</span>.</p>
+<p>It is usually not necessary, but this might help you understand the cancellation.</p>
+</div>
+</div>
+</div>
+<p>So in this case <span class="math inline">\([L^1][L^{-2}] = [L^{1+(-2)}] = [L^{-1}]\)</span>, which leaves the simpler formula:</p>
+<p><span class="math display">\[[M L^{-1} T^{-2}]\]</span></p>
+<p>From this it can be determined that the units are: <span class="math inline">\(kg \ m^{-1} \ s^{-2}\)</span>. This can then be converted to other units as needed; for example, <span class="math inline">\(1 \ Pa = 1 \ kg \ m^{-1} \ s^{-2}\)</span>.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When cancelling dimensions (or units) the rules of algebra apply.</p>
+<p>For example: <span class="math inline">\(a^i \cdot a^j = a^{i+j}\)</span> and <span class="math inline">\(\frac{a^i}{a^j} = a^{i-j}\)</span>.</p>
+<p>This is secondary school mathematics (not higher level) and such rules are easy to find online if you have forgotten.</p>
+<p>If in doubt, look them up.</p>
+</div>
+</div>
+<p>With practice this process becomes quite natural and is faster than it looks. One advantage of being able to derive dimensions like this is immediately obvious. Instead of needing to remember the equation for pressure <em>and</em> the units of pressure you simply need to remember the equation and then you can derive the units when you need.</p>
+<p>While it is common and convenient to use units like Newtons and Pascals, I advise against relying on them unless you understand first how to derive/express units using <span class="math inline">\(kg\)</span>, <span class="math inline">\(m\)</span> and <span class="math inline">\(s\)</span>.</p>
+</section>
+<section id="common-quantities" class="level2">
+<h2 class="anchored" data-anchor-id="common-quantities">Common Quantities</h2>
+<p>Some of the most common and important quantities you will encounter in food physics are:</p>
+<ul>
+<li>area</li>
+<li>velocity</li>
+<li>acceleration</li>
+<li>density</li>
+<li>pressure</li>
+<li>viscosity</li>
+</ul>
+<p>We have discussed the importance of surface <strong>area</strong> in class. Generally, when some kind of change is happening in a food process it occurs at a greater rate when the surface area is maximised.</p>
+<p>Here are two examples of this effect:</p>
+<ol type="1">
+<li>The transfer of heat is more rapid when the heat exchange surface has a large surface area</li>
+<li>The evaporation of water from a liquid is more rapid when the liquid is in the form of droplets</li>
+</ol>
+<p>Earlier, it was shown that productive differences in <strong>temperature</strong> (heat exchange) and <strong>pressure</strong> (flow) can drive change during food processes.</p>
+<p>Now think about <strong>density</strong>. First, consider that alcohol is less dense than water. Imagine you are designing some process where the ratio of alcohol to water is increasing. How might this process be monitored, so that we can track the change and know when to stop the process?</p>
+<p>Simple: <em>measure the density over time</em>.</p>
+<p>Now consider a second example where <strong>density</strong> is important. Oil is less dense than water — so oil droplets rise in water, <em>driven by the density difference</em>. What quantity would characterise the rate of the resultant change? <strong>Velocity</strong>. So we say that the rising velocity is proportional to the density difference.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The Reynold’s number (<span class="math inline">\(Re\)</span>) is used to characterise the degree of turbulence in a flowing liquid.</p>
+<p>It is written as follows:</p>
+<p><span class="math display">\[Re = \frac{\rho v D}{\mu}\]</span></p>
+<p>Where <span class="math inline">\(\rho\)</span> is the density of the liquid, <span class="math inline">\(v\)</span> is the flow velocity and <span class="math inline">\(D\)</span> is the pipe diameter. The dimensions for viscosity are <span class="math inline">\([M L^{-1} T^{-1}]\)</span> but you should know the rest.</p>
+<p>Can you show that <span class="math inline">\(Re\)</span> has no dimensions?</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -433,6 +592,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Overview</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../notes/slides.html" class="pagination-link">
+        <span class="nav-page-text">Slides</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
