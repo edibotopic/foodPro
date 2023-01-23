@@ -31,7 +31,7 @@ Two kinds of quantities are often distinguished:
 Intensive quantities are often ratios of extensive quantities.
 For example, mass and volume are extensive quantities, but the ratio of mass to volume is an intensive quantity (density).
 Intensive properties often define — to an extent — the "quality" of a product.
-For example, balsamic vinegars that have been aged for many years often becomes more dense and may be labelled with their density value as a "mark of quality".
+For example, balsamic vinegars that have been aged for many years often become more dense and may be labelled with their density value as a "mark of quality".
 
 ## Productive Difference
 
