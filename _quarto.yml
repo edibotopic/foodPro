@@ -17,11 +17,10 @@ website:
       - section: "Food Physics"
         contents:
           - notes/quantities.qmd 
-        #   - notes/dimensions.qmd 
-      # - section: "Fluid Statics"
-      #   contents:
+      - section: "Fluid Statics"
+        contents:
+          - notes/stokes-law.qmd
       #     - notes/pressure.qmd
-      #     - notes/stokes-law.qmd
       # - section: "Fluid Dynamics"
       #   contents:
       #     - notes/flow.qmd

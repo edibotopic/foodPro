@@ -1,0 +1,224 @@
+---
+title: Stoke's Law 
+slide-format: revealjs
+css: ../styles.css
+execute:
+  echo: false
+search: true
+---
+
+`Fluid Statics` is the science of liquid systems at rest.
+The fact that the liquid is "at rest" does not mean nothing is happening.
+
+As this topic can get quite technical we will start with a relevant food example that
+brings together some concepts we have encountered already.
+
+In food processing it is often in our interest to exploit some kind of *productive difference*.
+Successful exploitation of such differences allow us to generate a useful change.
+Productive differences and the changes they induce are often captured in equations.
+Dimensional analysis can help us to reason about these equations.
+
+These ideas are here reinforced with the example of systems in which particles are dispersed in a liquid.
+
+::: {.callout-note}
+
+There are no slides associated with this lecture.
+Please interact with the app below to develop your intuition for the topics discussed.
+
+:::
+
+<div> 
+<iframe class="slide-deck" src="https://edibotopic.github.io/stokes-law/"></iframe>
+</div>
+
+🔗 [Click here for a full-screen version](https://edibotopic.github.io/stokes-law)
+
+# Pressure, Density and Buoyancy 
+
+In a liquid, the pressure increases with depth from the surface.
+When an object is submerged in a liquid there is more pressure at its bottom than at its top.
+This pressure drop results in the phenomenon of *buoyancy*, which is the
+tendency of a liquid to exert an upward force on a submerged object
+that opposes the object's weight (which would otherwise tend to pull it downards).
+The force is equivalent to the weight of the fluid displaced by the object.
+
+::: {.callout}
+
+Remember, weight is mass times gravitational acceleration, and therefore a force ($F = ma$).
+
+:::
+
+The density of the object determines if it sinks or floats.
+If the object's density is less than the surrounding fluid, it will float.
+The reason is that the fluid, which has the greater density, contains more mass/weight
+in a given volume compared to the object.
+The buoyant (upward) force, which equals the weight of the fluid displaced,
+is thus greater than the weight of the object (downward force).
+
+::: {.callout-warning}
+
+The above statements about the physics of buoyancy are for background.
+If you are confused, read through the statements carefully again.
+Still confused? Move on to the section on Stoke's Law, which is more important in this module.
+
+:::
+
+The key point is that sinking or floating requires a **density difference**.
+
+# Stoke's Law
+
+Food scientists usually use Stoke's Law to reason about systems in which particles are
+dispersed in a liquid.
+This equation accounts for numerous factors relevant to food systems that can be controlled during processing.
+
+We are interested in floating or sinking, which is characterised by a *velocity*.
+This velocity is then a function of some set of physical parameters.
+We know one already: *density difference*.
+These changes also depend on gravity, which can be captured with the constant for gravitational acceleration.
+
+To find the full set of parameters requires some knowledge of the real world.
+Alternatively, if you are not the observant type, [play with the sliders to explore the effect of the parameters](https://edibotopic.github.io/stokes-law/).
+
+The answers to the following should be obvious enough but if not expand the box below to confirm.
+
+> Do you think large or small particles fall quicker?
+
+> Do particles fall more quickly in water or honey?
+
+::: {.callout-important collapse="true"}
+
+## Expand for Answers
+
+Large stones fall quicker than small pebbles in water.
+
+Things fall slowly in honey.
+
+Clearly then, particle *diameter* and solvent *viscosity* must be considered.
+
+:::
+
+We can say then that the velocity is a function of particle diameter, density difference, gravitational acceleration and viscosity.
+
+Some of these will `drive` the change and some will `resist` the change:
+
+$$v = \frac{drive}{resist}$$
+
+The viscosity is the only factor that resists the change.
+Thus, velocity is proportional to the other parameters and inversely proportion to viscosity.
+
+::: {.callout-tip}
+
+## Writing the Equation with Some Educated Guesses
+
+Based on what we know so far we can *guess* that velocity ($v$) is proportional
+to particle diameter ($D$), density difference ($\Delta \rho$) and gravitational acceleration ($g$):
+We can write this more succintly as:
+
+$$v \propto (D,\Delta \rho,g)$$
+
+We also know that viscosity ($\mu$) tends to resist floating and sinking (e.g., $v$ is inversely proportional to $\mu$). 
+
+$$v \propto \frac{1}{\mu}$$
+
+Putting this information together we have the following (incorrect) equation:
+
+$$v ≈ \frac{D \cdot \Delta \rho \cdot g}{\mu}$$
+
+Why is this incorrect (?) — because the dimensions on the left don't match those on the right.
+**You are strongly advised to check this yourself.**
+
+The dimensions for $v$ are $[L T^{-1}]$ but the right gives $[T^{-1}]$.
+
+Assuming we have identified the correct parameters, what can we do to correct the dimensions?
+
+The most obvious solution is to square the diameter term, yielding:
+
+$$v ≈ \frac{D^2 \cdot \Delta \rho \cdot g}{\mu}$$
+
+The equation now has all the correct terms: the velocity is proportion to the square of the
+diameter, which is also known from experiments.
+
+An empirical factor of $18$ is also usually included based on experimental observations:
+
+$$v = \frac{D^2 \cdot \Delta \rho \cdot g}{18\mu}$$
+
+:::
+
+## Importance to Processing
+
+There are two contexts in which Stoke's Law becomes important in a food processing context.
+
+1. Recovery of the dispersed phase to generate a product
+2. Stabilising the dispersion to improve product quality
+
+These two situations have opposing goals, but Stoke's Law helps in both cases.
+
+### Recovery
+
+If the goal is separation we can target parameters that increase sinking/floating velocity.
+
+For example, particles can be aggregated/flocculated to increase their diameter.[^1] 
+
+[^1]: This requires knowledge of the chemistry of a specific system
+
+It is not possible to change gravity, but we can use centrifuges to apply an increased g-force.[^2]
+
+[^2]: in such cases $g$ may be replaced with a term representing centrifugal force
+
+When using a centrifuge an elevated temperature can be used to reduce viscosity; in this, way parameters can be manipulated simultaneously to achieve the desired effect.
+
+::: {.callout-note}
+
+We will discuss technology like centrifuges in more detail in later sections in the module. 
+For now, it is sufficient to know that centrifuges accelerate sinking/floating by spinning a sample around a central axis at high speeds.
+
+You are encouraged to look them up in the meantime if you want to know more.
+
+:::
+
+### Stabilisation
+
+When the goal is stabilisation (preventing separation) a different approach is necessary.
+
+Decreasing particle diameter will decrease separation velocity, and this can be achieved with homogenisation.
+
+::: {.callout-note}
+
+Homogenisers are covered in later sections — they force a dispersion through a narrow gap, which breaks dispersed particles into smaller-sized particles.
+
+:::
+
+When formulating the product — if appropriate — a thickener can be added to increase viscosity.
+
+### Operations and their Inverses
+
+There is sometimes confusion among students about situations in which an idea or equation
+can be leveraged to achieve two opposing goals, in this case *separation* and *stabilisation*.
+Of course, which operation we are interested in depends on *context* (what are you processing?
+who are your customers?).
+However, it is valuable to be able to apply an idea/equation in these different contexts, rather than being restricted to one.
+
+In general, many operations ($O$) have an `inverse` ($O^{-1})$.
+This is a useful mental shortcut for remembering multiple operations.
+
+| $O$  | $O^{-1}$  | Examples  |
+|---|---|---|
+| heating   | cooling  | pasteurising/refrigerating   |
+| drying   | rehydrating  | spray-drying/dissolution  |
+| comminution   | aggregation  | mincing/granulation  |
+| separation  | stabilisation  | filtration/homogenisation   |
+| concentration  | dilution  | evaporation/washing  |
+
+Can you think of other examples?
+
+::: {.callout-note}
+
+## Question
+
+Your company is interested in recovering a plant protein from process waste.
+Laboratory results show that the protein aggregates in the presence of calcium and that the aggregates sink.
+Early tests indicate that the viscosity of the solution decreases at 50C.
+
+Provide a clear rationale, using appropriate equations, for the design of an operation to recover the proteins.
+
+:::
