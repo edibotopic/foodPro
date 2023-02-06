@@ -14,7 +14,7 @@ This module involves two lectures each week.
 
 Lectures will be at **9 am Tuesday (CONN_S3)** and **2 pm Thursday (FSB_322)**.
 
-There are 7 laboratory practicals in this module, which will not start until **3 weeks into term**.
+There are 6 laboratory practicals in this module, which will not start until **3 weeks into term**.
 More detail will be provided before the labs start.
 
 ::: {.callout-note}
