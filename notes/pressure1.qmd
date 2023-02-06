@@ -1,0 +1,231 @@
+---
+title: Pressure I
+slide-format: revealjs
+css: ../styles.css
+execute:
+  echo: false
+search: true
+---
+
+There is a pressure drop across an object submerged in a fluid.
+Pressure is lowest at the top of the object and highest at the bottom.
+This pressure difference results in a buoyant force on the object.
+
+Pressure plays an important role throughout food processing.
+To understand pressure it is important to build up our understanding from simple to more complex cases.
+
+Several food processing operations require high pressures, including:
+
+- Homogenisation: 30-300 bar
+- Reverse Osmosis: 40-80 bar
+- Ultrafiltration: 2-10 bar
+
+Other food processes require reduced pressures, such a vacuum evaporation, distillation and freeze-drying.
+
+<div>
+```{=html}
+<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_6.html"></iframe>
+```
+</div>
+
+[📽️ Direct link to slides for this lecture](https://edibotopic.github.io/lecture-slides/FS2006_1.html)
+
+## Pressure in Static Fluids
+
+Pressure ($P$) is defined as:
+
+$$P = \frac{F}{A}$$
+
+This gives $P$ the dimensions $[M LT^{-2} L{^-2}]$ or — more simply — $[M L^{-1} T^{-2}]$.
+
+Consider a liquid in a container in which there is no submerged object.
+In such a system the pressure at a given point can be calculated as:
+
+$$P = \rho g h$$
+
+The $\rho$ corresponds to the density of the liquid and $h$ the height from the surface.
+As usual, $g$ is the acceleration due to gravity.
+
+::: {.callout-tip}
+
+## Dimensions Check
+
+Does the second equation above yield the dimensions you expect?
+
+:::
+
+The equation should *ring true* intuitively if you have ever experienced the increase in pressure when diving deeper into water.
+Nonetheless, it is counter-intuitive to many that it is merely the height (and not the volume) of water that determines the pressure.
+In practice, this means that very narrow columns of fluid can generate enormous pressures if the column is high enough (the hydrostatic paradox).
+
+::: {.callout-important}
+
+## Intuition Behind the Pressure Equation
+
+Intuitively we have some notion that $P$ is associated with the weight $W$ of liquid.
+So we might expect (wrongly) that
+
+$$P = W$$
+
+However, this cannot be correct because weight is a force not a pressure.
+So we might write:
+
+$$F = W$$
+
+This is correct, but does not seem to tell us what we want to know, which
+is how to calculate $P$.
+Now, to move forward we need to first consider that
+$\frac{F}{A} =  P$, so we know that we need to ultimately divide our $F$ 
+value by an area ($A$) value.
+Obviously, there is no $A$ value on the right-side of the equation,
+so we need to find one.
+To do this we consider that $W = m.a$ and in the
+liquid column the acceleration is due to gravity:
+
+$$F = m.g$$
+
+Next, we recognise that $m = ρV$, so that:
+
+$$F = ρ.V.g$$
+
+Remember, we would like to find an $A$ value on the right side, so where
+is it?
+Well, consider that the dimensions of $V$ are $L^3$, which can be the
+product of an area with dimensions $L^2$ and a length ($l$) with dimensions
+$L$.
+So we can re-write the equation as:
+
+$$F = ρ.A.l.g$$
+
+The $A$ value must refer to the cross-sectional area of the cylinder (i.e., a
+circle), while the $l$ value must refer to the height ($h$) of liquid.
+The volume of a cylinder is the product of the cross-sectional area by its height.
+Now, we can replace $l$ by $h$ and divide both sides by $A$:
+
+$$\frac{F}{A} = P = ρ.h.g$$
+
+:::
+
+## Pressure Head
+
+There is one simple way of re-arranging the equation for hydrostatic pressure that is important to note.
+If both sides of the equation are divided by the product of $\rho$ and $g$ then we get the following:
+
+$$h = \frac{P}{\rho g}$$
+
+This is known as the "pressure head" and tells us the height of a column of liquid that can be supported by a given pressure.
+
+::: {.callout}
+
+If atmospheric pressure is $101325 \ kg \ m^{-1} \ s^{-2}$, $g$ is $9.81 \ m \ s^{-2}$ and the density of water is $1000 \ kg \ m^{-3}$, estimate the height of a column of water
+that can be supported at atmospheric pressure.
+
+Assume that
+
+$$h = \frac{P}{\rho g}$$
+
+Plugging in values:
+
+$$h = \frac{101325}{1000 \cdot 9.81}$$
+
+$h = 10.3 \ m$
+
+Thus, the tendency of a column of liquid of a specific height to be supported by liquid at a specific pressure allows height
+(or "pressure head") to be used as an index of pressure.
+The greater the pressure the greater the height.
+This is the basis of traditional *barometers* used to measure pressure, where a more dense liquid (e.g., mercury) is used
+to ensure that the barometer does not need to be excessively large as an instrument (can you tell from the equation why this is so?).
+
+:::
+
+::: {.callout-tip}
+
+We will encounter pressure head again when looking at Bernoulli's equation, so you may need to return to these notes.
+
+:::
+
+## Absolute and Gauge Pressure
+
+In the tour of the processing facilities at UCC several pressure gauges were shown.
+These gauges were reading $0 \ bar$, yet atmospheric pressure is approximately $1 \ bar$.
+If the pressure was really zero then the processing facility would be in a vacuum.
+
+The simple reason for this is that these pressure gauges do not give a readout of *absolute* pressure.
+Instead, they provide what is known as *gauge* pressure.
+
+Gauge pressure is simply the pressure of the system **minus** the atmospheric pressure.
+Hence, if you want to convert a gauge pressure to absolute pressure you **add** the atmospheric pressure.
+
+For example, the (gauge) pressure at the bottom of a tank of liquid is given by $P = \rho g h$ but to
+calculate the absolute pressure ($P_A$) we would use $P_A = P_S + \rho g h$, where $P_S$ is the 
+pressure acting on the surface of the liquid (atmospheric).
+
+It is important to note that this distinction does not matter when it comes to **pressure drop**.
+To make sense of this statement, please review the box below.
+
+::: {.callout-note}
+
+## Pressure drop
+
+Consider a pipe through which a liquid is flowing from a region of high pressure to a region of low pressure.
+The first gauge reads $2.0 \ bar$ and the second gauge reads $1.5 \ bar$.
+The pressure drop is therefore $2.0 - 1.5 = 0.5 \ bar$.
+
+Now consider the same calculation, but this time we convert any gauge pressure into an absolute pressure
+by adding $1.0 \ bar$:
+
+$$(2.0 + 1.0) - (1.5 + 1.0) = 0.5 \ bar$$
+
+As you can see, when determining pressure drop (often what we are interested in) this distinction is unimportant.
+
+:::
+
+## From Static to Movement
+
+Fluid statics concerns the state of fluids "at rest" (not moving);
+however, as we saw in the example of Stoke's law, we usually use 
+these static systems is simplified models that help us understand
+more complex (moving) systems.
+So, while pressure can be created in a static liquid, we need to
+consider how this pressure can ultimately impact motion.
+
+A tank containing a liquid will exert pressure on the walls of the tank.
+The pressure will be greatest the deeper we dive below the surface.
+Place a pressure gauge just below the surface and one just above the bottom and
+there will be a difference in pressure.
+
+Now imagine there is a hole at the bottom of the tank.
+The pressure of the water inside the tank is high; however,
+the pressure outside the hole is the atmospheric pressure.
+As the pressure at the bottom of the tank is greater than the
+atmospheric pressure there will be a pressure drop from inside to outside.
+
+This will also be true if we connect a pipe to the hole.
+The pressure at the start of the pipe is the pressure due to the depth of liquid (high),
+while the pressure at the end of the pipe is the pressure due to the atmosphere (low).
+
+As you might expect, liquid will flow through the pipe, with the rate of flow determined by the pressure drop.
+While not a "pump" in the classic sense, this is the simplest model of a pump we can think of.
+To get liquid to flow from one location to another we need a pressure drop.
+Here, the pressure drop is created due to the height of the liquid above an outlet.
+
+Several questions can be raised at this point:
+
+- To what extent does pressure drop determine flow-rate?
+- How does viscosity influence flow-rate?
+- Which pressure gauges are avaiable and how should they be selected?
+
+To answer some of these questions we will again need to shift slightly between statics and dynamics
+before focusing on dynamics in a dedicated way.
+
+## Question
+
+Write the equation for hydrostatic pressure.
+
+Show that it yields the correct dimensions for pressure.
+
+Re-arrange the equation into a form for measuring "pressure head".
+
+Explain why the latter form of the equation is useful.
+
+:::

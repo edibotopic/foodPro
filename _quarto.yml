@@ -20,7 +20,7 @@ website:
       - section: "Fluid Statics"
         contents:
           - notes/stokes-law.qmd
-      #     - notes/pressure.qmd
+          - notes/pressure1.qmd
       # - section: "Fluid Dynamics"
       #   contents:
       #     - notes/flow.qmd
