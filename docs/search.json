@@ -11,7 +11,7 @@
     "href": "index.html#lectures-and-schedule",
     "title": "Overview",
     "section": "Lectures and Schedule",
-    "text": "Lectures and Schedule\nThis module involves two lectures each week.\nLectures will be at 9 am Tuesday (CONN_S3) and 2 pm Thursday (FSB_322).\nThere are 7 laboratory practicals in this module, which will not start until 3 weeks into term. More detail will be provided before the labs start.\n\n\n\n\n\n\nHow You Will Be Assessed\n\n\n\nAssessment for the module is as follows:\n\n15%: in-class exam\n15%: lab reports\n70%: formal exam"
+    "text": "Lectures and Schedule\nThis module involves two lectures each week.\nLectures will be at 9 am Tuesday (CONN_S3) and 2 pm Thursday (FSB_322).\nThere are 6 laboratory practicals in this module, which will not start until 3 weeks into term. More detail will be provided before the labs start.\n\n\n\n\n\n\nHow You Will Be Assessed\n\n\n\nAssessment for the module is as follows:\n\n15%: in-class exam\n15%: lab reports\n70%: formal exam"
   },
   {
     "objectID": "index.html#notes-and-slides",
@@ -19,6 +19,90 @@
     "title": "Overview",
     "section": "Notes and Slides",
     "text": "Notes and Slides\nThe first set of slides are embedded below — you should be able to interact with them easily on your phone, tablet or computer.\n\n\n\n📽️ Direct link to slides for this lecture\nNotes and slides included here are a framework only and ideas will be developed in greater depth during labs and lectures.\n\n\n\n\n\n\nTip\n\n\n\nRemember to take notes actively during lectures and contact me early if you are struggling with any particular topic.\n\n\nThe content of the course has the following general structure:\n\nFood Physics\nFluid Statics\nFluid Dynamics\nSeparation Science\nThermal Processing\nEvaporation & Drying\nBulk Solids Science\nSustainable Processing\nTopics in Engineering\n\nIndividual topics can take 2-4 lectures to complete, depending on class interest and progress.\nSome topics may not be covered if the class needs additional time on a specific topic. Only topics covered in lectures will be examined.\n\n\n\n\n\n\nImportant\n\n\n\nThis website will be continuously updated with notes and slides throughout the semester."
+  },
+  {
+    "objectID": "notes/slides.html",
+    "href": "notes/slides.html",
+    "title": "Slides",
+    "section": "",
+    "text": "This page will be populated with a list of all slides used during the course.\nIntroduction\nFood Physics"
+  },
+  {
+    "objectID": "notes/about.html",
+    "href": "notes/about.html",
+    "title": "About",
+    "section": "",
+    "text": "Shane is a food scientist and technologist from Cork, Ireland. He has worked full-time as an academic at UCC for six years."
+  },
+  {
+    "objectID": "notes/about.html#education",
+    "href": "notes/about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\nShane has a PhD in Food Science & Technology and a HDip in Philosophy, both from UCC. During his PhD he did research on nutritional ingredient development in UW-Madison, Wisconsin on a Fulbright scholarship."
+  },
+  {
+    "objectID": "notes/about.html#teaching",
+    "href": "notes/about.html#teaching",
+    "title": "About",
+    "section": "Teaching",
+    "text": "Teaching\nShane has taught food scientists, nutritional scientists and marketing students. He is interested in the application of technology in food and nutrition, as well as the exploration of how philosophy and programming can be applied to solving problems in food technology."
+  },
+  {
+    "objectID": "notes/about.html#research",
+    "href": "notes/about.html#research",
+    "title": "About",
+    "section": "Research",
+    "text": "Research\nShane’s PhD thesis focused on the development of protein and mineral ingredients for formulated nutritional products. More recently he has become interested in the broad areas of food design, food philosophy and food digitilisation."
+  },
+  {
+    "objectID": "notes/about.html#office-hours",
+    "href": "notes/about.html#office-hours",
+    "title": "About",
+    "section": "Office Hours",
+    "text": "Office Hours\nTBC…"
+  },
+  {
+    "objectID": "notes/pressure1.html",
+    "href": "notes/pressure1.html",
+    "title": "Pressure I",
+    "section": "",
+    "text": "There is a pressure drop across an object submerged in a fluid. Pressure is lowest at the top of the object and highest at the bottom. This pressure difference results in a buoyant force on the object.\nPressure plays an important role throughout food processing. To understand pressure it is important to build up our understanding from simple to more complex cases.\nSeveral food processing operations require high pressures, including:\nOther food processes require reduced pressures, such a vacuum evaporation, distillation and freeze-drying.\n📽️ Direct link to slides for this lecture"
+  },
+  {
+    "objectID": "notes/pressure1.html#pressure-in-static-fluids",
+    "href": "notes/pressure1.html#pressure-in-static-fluids",
+    "title": "Pressure I",
+    "section": "Pressure in Static Fluids",
+    "text": "Pressure in Static Fluids\nPressure (\\(P\\)) is defined as:\n\\[P = \\frac{F}{A}\\]\nThis gives \\(P\\) the dimensions \\([M LT^{-2} L{^-2}]\\) or — more simply — \\([M L^{-1} T^{-2}]\\).\nConsider a liquid in a container in which there is no submerged object. In such a system the pressure at a given point can be calculated as:\n\\[P = \\rho g h\\]\nThe \\(\\rho\\) corresponds to the density of the liquid and \\(h\\) the height from the surface. As usual, \\(g\\) is the acceleration due to gravity.\n\n\n\n\n\n\nDimensions Check\n\n\n\nDoes the second equation above yield the dimensions you expect?\n\n\nThe equation should ring true intuitively if you have ever experienced the increase in pressure when diving deeper into water. Nonetheless, it is counter-intuitive to many that it is merely the height (and not the volume) of water that determines the pressure. In practice, this means that very narrow columns of fluid can generate enormous pressures if the column is high enough (the hydrostatic paradox).\n\n\n\n\n\n\nIntuition Behind the Pressure Equation\n\n\n\nIntuitively we have some notion that \\(P\\) is associated with the weight \\(W\\) of liquid. So we might expect (wrongly) that\n\\[P = W\\]\nHowever, this cannot be correct because weight is a force not a pressure. So we might write:\n\\[F = W\\]\nThis is correct, but does not seem to tell us what we want to know, which is how to calculate \\(P\\). Now, to move forward we need to first consider that \\(\\frac{F}{A} = P\\), so we know that we need to ultimately divide our \\(F\\) value by an area (\\(A\\)) value. Obviously, there is no \\(A\\) value on the right-side of the equation, so we need to find one. To do this we consider that \\(W = m.a\\) and in the liquid column the acceleration is due to gravity:\n\\[F = m.g\\]\nNext, we recognise that \\(m = ρV\\), so that:\n\\[F = ρ.V.g\\]\nRemember, we would like to find an \\(A\\) value on the right side, so where is it? Well, consider that the dimensions of \\(V\\) are \\(L^3\\), which can be the product of an area with dimensions \\(L^2\\) and a length (\\(l\\)) with dimensions \\(L\\). So we can re-write the equation as:\n\\[F = ρ.A.l.g\\]\nThe \\(A\\) value must refer to the cross-sectional area of the cylinder (i.e., a circle), while the \\(l\\) value must refer to the height (\\(h\\)) of liquid. The volume of a cylinder is the product of the cross-sectional area by its height. Now, we can replace \\(l\\) by \\(h\\) and divide both sides by \\(A\\):\n\\[\\frac{F}{A} = P = ρ.h.g\\]"
+  },
+  {
+    "objectID": "notes/pressure1.html#pressure-head",
+    "href": "notes/pressure1.html#pressure-head",
+    "title": "Pressure I",
+    "section": "Pressure Head",
+    "text": "Pressure Head\nThere is one simple way of re-arranging the equation for hydrostatic pressure that is important to note. If both sides of the equation are divided by the product of \\(\\rho\\) and \\(g\\) then we get the following:\n\\[h = \\frac{P}{\\rho g}\\]\nThis is known as the “pressure head” and tells us the height of a column of liquid that can be supported by a given pressure.\n\n\n\n\n\n\nIf atmospheric pressure is \\(101325 \\ kg \\ m^{-1} \\ s^{-2}\\), \\(g\\) is \\(9.81 \\ m \\ s^{-2}\\) and the density of water is \\(1000 \\ kg \\ m^{-3}\\), estimate the height of a column of water that can be supported at atmospheric pressure.\nAssume that\n\\[h = \\frac{P}{\\rho g}\\]\nPlugging in values:\n\\[h = \\frac{101325}{1000 \\cdot 9.81}\\]\n\\(h = 10.3 \\ m\\)\nThus, the tendency of a column of liquid of a specific height to be supported by liquid at a specific pressure allows height (or “pressure head”) to be used as an index of pressure. The greater the pressure the greater the height. This is the basis of traditional barometers used to measure pressure, where a more dense liquid (e.g., mercury) is used to ensure that the barometer does not need to be excessively large as an instrument (can you tell from the equation why this is so?).\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nWe will encounter pressure head again when looking at Bernoulli’s equation, so you may need to return to these notes."
+  },
+  {
+    "objectID": "notes/pressure1.html#absolute-and-gauge-pressure",
+    "href": "notes/pressure1.html#absolute-and-gauge-pressure",
+    "title": "Pressure I",
+    "section": "Absolute and Gauge Pressure",
+    "text": "Absolute and Gauge Pressure\nIn the tour of the processing facilities at UCC several pressure gauges were shown. These gauges were reading \\(0 \\ bar\\), yet atmospheric pressure is approximately \\(1 \\ bar\\). If the pressure was really zero then the processing facility would be in a vacuum.\nThe simple reason for this is that these pressure gauges do not give a readout of absolute pressure. Instead, they provide what is known as gauge pressure.\nGauge pressure is simply the pressure of the system minus the atmospheric pressure. Hence, if you want to convert a gauge pressure to absolute pressure you add the atmospheric pressure.\nFor example, the (gauge) pressure at the bottom of a tank of liquid is given by \\(P = \\rho g h\\) but to calculate the absolute pressure (\\(P_A\\)) we would use \\(P_A = P_S + \\rho g h\\), where \\(P_S\\) is the pressure acting on the surface of the liquid (atmospheric).\nIt is important to note that this distinction does not matter when it comes to pressure drop. To make sense of this statement, please review the box below.\n\n\n\n\n\n\nPressure drop\n\n\n\nConsider a pipe through which a liquid is flowing from a region of high pressure to a region of low pressure. The first gauge reads \\(2.0 \\ bar\\) and the second gauge reads \\(1.5 \\ bar\\). The pressure drop is therefore \\(2.0 - 1.5 = 0.5 \\ bar\\).\nNow consider the same calculation, but this time we convert any gauge pressure into an absolute pressure by adding \\(1.0 \\ bar\\):\n\\[(2.0 + 1.0) - (1.5 + 1.0) = 0.5 \\ bar\\]\nAs you can see, when determining pressure drop (often what we are interested in) this distinction is unimportant."
+  },
+  {
+    "objectID": "notes/pressure1.html#from-static-to-movement",
+    "href": "notes/pressure1.html#from-static-to-movement",
+    "title": "Pressure I",
+    "section": "From Static to Movement",
+    "text": "From Static to Movement\nFluid statics concerns the state of fluids “at rest” (not moving); however, as we saw in the example of Stoke’s law, we usually use these static systems is simplified models that help us understand more complex (moving) systems. So, while pressure can be created in a static liquid, we need to consider how this pressure can ultimately impact motion.\nA tank containing a liquid will exert pressure on the walls of the tank. The pressure will be greatest the deeper we dive below the surface. Place a pressure gauge just below the surface and one just above the bottom and there will be a difference in pressure.\nNow imagine there is a hole at the bottom of the tank. The pressure of the water inside the tank is high; however, the pressure outside the hole is the atmospheric pressure. As the pressure at the bottom of the tank is greater than the atmospheric pressure there will be a pressure drop from inside to outside.\nThis will also be true if we connect a pipe to the hole. The pressure at the start of the pipe is the pressure due to the depth of liquid (high), while the pressure at the end of the pipe is the pressure due to the atmosphere (low).\nAs you might expect, liquid will flow through the pipe, with the rate of flow determined by the pressure drop. While not a “pump” in the classic sense, this is the simplest model of a pump we can think of. To get liquid to flow from one location to another we need a pressure drop. Here, the pressure drop is created due to the height of the liquid above an outlet.\nSeveral questions can be raised at this point:\n\nTo what extent does pressure drop determine flow-rate?\nHow does viscosity influence flow-rate?\nWhich pressure gauges are avaiable and how should they be selected?\n\nTo answer some of these questions we will again need to shift slightly between statics and dynamics before focusing on dynamics in a dedicated way."
+  },
+  {
+    "objectID": "notes/pressure1.html#question",
+    "href": "notes/pressure1.html#question",
+    "title": "Pressure I",
+    "section": "Question",
+    "text": "Question\nWrite the equation for hydrostatic pressure.\nShow that it yields the correct dimensions for pressure.\nRe-arrange the equation into a form for measuring “pressure head”.\nExplain why the latter form of the equation is useful.\n:::"
   },
   {
     "objectID": "notes/quantities.html",
@@ -75,47 +159,5 @@
     "title": "Stoke’s Law",
     "section": "Importance to Processing",
     "text": "Importance to Processing\nThere are two contexts in which Stoke’s Law becomes important in a food processing context.\n\nRecovery of the dispersed phase to generate a product\nStabilising the dispersion to improve product quality\n\nThese two situations have opposing goals, but Stoke’s Law helps in both cases.\n\nRecovery\nIf the goal is separation we can target parameters that increase sinking/floating velocity.\nFor example, particles can be aggregated/flocculated to increase their diameter.1\nIt is not possible to change gravity, but we can use centrifuges to apply an increased g-force.2\nWhen using a centrifuge an elevated temperature can be used to reduce viscosity; in this, way parameters can be manipulated simultaneously to achieve the desired effect.\n\n\n\n\n\n\nNote\n\n\n\nWe will discuss technology like centrifuges in more detail in later sections in the module. For now, it is sufficient to know that centrifuges accelerate sinking/floating by spinning a sample around a central axis at high speeds.\nYou are encouraged to look them up in the meantime if you want to know more.\n\n\n\n\nStabilisation\nWhen the goal is stabilisation (preventing separation) a different approach is necessary.\nDecreasing particle diameter will decrease separation velocity, and this can be achieved with homogenisation.\n\n\n\n\n\n\nNote\n\n\n\nHomogenisers are covered in later sections — they force a dispersion through a narrow gap, which breaks dispersed particles into smaller-sized particles.\n\n\nWhen formulating the product — if appropriate — a thickener can be added to increase viscosity.\n\n\nOperations and their Inverses\nThere is sometimes confusion among students about situations in which an idea or equation can be leveraged to achieve two opposing goals, in this case separation and stabilisation. Of course, which operation we are interested in depends on context (what are you processing? who are your customers?). However, it is valuable to be able to apply an idea/equation in these different contexts, rather than being restricted to one.\nIn general, many operations (\\(O\\)) have an inverse (\\(O^{-1})\\). This is a useful mental shortcut for remembering multiple operations.\n\n\n\n\\(O\\)\n\\(O^{-1}\\)\nExamples\n\n\n\n\nheating\ncooling\npasteurising/refrigerating\n\n\ndrying\nrehydrating\nspray-drying/dissolution\n\n\ncomminution\naggregation\nmincing/granulation\n\n\nseparation\nstabilisation\nfiltration/homogenisation\n\n\nconcentration\ndilution\nevaporation/washing\n\n\n\nCan you think of other examples?\n\n\n\n\n\n\nQuestion\n\n\n\nYour company is interested in recovering a plant protein from process waste. Laboratory results show that the protein aggregates in the presence of calcium and that the aggregates sink. Early tests indicate that the viscosity of the solution decreases at 50C.\nProvide a clear rationale, using appropriate equations, for the design of an operation to recover the proteins."
-  },
-  {
-    "objectID": "notes/slides.html",
-    "href": "notes/slides.html",
-    "title": "Slides",
-    "section": "",
-    "text": "This page will be populated with a list of all slides used during the course.\nIntroduction\nFood Physics"
-  },
-  {
-    "objectID": "notes/about.html",
-    "href": "notes/about.html",
-    "title": "About",
-    "section": "",
-    "text": "Shane is a food scientist and technologist from Cork, Ireland. He has worked full-time as an academic at UCC for six years."
-  },
-  {
-    "objectID": "notes/about.html#education",
-    "href": "notes/about.html#education",
-    "title": "About",
-    "section": "Education",
-    "text": "Education\nShane has a PhD in Food Science & Technology and a HDip in Philosophy, both from UCC. During his PhD he did research on nutritional ingredient development in UW-Madison, Wisconsin on a Fulbright scholarship."
-  },
-  {
-    "objectID": "notes/about.html#teaching",
-    "href": "notes/about.html#teaching",
-    "title": "About",
-    "section": "Teaching",
-    "text": "Teaching\nShane has taught food scientists, nutritional scientists and marketing students. He is interested in the application of technology in food and nutrition, as well as the exploration of how philosophy and programming can be applied to solving problems in food technology."
-  },
-  {
-    "objectID": "notes/about.html#research",
-    "href": "notes/about.html#research",
-    "title": "About",
-    "section": "Research",
-    "text": "Research\nShane’s PhD thesis focused on the development of protein and mineral ingredients for formulated nutritional products. More recently he has become interested in the broad areas of food design, food philosophy and food digitilisation."
-  },
-  {
-    "objectID": "notes/about.html#office-hours",
-    "href": "notes/about.html#office-hours",
-    "title": "About",
-    "section": "Office Hours",
-    "text": "Office Hours\nTBC…"
   }
 ]
