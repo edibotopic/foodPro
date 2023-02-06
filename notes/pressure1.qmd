@@ -28,7 +28,7 @@ Other food processes require reduced pressures, such a vacuum evaporation, disti
 ```
 </div>
 
-[📽️ Direct link to slides for this lecture](https://edibotopic.github.io/lecture-slides/FS2006_1.html)
+[📽️ Direct link to slides for this lecture](https://edibotopic.github.io/lecture-slides/FS2006_6.html)
 
 ## Pressure in Static Fluids
 
