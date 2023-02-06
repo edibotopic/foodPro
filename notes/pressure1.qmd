@@ -36,7 +36,7 @@ Pressure ($P$) is defined as:
 
 $$P = \frac{F}{A}$$
 
-This gives $P$ the dimensions $[M LT^{-2} L{^-2}]$ or — more simply — $[M L^{-1} T^{-2}]$.
+This gives $P$ the dimensions $[M LT^{-2} L^{-2}]$ or — more simply — $[M L^{-1} T^{-2}]$.
 
 Consider a liquid in a container in which there is no submerged object.
 In such a system the pressure at a given point can be calculated as:
@@ -227,5 +227,3 @@ Show that it yields the correct dimensions for pressure.
 Re-arrange the equation into a form for measuring "pressure head".
 
 Explain why the latter form of the equation is useful.
-
-:::
