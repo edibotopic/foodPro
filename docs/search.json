@@ -81,7 +81,14 @@
     "href": "notes/slides.html",
     "title": "Slides",
     "section": "",
-    "text": "This page will be populated with a list of all slides used during the course.\nIntroduction\nFood Physics"
+    "text": "This page will be populated with a list of all slides used during the course.\nIntroduction\nFood Physics\nPressure I\nPressure II"
+  },
+  {
+    "objectID": "notes/pressure2.html",
+    "href": "notes/pressure2.html",
+    "title": "Pressure II",
+    "section": "",
+    "text": "Draft\n\n\n\nThese notes will be updated later in the week.\nFor now I am focusing on the Excel tutorial that will be uploaded later this week.\n\n\nThis week’s lab practical focuses on the Hagen-Poiseuille equation, which can be used to explain how hydrostatic pressure influences flow-rate.\nPlease review the notes that are provided for the laboratory practical.\nRe-arranging the equation also provides a simple means of calculating/measuring viscosity. Slides are available below, which will be supplemented with additional info during the class.\n\n\n\n📽️ Direct link to slides for this lecture"
   },
   {
     "objectID": "notes/about.html",
