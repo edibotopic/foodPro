@@ -21,6 +21,7 @@ website:
         contents:
           - notes/stokes-law.qmd
           - notes/pressure1.qmd
+          - notes/pressure2.qmd
       # - section: "Fluid Dynamics"
       #   contents:
       #     - notes/flow.qmd

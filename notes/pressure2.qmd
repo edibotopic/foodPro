@@ -1,0 +1,36 @@
+---
+title: Pressure II
+slide-format: revealjs
+css: ../styles.css
+execute:
+  echo: false
+search: true
+---
+
+::: {.callout-important}
+
+## Draft
+
+These notes will be updated later in the week.
+
+For now I am focusing on the Excel tutorial that will be uploaded later this week.
+
+:::
+
+This week's lab practical focuses on the Hagen-Poiseuille equation, which can
+be used to explain how hydrostatic pressure influences flow-rate.
+
+Please review the notes that are provided for the laboratory practical.
+
+Re-arranging the equation also provides a simple means of calculating/measuring viscosity.
+Slides are available below, which will be supplemented with additional info during the class.
+
+<div>
+```{=html}
+<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_8.html"></iframe>
+```
+</div>
+
+[📽️ Direct link to slides for this lecture](https://edibotopic.github.io/lecture-slides/FS2006_8.html)
+
+---
