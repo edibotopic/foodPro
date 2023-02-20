@@ -12,3 +12,5 @@ This page will be populated with a list of all slides used during the course.
 [Food Physics](https://edibotopic.github.io/lecture-slides/FS2006_1.html)
 
 [Pressure I](https://edibotopic.github.io/lecture-slides/FS2006_6.html)
+
+[Pressure II](https://edibotopic.github.io/lecture-slides/FS2006_8.html)

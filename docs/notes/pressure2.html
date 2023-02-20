@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Food Process Design &amp; Optimisation - Stoke’s Law</title>
+<title>Food Process Design &amp; Optimisation - Pressure II</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../notes/pressure1.html" rel="next">
-<link href="../notes/quantities.html" rel="prev">
+<link href="../notes/slides.html" rel="next">
+<link href="../notes/pressure1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -63,7 +63,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -74,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Stoke’s Law</h1>
+      <h1 class="quarto-secondary-nav-title">Pressure II</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -153,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/stokes-law.html" class="sidebar-item-text sidebar-link active">Stoke’s Law</a>
+  <a href="../notes/stokes-law.html" class="sidebar-item-text sidebar-link">Stoke’s Law</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -163,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/pressure2.html" class="sidebar-item-text sidebar-link">Pressure II</a>
+  <a href="../notes/pressure2.html" class="sidebar-item-text sidebar-link active">Pressure II</a>
   </div>
 </li>
       </ul>
@@ -193,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Stoke’s Law</h1>
+<h1 class="title d-none d-lg-block">Pressure II</h1>
 </div>
 
 
@@ -208,234 +207,32 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><code>Fluid Statics</code> is the science of liquid systems at rest. The fact that the liquid is “at rest” does not mean nothing is happening.</p>
-<p>As this topic can get quite technical we will start with a relevant food example that brings together some concepts we have encountered already.</p>
-<p>In food processing it is often in our interest to exploit some kind of <em>productive difference</em>. Successful exploitation of such differences allow us to generate a useful change. Productive differences and the changes they induce are often captured in equations. Dimensional analysis can help us to reason about these equations.</p>
-<p>These ideas are here reinforced with the example of systems in which particles are dispersed in a liquid.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>There are no slides associated with this lecture. Please interact with the app below to develop your intuition for the topics discussed.</p>
-</div>
-</div>
-<div>
-<iframe class="slide-deck" src="https://edibotopic.github.io/stokes-law/">
-</iframe>
-</div>
-<p>🔗 <a href="https://edibotopic.github.io/stokes-law">Click here for a full-screen version</a></p>
-<section id="pressure-density-and-buoyancy" class="level1">
-<h1>Pressure, Density and Buoyancy</h1>
-<p>In a liquid, the pressure increases with depth from the surface. When an object is submerged in a liquid there is more pressure at its bottom than at its top. This pressure drop results in the phenomenon of <em>buoyancy</em>, which is the tendency of a liquid to exert an upward force on a submerged object that opposes the object’s weight (which would otherwise tend to pull it downards). The force is equivalent to the weight of the fluid displaced by the object.</p>
-<div class="callout callout callout-style-simple no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Remember, weight is mass times gravitational acceleration, and therefore a force (<span class="math inline">\(F = ma\)</span>).</p>
-</div>
-</div>
-</div>
-<p>The density of the object determines if it sinks or floats. If the object’s density is less than the surrounding fluid, it will float. The reason is that the fluid, which has the greater density, contains more mass/weight in a given volume compared to the object. The buoyant (upward) force, which equals the weight of the fluid displaced, is thus greater than the weight of the object (downward force).</p>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The above statements about the physics of buoyancy are for background. If you are confused, read through the statements carefully again. Still confused? Move on to the section on Stoke’s Law, which is more important in this module.</p>
-</div>
-</div>
-<p>The key point is that sinking or floating requires a <strong>density difference</strong>.</p>
-</section>
-<section id="stokes-law" class="level1">
-<h1>Stoke’s Law</h1>
-<p>Food scientists usually use Stoke’s Law to reason about systems in which particles are dispersed in a liquid. This equation accounts for numerous factors relevant to food systems that can be controlled during processing.</p>
-<p>We are interested in floating or sinking, which is characterised by a <em>velocity</em>. This velocity is then a function of some set of physical parameters. We know one already: <em>density difference</em>. These changes also depend on gravity, which can be captured with the constant for gravitational acceleration.</p>
-<p>To find the full set of parameters requires some knowledge of the real world. Alternatively, if you are not the observant type, <a href="https://edibotopic.github.io/stokes-law/">play with the sliders to explore the effect of the parameters</a>.</p>
-<p>The answers to the following should be obvious enough but if not expand the box below to confirm.</p>
-<blockquote class="blockquote">
-<p>Do you think large or small particles fall quicker?</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Do particles fall more quickly in water or honey?</p>
-</blockquote>
 <div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Expand for Answers
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Large stones fall quicker than small pebbles in water.</p>
-<p>Things fall slowly in honey.</p>
-<p>Clearly then, particle <em>diameter</em> and solvent <em>viscosity</em> must be considered.</p>
-</div>
-</div>
-</div>
-<p>We can say then that the velocity is a function of particle diameter, density difference, gravitational acceleration and viscosity.</p>
-<p>Some of these will <code>drive</code> the change and some will <code>resist</code> the change:</p>
-<p><span class="math display">\[v = \frac{drive}{resist}\]</span></p>
-<p>The viscosity is the only factor that resists the change. Thus, velocity is proportional to the other parameters and inversely proportion to viscosity.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Writing the Equation with Some Educated Guesses
+Draft
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Based on what we know so far we can <em>guess</em> that velocity (<span class="math inline">\(v\)</span>) is proportional to particle diameter (<span class="math inline">\(D\)</span>), density difference (<span class="math inline">\(\Delta \rho\)</span>) and gravitational acceleration (<span class="math inline">\(g\)</span>): We can write this more succintly as:</p>
-<p><span class="math display">\[v \propto (D,\Delta \rho,g)\]</span></p>
-<p>We also know that viscosity (<span class="math inline">\(\mu\)</span>) tends to resist floating and sinking (e.g., <span class="math inline">\(v\)</span> is inversely proportional to <span class="math inline">\(\mu\)</span>).</p>
-<p><span class="math display">\[v \propto \frac{1}{\mu}\]</span></p>
-<p>Putting this information together we have the following (incorrect) equation:</p>
-<p><span class="math display">\[v ≈ \frac{D \cdot \Delta \rho \cdot g}{\mu}\]</span></p>
-<p>Why is this incorrect (?) — because the dimensions on the left don’t match those on the right. <strong>You are strongly advised to check this yourself.</strong></p>
-<p>The dimensions for <span class="math inline">\(v\)</span> are <span class="math inline">\([L T^{-1}]\)</span> but the right gives <span class="math inline">\([T^{-1}]\)</span>.</p>
-<p>Assuming we have identified the correct parameters, what can we do to correct the dimensions?</p>
-<p>The most obvious solution is to square the diameter term, yielding:</p>
-<p><span class="math display">\[v ≈ \frac{D^2 \cdot \Delta \rho \cdot g}{\mu}\]</span></p>
-<p>The equation now has all the correct terms: the velocity is proportion to the square of the diameter, which is also known from experiments.</p>
-<p>An empirical factor of <span class="math inline">\(18\)</span> is also usually included based on experimental observations:</p>
-<p><span class="math display">\[v = \frac{D^2 \cdot \Delta \rho \cdot g}{18\mu}\]</span></p>
+<p>These notes will be updated later in the week.</p>
+<p>For now I am focusing on the Excel tutorial that will be uploaded later this week.</p>
 </div>
 </div>
-<section id="importance-to-processing" class="level2">
-<h2 class="anchored" data-anchor-id="importance-to-processing">Importance to Processing</h2>
-<p>There are two contexts in which Stoke’s Law becomes important in a food processing context.</p>
-<ol type="1">
-<li>Recovery of the dispersed phase to generate a product</li>
-<li>Stabilising the dispersion to improve product quality</li>
-</ol>
-<p>These two situations have opposing goals, but Stoke’s Law helps in both cases.</p>
-<section id="recovery" class="level3">
-<h3 class="anchored" data-anchor-id="recovery">Recovery</h3>
-<p>If the goal is separation we can target parameters that increase sinking/floating velocity.</p>
-<p>For example, particles can be aggregated/flocculated to increase their diameter.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p>It is not possible to change gravity, but we can use centrifuges to apply an increased g-force.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<p>When using a centrifuge an elevated temperature can be used to reduce viscosity; in this, way parameters can be manipulated simultaneously to achieve the desired effect.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>This week’s lab practical focuses on the Hagen-Poiseuille equation, which can be used to explain how hydrostatic pressure influences flow-rate.</p>
+<p>Please review the notes that are provided for the laboratory practical.</p>
+<p>Re-arranging the equation also provides a simple means of calculating/measuring viscosity. Slides are available below, which will be supplemented with additional info during the class.</p>
+<div>
+<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_8.html"></iframe>
 </div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>We will discuss technology like centrifuges in more detail in later sections in the module. For now, it is sufficient to know that centrifuges accelerate sinking/floating by spinning a sample around a central axis at high speeds.</p>
-<p>You are encouraged to look them up in the meantime if you want to know more.</p>
-</div>
-</div>
-</section>
-<section id="stabilisation" class="level3">
-<h3 class="anchored" data-anchor-id="stabilisation">Stabilisation</h3>
-<p>When the goal is stabilisation (preventing separation) a different approach is necessary.</p>
-<p>Decreasing particle diameter will decrease separation velocity, and this can be achieved with homogenisation.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Homogenisers are covered in later sections — they force a dispersion through a narrow gap, which breaks dispersed particles into smaller-sized particles.</p>
-</div>
-</div>
-<p>When formulating the product — if appropriate — a thickener can be added to increase viscosity.</p>
-</section>
-<section id="operations-and-their-inverses" class="level3">
-<h3 class="anchored" data-anchor-id="operations-and-their-inverses">Operations and their Inverses</h3>
-<p>There is sometimes confusion among students about situations in which an idea or equation can be leveraged to achieve two opposing goals, in this case <em>separation</em> and <em>stabilisation</em>. Of course, which operation we are interested in depends on <em>context</em> (what are you processing? who are your customers?). However, it is valuable to be able to apply an idea/equation in these different contexts, rather than being restricted to one.</p>
-<p>In general, many operations (<span class="math inline">\(O\)</span>) have an <code>inverse</code> (<span class="math inline">\(O^{-1})\)</span>. This is a useful mental shortcut for remembering multiple operations.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th><span class="math inline">\(O\)</span></th>
-<th><span class="math inline">\(O^{-1}\)</span></th>
-<th>Examples</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>heating</td>
-<td>cooling</td>
-<td>pasteurising/refrigerating</td>
-</tr>
-<tr class="even">
-<td>drying</td>
-<td>rehydrating</td>
-<td>spray-drying/dissolution</td>
-</tr>
-<tr class="odd">
-<td>comminution</td>
-<td>aggregation</td>
-<td>mincing/granulation</td>
-</tr>
-<tr class="even">
-<td>separation</td>
-<td>stabilisation</td>
-<td>filtration/homogenisation</td>
-</tr>
-<tr class="odd">
-<td>concentration</td>
-<td>dilution</td>
-<td>evaporation/washing</td>
-</tr>
-</tbody>
-</table>
-<p>Can you think of other examples?</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Question
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Your company is interested in recovering a plant protein from process waste. Laboratory results show that the protein aggregates in the presence of calcium and that the aggregates sink. Early tests indicate that the viscosity of the solution decreases at 50C.</p>
-<p>Provide a clear rationale, using appropriate equations, for the design of an operation to recover the proteins.</p>
-</div>
-</div>
+<p><a href="https://edibotopic.github.io/lecture-slides/FS2006_8.html">📽️ Direct link to slides for this lecture</a></p>
+<hr>
 
 
-</section>
-</section>
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>This requires knowledge of the chemistry of a specific system<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>in such cases <span class="math inline">\(g\)</span> may be replaced with a term representing centrifugal force<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -686,13 +483,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../notes/quantities.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Quantities</span>
+      <a href="../notes/pressure1.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Pressure I</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../notes/pressure1.html" class="pagination-link">
-        <span class="nav-page-text">Pressure I</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../notes/slides.html" class="pagination-link">
+        <span class="nav-page-text">Slides</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
