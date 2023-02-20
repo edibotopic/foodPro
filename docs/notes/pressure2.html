@@ -63,6 +63,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -207,30 +208,58 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Draft
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>These notes will be updated later in the week.</p>
-<p>For now I am focusing on the Excel tutorial that will be uploaded later this week.</p>
-</div>
-</div>
-<p>This week’s lab practical focuses on the Hagen-Poiseuille equation, which can be used to explain how hydrostatic pressure influences flow-rate.</p>
-<p>Please review the notes that are provided for the laboratory practical.</p>
-<p>Re-arranging the equation also provides a simple means of calculating/measuring viscosity. Slides are available below, which will be supplemented with additional info during the class.</p>
+<p>Flow through a pipe is driven by a pressure drop. Previously, you were shown an equation (Toricelli’s law), which relates flow velocity through an orifice to pressure drop; however, this is a simplification of real systems.</p>
 <div>
 <iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_8.html"></iframe>
 </div>
 <p><a href="https://edibotopic.github.io/lecture-slides/FS2006_8.html">📽️ Direct link to slides for this lecture</a></p>
 <hr>
+<section id="flow-pattern-in-a-pipe-laminar" class="level2">
+<h2 class="anchored" data-anchor-id="flow-pattern-in-a-pipe-laminar">Flow Pattern in A Pipe (laminar)</h2>
+<p>While it seems unusual at first, liquid flowing through a pipe is often modelled (in 3D) as flowing as a series of concentric cylinders. In 2D, you can imagine that the liquid at the furthest point from the walls of a pipe is moving the fastest. The layer of liquid in direct contact with the walls is assumed to have zero velocity (this is referred to as the “no slip” condition). There is therefore a gradient of velocities, ranging from zero velocity to max velocity.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The flow pattern described above will later be used to derive the equation and dimensions for viscosity.</p>
+</div>
+</div>
+<p>The reason for this behaviour is <em>viscosity</em>, which — according to this model — can be imagined as friction generated between the liquid and the walls but also between the individual layers of liquid.</p>
+</section>
+<section id="hagen-poiseuille" class="level2">
+<h2 class="anchored" data-anchor-id="hagen-poiseuille">Hagen-Poiseuille</h2>
+<p>An equation that is superficially similar to Toricelli’s law, but is more predictive of flow in real liquid systems, is the Hagen-Poiseuille equation.</p>
+<p><span class="math display">\[Q = \frac{\Delta P \pi D^4}{128L\mu}\]</span></p>
+<p>This equation relates the volumetric flow-rate <span class="math inline">\(Q\)</span> to pressure drop <span class="math inline">\(\Delta P\)</span>. Notably, viscosity <span class="math inline">\(\mu\)</span> is in the denominator, offering resistance against flow. All of the other terms (except the empirical factor <span class="math inline">\(128\)</span>) reflects the geometry of the pipe. Simply put: increasing the diameter of the pipe <span class="math inline">\(D\)</span> has an enormous positive effect on flow-rate while increasing its length <span class="math inline">\(L\)</span> has a negative effect.</p>
+<p>By re-arranging the equation it is possible to use this equation to solve for viscosity, which gives us one of the most simple models of a viscometer (an instrument for measuring viscosity). It should be noted that the equation strictly only works in systems with laminar flow (<span class="math inline">\(Re &lt; 2100\)</span>), so it is not appropriate to use it for determining flow-rate or viscosity in turbulence (<span class="math inline">\(Re &gt; 4000\)</span>) systems.</p>
+<p>In general, to attain an equivalent flow-rate for a low-viscosity and a high-viscosity fluid, the higher viscosity fluid will require a greater pressure drop.</p>
+</section>
+<section id="measuring-pressure-in-food-processes" class="level2">
+<h2 class="anchored" data-anchor-id="measuring-pressure-in-food-processes">Measuring Pressure in Food Processes</h2>
+<p>Pressure is measured typically using a <strong>pressure gauge</strong>. The classical pressure gauge consists of a dial with pressure markings and a pointer. The pointer is connected to a mechanism that responds to changes in pressure. Digital gauges are increasingly used but not always.</p>
+<p>Most gauges give a reading for “gauge pressure”. This means that if the pressure being measured is at atmospheric pressure the gauge will read zero. Absolute pressure is the true pressure, including the atmospheric pressure, and can be calculated as: <span class="math inline">\(P_{abs} = P_{gauge} + P_{atm}\)</span> in obvious symbols. It should be noted that if measuring <em>pressure drop</em> then it does not matter whether you use absolute or gauge pressure, as long as you are consistent (don’t subtract gauge from absolute or vice-versa).</p>
+<p>Two common designs are the <strong>Bourdon</strong> and <strong>Diaphragm</strong> gauge.</p>
+<p>A Bourdon gauge contains a flexible “Bourdon tube”, usually in a C-shape that follows the circular shape of the dial. The tube is open to the fluid being measured and closed on one end. In a pipe, liquid enters the tube and partially expands the tube. The higher the pressure of the fluid the more expansion that takes place. The expansion (or de-expansion) affects a mechanism consisting of levers and gears that change the position of the pointer.</p>
+<p>In comparison, a diaphragm gauge separates the internal mechanism of the gauge from the fluid being measured. A thin, flexible diaphragm gets deflected based on the pressure of the fluid. The extent to which the diaphragm gets deflected drives the position of the pointer.</p>
+<p>In food processing facilities, it is common to encounter both kinds of gauge. Typically, diaphragm gauges are preferred in food-contact situations, in which <strong>sanitary design</strong> is critical. For example, if a viscous food material is permitted to fill a Bourdon tube contamination of the food may occur over time due to the build-up of residues inside the gauge. The use of a diaphragm gauge, which separates the internal environment of the gauge from the external environment of the fluid, prevents this happening.</p>
+<p>Not every fluid in a food processing facility may need a diaphragm gauge, however, which is important given that they tend to be more expensive. In the pumping of chilled water, hot water, steam or compressed air, a Bourdon gauge may be sufficient. For example, ingredients are often mixed in jacketed vessels that have gaps in their walls through which a cooling or heating fluid flows. To ensure reliable flow of these <strong>utilities</strong> pressure may need to be measured, but because the fluids never contact the food (they are separated by a wall) a Bourdon gauge can be used. It is also simply far more difficult to effectively remove something like milk from a Bourdon tube compared to clean water — the milk is more viscous, can go sour and even become solid, making cleaning very difficult. Lastly, if liquids being processed are corrosive it might also be wise to choose a diaphragm gauge, as this will protect the gauge itself grom damage and ensure a longer life before it needs to be replaced.</p>
+<p>The principles outlined above for the sanitary use and installation of pressure gauges also extends to a variety of other equipment, like sensors, meters and actuators.</p>
+</section>
+<section id="question" class="level2">
+<h2 class="anchored" data-anchor-id="question">Question</h2>
+<p>What is the relationship between pressure drop and viscosity in pipe flow?</p>
+<p>How can Hagen-Poiseuille’s equation be re-arranged to solve for viscosity?</p>
+<p>Which pressure gauges are used in the food industry?</p>
+<p>Why is a diaphragm gauge preferable to use in some cases.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
