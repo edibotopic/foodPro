@@ -22,12 +22,12 @@ website:
           - notes/stokes-law.qmd
           - notes/pressure1.qmd
           - notes/pressure2.qmd
-      # - section: "Fluid Dynamics"
-      #   contents:
-      #     - notes/flow.qmd
-      #     - notes/turbulence.qmd
+      - section: "Fluid Dynamics"
+        contents:
+          - notes/viscosity.qmd
+          - notes/flow1.qmd
+          - notes/flow2.qmd
       #     - notes/mixing.qmd
-      #     - notes/viscosity.qmd
       # - section: "Separation Science"
       #   contents:
       #     - notes/dead-end.qmd

@@ -1,0 +1,121 @@
+---
+title: Flow I [draft]
+slide-format: revealjs
+css: ../styles.css
+execute:
+  echo: false
+search: false
+---
+---
+
+::: {.callout-warning}
+
+These notes will be updated as the lectures are delivered.
+
+:::
+
+# Flow
+
+Processes consist of a series of operations, each with an input and output.
+Materials flow between operations, and in modern food factories this flow is often continuous.
+A high rate of flow is often desired because it ensures a process is efficient (ratio of value flow out to value flow in).
+Changes in flow-rate — especially decreases — often indicate a problem, such as equipment blockage or material supply issues.
+The flow of food liquids is complex and involves an interplay between equipment properties (pipe geometry), food characteristics (viscosity) and flow behaviour (turbulence).
+Carefully controlling these factors can allow effective operations like homogenisation to be designed.
+
+<div>
+```{=html}
+<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_10.html"></iframe>
+```
+</div>
+
+[📽️ Direct link to slides for this lecture](https://edibotopic.github.io/lecture-slides/FS2006_10.html)
+
+## Quantities
+
+There some quantities that are used to define flow that are important to remember.
+Please review the equations outlined below and try to understand them.
+The mathematics and physics knowledge required is not advanced.
+
+### Volumetric Flow-rate
+
+Flow-rate for liquids is usually given the symbol $Q$ and is defined as:
+
+$$Q = \frac{V}{t}$$
+
+The units are most commonly $L \ h^{-1}$ or $m^3 \ h^{-1}$.
+
+::: {.callout-note}
+
+Writing $L \ h^{-1}$ is equivalent to $L/h$.
+
+Similarly, $m \ s^{-2}$ — the units of acceleration — can also be written $m/s^{2}$.
+
+Do not let the exponents and negative numbers confuse you and rewrite them if it helps.
+
+:::
+
+A common method of measuring flow-rate in a lab is to periodically measure the volume collected over a certain period of time.
+For example, if 300 mL is collected from a pipe in 30 seconds we could convert this to a flow-rate by first converting mL → L:
+
+$$\frac{300}{1000} = 0.3 \ L$$
+
+This means that 0.3 L is collected per 30 s, but we need the volume in an hour, so we do the following:
+
+$$0.3 \times 2 \times 60 = 36 \ L \ h^{-1}$$
+
+This quantity is known sometimes as the "volumetric flow-rate".
+If units for mass (e.g., kg) are used instead then it "mass flow rate".
+
+### Velocity of flow
+
+The volumetric flow-rate ($Q$) has the units $m^3 \ s^{-1}$.
+
+We know that a common way of expressing velocity is meters-per-second.
+From the units above we can expect that to calculate velocity of flow we simply divide $Q$ by an area $A$:
+
+::: {.callout}
+Why can we "expect" this? Because to convert $m^3$ to $m$ (or $m^1$) we need to divide by $m^2$, when these values are divided the exponents subtract like so: $\frac{m^3}{m^2} = m^{3-2} = m^1 = m$.
+:::
+
+$$v = \frac{Q}{A}$$
+
+The area in this case is the cross-sectional area of flow.
+In food engineering calculations this is nearly always the area of a disc (because we are usually dealing with pipes).
+
+The velocity is often required in equations where the flow-rate cannot be used (you need to understand that they are different).
+For example, the Reynold's number used to define turbulence uses velocity not flow-rate.
+
+Velocity is a `vector` quantity, so to be more precise we could write $\overrightarrow{v}$.
+It also represents an `average` value, meaning that it represents the statistical average of a range of individual velocities.
+How this is normally represented is that a fluid moving through a pipe consists of `stream-lines`, each flowing in a specific direction.
+In `laminar` (non-turbulent) flow the maximum velocity is in the centre and the velocity at the edges is $0$.
+This means that liquids flows in a "curved" fashion, with the fastest streamlines in the centre.
+
+## Turbulence
+
+Turbulence represents phenomena associated with the chaotic motion of fluids.
+
+A high degree of turbulence is often desirable in many food operations, such as heating and mixing.
+Turbulence is calculated from a famous equation that returns the Re(ynold's) number:
+
+$$Re = \frac{v \rho D}{\mu}$$
+
+Note that viscosity is below the line, meaning that a lower degree of turbulence is often observed in viscous systems.
+
+For our purposes it might be sufficient to remember that turbulence is proportional to velocity (it increases when velocity increases):
+
+$$Re ∝ v$$
+
+and inversely proportional to viscosity (it decreases when viscosity increases):
+
+$$Re ∝ \frac{1}{\mu}$$
+
+When a liquid is pumped at a high velocity it is more likely to transition into chaotic motion, which can be preferable in specific situations:
+
+- Turbulence can decrease the tendency for particles to form deposits on equipment surfaces
+- Turbulence can increase the rate of heat transfer during thermal processing
+- Turbulence can promote the disintegration of particles
+
+This last point helps explain the operation of a homogeniser.
+

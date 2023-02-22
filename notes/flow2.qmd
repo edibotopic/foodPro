@@ -1,0 +1,119 @@
+---
+title: Flow II [draft]
+slide-format: revealjs
+css: ../styles.css
+execute:
+  echo: false
+search: false
+---
+---
+
+::: {.callout-warning}
+
+These notes will be updated as the lectures are delivered.
+
+:::
+
+## Velocity, Pipe Area and Pressure
+
+<div>
+```{=html}
+<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_12.html"></iframe>
+```
+</div>
+
+[📽️ Direct link to slides for this lecture](https://edibotopic.github.io/lecture-slides/FS2006_12.html)
+
+We all know intuitively that what flows into a system must flow out.
+If you pour some water into a tank and add two fish, you would expect to recover the same quantity of each when the tank is drained.
+
+This can be summarised in the following equation:
+
+$$Q_{in} = Q_{out}$$
+
+This is important but unremarkable.
+We also know, however, that:
+
+$$v = \frac{Q}{A}$$
+
+or:
+
+$$Q = v \cdot A$$
+
+Therefore:
+
+$$v_{in} \cdot A_{in} = v_{out} \cdot A_{out}$$
+
+If we re-arrange to solve for $v_{out}$ we get an odd result:
+
+$$v_{out} = \frac{v_{in} \cdot A_{in}}{A_{out}}$$
+
+It is perhaps more obvious when the formula is represented as:
+
+$$v_{out} = v_{in} \cdot \frac{A_{in}}{A_{out}}$$
+
+This means that the velocity in a pipe increases when the pipe narrows.
+A second important effect during this narrowing is that pressure decreases (a derivation for this is included below but is only for those who want a deeper understanding).
+
+::: {.callout-important}
+
+## Explanation for Pressure Drop with High Velocity
+
+The explanation for why pressure decreases when a pipe narrows is more complex.
+Bernoulli's equation is usually used to describe the balance of pressures between two regions of pipe:
+
+$$\frac{P_1}{\rho g} + \frac{v_1^2}{2g} + h_1 = \frac{P_2}{\rho g} + \frac{v_2^2}{2g} + h_2$$
+
+On each side, the term with $P$ can be taken to mean "pressure", $v$ velocity and $h$ height.
+In the systems discussed in the lecture there is no difference in height between the two regions.
+In addition, the velocity in the narrow region is very high relative to the wider region.
+For these reasons, we can remove the height terms (they are equal) and also the $v_1^2$ (a tiny value).
+
+$$\frac{P_1}{\rho g} = \frac{P_2}{\rho g} + \frac{v_2^2}{2g}$$
+
+To simplify we can bring the pressure term from the right to the left.
+As the pressure term from the right now subtracts from the left we can represent it as a pressure difference ($\Delta P$):
+
+$$\frac{\Delta P}{\rho g} =  \frac{v_2^2}{2g}$$
+
+To isolate the $v_2^2$ we can multiple by $2g$ on both sides, which has the effect of cancelling the $g$ on the left:
+
+$$\frac{2 \Delta P}{\rho} =  v_2^2$$
+
+To simplify further we can take the square root of both sides:
+
+$$v_2 = \sqrt{\frac{2 \Delta P}{\rho}}$$
+
+Note: this implies that as we increase velocity (i.e., due to a narrowing in pipe area) there is also an increase in pressure drop (due a loss of pressure in the narrow region).
+This has been experimentally determined to be correct.
+:::
+
+## Homogenisation
+
+A homogeniser is a piece of equipment that can be used to continuously reduce the size of solid particles or liquid droplets in a mixture.
+
+Its working principles is based on concepts encountered in previous sections (mainly *the influence of flow area on velocity and pressure*):
+
+1. The liquid being pumped into a homogeniser is forced through a narrow orifice (or nozzle)
+2. The decrease in flow area increases velocity and therefore turbulence
+3. The decrease in velocity causes a pressure drop, which can cause cavitation
+4. The chaotic motion, cavitation effects and high shear results in particle size reduction
+5. Homogenisers are often operated at slightly elevated temperature to reduce the influence of viscosity
+
+::: {.callout-note}
+
+## Cavitation
+
+At normal atmospheric pressure, when water is heated to 100 °C it boils.
+Boiling results in the formation of vapour (phase transition between liquid and gas) evidenced by the appearance of bubbles that form and collapse.
+
+A similar thing can happen when pressure drops while temperature is constant, which happens when liquid is accelerate to high velocities.
+The boiling point of a liquid decreases as pressure decreases, meaning that it can begin boiling at lower temperatures than normal.
+
+(We will see in the **concentration** section how reducing boiling point like this can be used to our advantage).
+
+When cavitation occurs in food processes (such as homogenisation) it leads to the formation of vapor bubbles in the liquid, which then collapse under the pressure of the surrounding liquid, releasing thermal energy that can contribute to particle size reduction.
+
+**If you want a colouful example to help understand this look up videos of the "pistol shrimp", a shrimp that attacks threats underwater with a high-speed motion that causes cavitation to occur, creating bubbles that implode and sometimes shatter the hard shells of unsuspecting creatures.**
+
+:::
