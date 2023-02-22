@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Food Process Design &amp; Optimisation - Pressure I</title>
+<title>Food Process Design &amp; Optimisation - Viscosity</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../notes/pressure2.html" rel="next">
-<link href="../notes/stokes-law.html" rel="prev">
+<link href="../notes/flow1.html" rel="next">
+<link href="../notes/pressure2.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Pressure I</h1>
+      <h1 class="quarto-secondary-nav-title">Viscosity</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -158,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/pressure1.html" class="sidebar-item-text sidebar-link active">Pressure I</a>
+  <a href="../notes/pressure1.html" class="sidebar-item-text sidebar-link">Pressure I</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -178,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/viscosity.html" class="sidebar-item-text sidebar-link">Viscosity</a>
+  <a href="../notes/viscosity.html" class="sidebar-item-text sidebar-link active">Viscosity</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -218,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Pressure I</h1>
+<h1 class="title d-none d-lg-block">Viscosity</h1>
 </div>
 
 
@@ -233,146 +233,152 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>There is a pressure drop across an object submerged in a fluid. Pressure is lowest at the top of the object and highest at the bottom. This pressure difference results in a buoyant force on the object.</p>
-<p>Pressure plays an important role throughout food processing. To understand pressure it is important to build up our understanding from simple to more complex cases.</p>
-<p>Several food processing operations require high pressures, including:</p>
-<ul>
-<li>Homogenisation: 30-300 bar</li>
-<li>Reverse Osmosis: 40-80 bar</li>
-<li>Ultrafiltration: 2-10 bar</li>
-</ul>
-<p>Other food processes require reduced pressures, such a vacuum evaporation, distillation and freeze-drying.</p>
-<div>
-<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_6.html"></iframe>
-</div>
-<p><a href="https://edibotopic.github.io/lecture-slides/FS2006_6.html">📽️ Direct link to slides for this lecture</a></p>
-<section id="pressure-in-static-fluids" class="level2">
-<h2 class="anchored" data-anchor-id="pressure-in-static-fluids">Pressure in Static Fluids</h2>
-<p>Pressure (<span class="math inline">\(P\)</span>) is defined as:</p>
-<p><span class="math display">\[P = \frac{F}{A}\]</span></p>
-<p>This gives <span class="math inline">\(P\)</span> the dimensions <span class="math inline">\([M LT^{-2} L^{-2}]\)</span> or — more simply — <span class="math inline">\([M L^{-1} T^{-2}]\)</span>.</p>
-<p>Consider a liquid in a container in which there is no submerged object. In such a system the pressure at a given point can be calculated as:</p>
-<p><span class="math display">\[P = \rho g h\]</span></p>
-<p>The <span class="math inline">\(\rho\)</span> corresponds to the density of the liquid and <span class="math inline">\(h\)</span> the height from the surface. As usual, <span class="math inline">\(g\)</span> is the acceleration due to gravity.</p>
+<hr>
+<p>Informally, viscosity is a measure of the resistance of a liquid to flow. It is a critical property in food that is important both in terms of processing behaviour and in consumer acceptance.</p>
+<p>Viscosity is defined as the ratio of the deformation stress applied to a liquid and the extent of the resultant deformation. More formally, it is the ratio of shear stress to shear rate. A viscous liquid requires more shear to cause deformation (or flow).</p>
+<p>For liquids to flow during food processing the viscosity of the liquid must be overcome. Pumps to create a sufficient pressure drop across a pipe to ensure consistent flow of material.</p>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Dimensions Check
+The Easiest Way to Understand Viscosity?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Does the second equation above yield the dimensions you expect?</p>
+<p>Perhaps the easiest way to measure and understand viscosity is the <strong>falling ball</strong>. Another advantage of thinking about viscosity this way is that it can be helpful to remember how emulsions and suspensions behave.</p>
+<hr>
+<p><a href="https://edibotopic.github.io/stokes-law/">Simulation of Stoke’s Law</a></p>
+<hr>
+<p>The velocity of a falling ball in a liquid is given by (note — <em>there must be a density difference</em>):</p>
+<p><span class="math display">\[v = \frac{D^2 \cdot (\rho_{ball} - \rho_{liquid}) \cdot g }{18 \cdot \mu}\]</span></p>
+<p>As viscosity (<span class="math inline">\(\mu\)</span>) is below the line, this means that its increase results in a decrease in velocity — more viscous liquids create more <em>drag</em> on objects. One of the easiest and cheapest ways to measure viscosity is to take a ball of known dimensions (diameter, density) and place it in a liquid of known density. The time it takes for the ball to sink a certain number of centimeters can then be used to calculate velocity, which means we know every value in the equation except for viscosity. Re-arranging the equation allows us to solve for this value:</p>
+<p><span class="math display">\[\mu = \frac{D^2 \cdot (\rho_{ball} - \rho_{liquid}) \cdot g }{18 \cdot v}\]</span></p>
+<p>Note: that diameter is squared in the equation is very important, and means that a very small diameter may be required to test a liquid of low viscosity.</p>
+<p>It also means that reducing the diameter of a particle or droplet (for example: by homogenisation) has a massive effect on its separation velocity.</p>
 </div>
 </div>
-<p>The equation should <em>ring true</em> intuitively if you have ever experienced the increase in pressure when diving deeper into water. Nonetheless, it is counter-intuitive to many that it is merely the height (and not the volume) of water that determines the pressure. In practice, this means that very narrow columns of fluid can generate enormous pressures if the column is high enough (the hydrostatic paradox).</p>
+<section id="derivation-of-viscosity-its-dimensions-and-units" class="level2">
+<h2 class="anchored" data-anchor-id="derivation-of-viscosity-its-dimensions-and-units">Derivation of Viscosity, its Dimensions and Units</h2>
+<p>Imagine a liquid medium positioned between two flat plates. The bottom plate is static while to the top plate can be moved. There is a distance <span class="math inline">\(z\)</span> between the plates and each has an area <span class="math inline">\(A\)</span> in contact with the liquid. A force <span class="math inline">\(F\)</span> is applied to the top plate to move it with a velocity <span class="math inline">\(v\)</span>.</p>
+<p>A “no-slip” condition is assumed, in which the layer of liquid in immediate contact with a plate has a velocity equivalent to that plate. This implies that the liquid layer in contact with the top plate has a velocity, which we can call <span class="math inline">\(v_{MAX}\)</span> and that in contact with the static plate has zero velocity or <span class="math inline">\(v_{MIN}\)</span>. Thus, there is a velocity gradient <span class="math inline">\(\Delta v\)</span> in the liquid from top to bottom.</p>
+<p>The equation describing this system is:</p>
+<p><span class="math display">\[F \propto \frac{\Delta v \cdot A}{\Delta z}\]</span></p>
+<p>To replace the proportional sign with an equality sign we add a proportionality constant <span class="math inline">\(\mu\)</span> — which represents viscosity:</p>
+<p><span class="math display">\[F = \mu \cdot \frac{\Delta v \cdot A}{\Delta z}\]</span></p>
+<p>To solve for viscosity and determine the units of viscosity first divide both sides of the equation by <span class="math inline">\(A\)</span>, :</p>
+<p><span class="math display">\[\frac{F}{A} = \mu \cdot \frac{\Delta v}{\Delta z}\]</span></p>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Intuition Behind the Pressure Equation
+Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Intuitively we have some notion that <span class="math inline">\(P\)</span> is associated with the weight <span class="math inline">\(W\)</span> of liquid. So we might expect (wrongly) that</p>
-<p><span class="math display">\[P = W\]</span></p>
-<p>However, this cannot be correct because weight is a force not a pressure. So we might write:</p>
-<p><span class="math display">\[F = W\]</span></p>
-<p>This is correct, but does not seem to tell us what we want to know, which is how to calculate <span class="math inline">\(P\)</span>. Now, to move forward we need to first consider that <span class="math inline">\(\frac{F}{A} = P\)</span>, so we know that we need to ultimately divide our <span class="math inline">\(F\)</span> value by an area (<span class="math inline">\(A\)</span>) value. Obviously, there is no <span class="math inline">\(A\)</span> value on the right-side of the equation, so we need to find one. To do this we consider that <span class="math inline">\(W = m.a\)</span> and in the liquid column the acceleration is due to gravity:</p>
-<p><span class="math display">\[F = m.g\]</span></p>
-<p>Next, we recognise that <span class="math inline">\(m = ρV\)</span>, so that:</p>
-<p><span class="math display">\[F = ρ.V.g\]</span></p>
-<p>Remember, we would like to find an <span class="math inline">\(A\)</span> value on the right side, so where is it? Well, consider that the dimensions of <span class="math inline">\(V\)</span> are <span class="math inline">\(L^3\)</span>, which can be the product of an area with dimensions <span class="math inline">\(L^2\)</span> and a length (<span class="math inline">\(l\)</span>) with dimensions <span class="math inline">\(L\)</span>. So we can re-write the equation as:</p>
-<p><span class="math display">\[F = ρ.A.l.g\]</span></p>
-<p>The <span class="math inline">\(A\)</span> value must refer to the cross-sectional area of the cylinder (i.e., a circle), while the <span class="math inline">\(l\)</span> value must refer to the height (<span class="math inline">\(h\)</span>) of liquid. The volume of a cylinder is the product of the cross-sectional area by its height. Now, we can replace <span class="math inline">\(l\)</span> by <span class="math inline">\(h\)</span> and divide both sides by <span class="math inline">\(A\)</span>:</p>
-<p><span class="math display">\[\frac{F}{A} = P = ρ.h.g\]</span></p>
+<p>The form of the equation above is often represented with <span class="math inline">\(\frac{F}{A}\)</span> replaced by <span class="math inline">\(\sigma\)</span> and <span class="math inline">\(\frac{v}{z}\)</span> by <span class="math inline">\(\dot{\gamma}\)</span>:</p>
+<p><span class="math display">\[\sigma = \mu \cdot \dot{\gamma}\]</span></p>
+<p>Remember that <span class="math inline">\(\mu\)</span> is a proportionality constant, which is a ratio between two terms; in this case the ratio between shear stress (<span class="math inline">\(\sigma\)</span>) and shear rate (<span class="math inline">\(\dot{\gamma}\)</span>):</p>
+<p><span class="math display">\[\mu = \frac{\sigma}{\dot{\gamma}}\]</span></p>
+<p>This is the simplest definition of viscosity, in words:</p>
+<blockquote class="blockquote">
+<p>Viscosity is the ratio between shear stress and shear rate.</p>
+</blockquote>
+<p>According to these equations a plot of shear stress against shear rate for a given liquid yields a straight line defined by a slope that is the viscosity.</p>
 </div>
 </div>
+<p>Now (leaving out the <span class="math inline">\(\Delta\)</span> signs for simplicity) multiply both sides by <span class="math inline">\(z\)</span>:</p>
+<p><span class="math display">\[\frac{F \cdot z}{A} = \mu\]</span></p>
+<p>Then divide both sides by <span class="math inline">\(v\)</span>:</p>
+<p><span class="math display">\[\frac{F \cdot z}{A \cdot v} = \mu\]</span></p>
+<p>To determine the dimensions (and units) of viscosity substitute in the dimensions of each term on the left:</p>
+<p><span class="math display">\[\frac{[M L T^{-2}] \cdot [L]}{[L^2] \cdot [L T^{-1}]} = \mu\]</span></p>
+<p>Now cancel the [M], [L] and [T] dimensions and you should get (<code>check this yourself!</code>):</p>
+<p><span class="math display">\[[M L^{-1} T^{-1}]\]</span></p>
+<p>This gives the units <span class="math inline">\(kg m^{-1} s^{-1}\)</span>.</p>
+<p>Note, however, that this is equivalent to the product of the dimensions of pressure and time:</p>
+<p><span class="math display">\[[M L^{-1} T^{-2}] \cdot [T]\]</span></p>
+<p><strong>This is why the units of <span class="math inline">\(Pa.s\)</span> make sense for viscosity</strong>.</p>
 </section>
-<section id="pressure-head" class="level2">
-<h2 class="anchored" data-anchor-id="pressure-head">Pressure Head</h2>
-<p>There is one simple way of re-arranging the equation for hydrostatic pressure that is important to note. If both sides of the equation are divided by the product of <span class="math inline">\(\rho\)</span> and <span class="math inline">\(g\)</span> then we get the following:</p>
-<p><span class="math display">\[h = \frac{P}{\rho g}\]</span></p>
-<p>This is known as the “pressure head” and tells us the height of a column of liquid that can be supported by a given pressure.</p>
-<div class="callout callout callout-style-simple no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>If atmospheric pressure is <span class="math inline">\(101325 \ kg \ m^{-1} \ s^{-2}\)</span>, <span class="math inline">\(g\)</span> is <span class="math inline">\(9.81 \ m \ s^{-2}\)</span> and the density of water is <span class="math inline">\(1000 \ kg \ m^{-3}\)</span>, estimate the height of a column of water that can be supported at atmospheric pressure.</p>
-<p>Assume that</p>
-<p><span class="math display">\[h = \frac{P}{\rho g}\]</span></p>
-<p>Plugging in values:</p>
-<p><span class="math display">\[h = \frac{101325}{1000 \cdot 9.81}\]</span></p>
-<p><span class="math inline">\(h = 10.3 \ m\)</span></p>
-<p>Thus, the tendency of a column of liquid of a specific height to be supported by liquid at a specific pressure allows height (or “pressure head”) to be used as an index of pressure. The greater the pressure the greater the height. This is the basis of traditional <em>barometers</em> used to measure pressure, where a more dense liquid (e.g., mercury) is used to ensure that the barometer does not need to be excessively large as an instrument (can you tell from the equation why this is so?).</p>
-</div>
-</div>
-</div>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>We will encounter pressure head again when looking at Bernoulli’s equation, so you may need to return to these notes.</p>
-</div>
-</div>
-</section>
-<section id="absolute-and-gauge-pressure" class="level2">
-<h2 class="anchored" data-anchor-id="absolute-and-gauge-pressure">Absolute and Gauge Pressure</h2>
-<p>In the tour of the processing facilities at UCC several pressure gauges were shown. These gauges were reading <span class="math inline">\(0 \ bar\)</span>, yet atmospheric pressure is approximately <span class="math inline">\(1 \ bar\)</span>. If the pressure was really zero then the processing facility would be in a vacuum.</p>
-<p>The simple reason for this is that these pressure gauges do not give a readout of <em>absolute</em> pressure. Instead, they provide what is known as <em>gauge</em> pressure.</p>
-<p>Gauge pressure is simply the pressure of the system <strong>minus</strong> the atmospheric pressure. Hence, if you want to convert a gauge pressure to absolute pressure you <strong>add</strong> the atmospheric pressure.</p>
-<p>For example, the (gauge) pressure at the bottom of a tank of liquid is given by <span class="math inline">\(P = \rho g h\)</span> but to calculate the absolute pressure (<span class="math inline">\(P_A\)</span>) we would use <span class="math inline">\(P_A = P_S + \rho g h\)</span>, where <span class="math inline">\(P_S\)</span> is the pressure acting on the surface of the liquid (atmospheric).</p>
-<p>It is important to note that this distinction does not matter when it comes to <strong>pressure drop</strong>. To make sense of this statement, please review the box below.</p>
+<section id="ideal-liquids-and-deviations-from-ideality" class="level2">
+<h2 class="anchored" data-anchor-id="ideal-liquids-and-deviations-from-ideality">Ideal Liquids and Deviations from Ideality</h2>
+<p>Viscosity can be considered the slope of a plot of shear stress against shear rate:</p>
+<p><span class="math display">\[\sigma = \mu \cdot \dot{\gamma}\]</span></p>
+<p>Equipment like viscometers and rheometers can be used to generate data that can be used to plot such curves. Many of these devices consist of a static bottom plate and a moving/rotating top plate (similar to the model described above) — this geometry is referred to as a “parallel plate”. A liquid can be sheared between the two plates and its response (shear rate) measured, allowing a plot to be constructed.</p>
+<p>The equations discussed above, however, apply to liquids for which a plot of shear rate against shear stress yields a linear curve (shear rate increases linearly with shear stress). Such liquids are referred to as “ideal” or “Newtonian”. Several liquids encountered in food processing are <em>approximately</em> Newtonian, including:</p>
+<ul>
+<li>Water</li>
+<li>Beer</li>
+<li>Wine</li>
+<li>Honey</li>
+<li>Oil</li>
+<li>Syrups</li>
+</ul>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Pressure drop
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Consider a pipe through which a liquid is flowing from a region of high pressure to a region of low pressure. The first gauge reads <span class="math inline">\(2.0 \ bar\)</span> and the second gauge reads <span class="math inline">\(1.5 \ bar\)</span>. The pressure drop is therefore <span class="math inline">\(2.0 - 1.5 = 0.5 \ bar\)</span>.</p>
-<p>Now consider the same calculation, but this time we convert any gauge pressure into an absolute pressure by adding <span class="math inline">\(1.0 \ bar\)</span>:</p>
-<p><span class="math display">\[(2.0 + 1.0) - (1.5 + 1.0) = 0.5 \ bar\]</span></p>
-<p>As you can see, when determining pressure drop (often what we are interested in) this distinction is unimportant.</p>
+<p>The name of Newton is invoked because Isaac Newton did significant early theoretical work on the viscosity of ideal physical systems.</p>
 </div>
 </div>
-</section>
-<section id="from-static-to-movement" class="level2">
-<h2 class="anchored" data-anchor-id="from-static-to-movement">From Static to Movement</h2>
-<p>Fluid statics concerns the state of fluids “at rest” (not moving); however, as we saw in the example of Stoke’s law, we usually use these static systems is simplified models that help us understand more complex (moving) systems. So, while pressure can be created in a static liquid, we need to consider how this pressure can ultimately impact motion.</p>
-<p>A tank containing a liquid will exert pressure on the walls of the tank. The pressure will be greatest the deeper we dive below the surface. Place a pressure gauge just below the surface and one just above the bottom and there will be a difference in pressure.</p>
-<p>Now imagine there is a hole at the bottom of the tank. The pressure of the water inside the tank is high; however, the pressure outside the hole is the atmospheric pressure. As the pressure at the bottom of the tank is greater than the atmospheric pressure there will be a pressure drop from inside to outside.</p>
-<p>This will also be true if we connect a pipe to the hole. The pressure at the start of the pipe is the pressure due to the depth of liquid (high), while the pressure at the end of the pipe is the pressure due to the atmosphere (low).</p>
-<p>As you might expect, liquid will flow through the pipe, with the rate of flow determined by the pressure drop. While not a “pump” in the classic sense, this is the simplest model of a pump we can think of. To get liquid to flow from one location to another we need a pressure drop. Here, the pressure drop is created due to the height of the liquid above an outlet.</p>
-<p>Several questions can be raised at this point:</p>
+<p>Several methods for measuring viscosity, including the <code>falling ball</code> and the <code>u-tube</code> assume that the liquid is Newtonian. However, there are also many liquids that are <strong>non-Newtonian</strong>. To understand what this means, imagine you are measuring the viscosity of two different liquids — oil and yogurt. You do not have a viscometer so you are just going to use a spoon, stirring each liquid with different degrees of intensity. What you will find is that the viscosity of the oil stays the same regardless of how intensely you stir, while the viscosity of the yogurt tends to decrease the more intensely you stir. The viscosity of the oil is independent of the shear stress, while for yogurt the viscosity decreases with increasing shear stress. Therefore, the yogurt is non-Newtonian and — more specifically — <strong>shear-thinning</strong>. Another example of a shear-thinning liquid is ketchup, which often must be shaken (sheared) before being squeezed through an orifice. The opposite type of liquid is also encountered, and is known as <strong>shear-thickening</strong>, an example being solutions of corn starch.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Non-Newtonian Liquids
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li>To what extent does pressure drop determine flow-rate?</li>
-<li>How does viscosity influence flow-rate?</li>
-<li>Which pressure gauges are avaiable and how should they be selected?</li>
+<li><p>Shear-thinning: viscosity decreases with increasing shear. A plot of shear rate against shear rate will shown an initial linear region that then curves upwards at higher stresses.</p></li>
+<li><p>Shear-thickening: viscosity increases with increasing shear. A plot of shear rate against shear rate will shown an initial linear region that then curves downwards at higher stresses.</p></li>
 </ul>
-<p>To answer some of these questions we will again need to shift slightly between statics and dynamics before focusing on dynamics in a dedicated way.</p>
+<p>Measuring these liquids using techniques like the <code>faling ball</code> is inappropriate. Variable-sheer devices like rheometers are instead required.</p>
+</div>
+</div>
 </section>
-<section id="question" class="level2">
-<h2 class="anchored" data-anchor-id="question">Question</h2>
-<p>Write the equation for hydrostatic pressure.</p>
-<p>Show that it yields the correct dimensions for pressure.</p>
-<p>Re-arrange the equation into a form for measuring “pressure head”.</p>
-<p>Explain why the latter form of the equation is useful.</p>
+<section id="general-facts-about-viscosity" class="level2">
+<h2 class="anchored" data-anchor-id="general-facts-about-viscosity">General Facts About Viscosity</h2>
+<p>The science of viscosity is complex and it is not the purpose of this module to explain it in detail. For now, consider some <em>general</em> facts about viscosity in a food context, that apply in many (if not all) cases:</p>
+<ul>
+<li>Viscosity tends to decrease with increasing temperature unless some transformation occurs (i.e., if a protein solution is heated to the point that proteins denature or starch gelatinises then viscosity is likely to increase)</li>
+<li>Viscosity opposes motion during food processing, including providing resistance against flow and resistance against turbulence</li>
+<li>Many food processing operations occur at a temperature sufficiently high to reduce viscosity without inducing physico-chemical transformations, including pumping, mixing, filtration and centrifugation</li>
+<li>Many (not all) liquids in food processing tend to be shear-thinning (i.e., products like yogurt and ketchup tend to becomes more liquid-like the more stress that is applied)</li>
+<li>Some liquids are “ideal” meaning there is a linear relationship between stress and deformation (e.g., liquids like oil, water and syrups generally deform to the same extent no matter how much force is applied)</li>
+</ul>
+</section>
+<section id="viscosity-as-momentum-flux" class="level2">
+<h2 class="anchored" data-anchor-id="viscosity-as-momentum-flux">Viscosity as Momentum Flux</h2>
+<p>Up to this point we have a limited concept of what viscosity <em>is</em>. Dimensional analysis can help us develop an intuition.</p>
+<p>Earlier we derived the following equation based on the two-plate system:</p>
+<p><span class="math display">\[\frac{F}{A} = \mu \cdot \frac{\Delta v}{\Delta z}\]</span></p>
+<p>This is sometimes written with a minus sign to represent that the velocity is decreasing as we move from the top plate to the bottom plate:</p>
+<p><span class="math display">\[\frac{F}{A} = -\mu \cdot \frac{\Delta v}{\Delta z}\]</span></p>
+<p>This also yields an equation that is similar to a variety of other <em>transfer equations</em> used by engineers. For example, look at the resemblance between this equation and that describing the rate of heat transfer (<span class="math inline">\(q\)</span>) through a body (the flow of heat from a warm to a cold region):</p>
+<p><span class="math display">\[\frac{q}{A} = -k \cdot \frac{\Delta T}{\Delta z}\]</span></p>
+<p>The fraction on the far left of the viscosity transfer equation represents shear stress and the fraction on the right is shear rate. Note that shear stress has the same formula as pressure; however, it is distinct from pressure. In physics you encounter the concept of scalars and vectors; the first has a magnitude but no direction while the former has a magnitude and a direction. We have conveniently been ignoring this distinction in order to avoid introducing unecessary complexity; for example, when discussing Stoke’s Law the velocity (a vector) either refers to a movement up (floating) or a movement down (sinking). On the other hand, when discussing pressure there is no associated direction; technically speaking, pressure is isotropic, meaning that pressure applied at a point is equal in all directions (the directions effectively cancel out). Shear stress is more like a vector than a scalar (to be precise it is a second-order tensor, but this is beyond our scope), in that it can be thought of as having an associated direction; for our purposes, the two directions can either be perpendicular to a surface (normal stress) or parallel to a surface (shear stress). The application of a shear stress to a liquid results in the liquid having a shear rate (it deforms in the direction of the shear stress).</p>
+<p>The dimensions of shear stress are equivalent to pressure: <span class="math inline">\([MLT^{-2}][L^{-2}]\)</span>.</p>
+<p>These dimensions are equivalent to the following: <span class="math inline">\([MLT^{-1}][T^{-1}][L^{-2}]\)</span>.</p>
+<p>From left to right, this reads “<strong>momentum</strong> per <strong>time</strong> per <strong>area</strong>”, also known as “momentum flux”.</p>
+<p>Note that momentum <span class="math inline">\(p\)</span> is defined usually as <span class="math inline">\(p = m \cdot v\)</span> (mass times velocity).</p>
+<p>The physical meaning of momentum flux in the context of viscosity can be explained as follows:</p>
+<blockquote class="blockquote">
+<p>The top layer of liquid has the greatest velocity and therefore the greatest momentum. The lowest layer of the liquid has the lowest momentum. As the liquid is sheared from left to right momentum is transferred top-down. Layers with higher momentum lose momentum to layers with lower momentum. This results in a gradual loss of momentum between the top and bottom plate.</p>
+</blockquote>
+<p>Therefore there is shear being applied horizontally at the surface of the liquid and momentum transferring downwards.</p>
 
 
 </section>
@@ -628,13 +634,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../notes/stokes-law.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Stoke’s Law</span>
+      <a href="../notes/pressure2.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Pressure II</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../notes/pressure2.html" class="pagination-link">
-        <span class="nav-page-text">Pressure II</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../notes/flow1.html" class="pagination-link">
+        <span class="nav-page-text">Flow I [draft]</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

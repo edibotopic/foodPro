@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Food Process Design &amp; Optimisation - Pressure I</title>
+<title>Food Process Design &amp; Optimisation - Flow II [draft]</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../notes/pressure2.html" rel="next">
-<link href="../notes/stokes-law.html" rel="prev">
+<link href="../notes/slides.html" rel="next">
+<link href="../notes/flow1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Pressure I</h1>
+      <h1 class="quarto-secondary-nav-title">Flow II [draft]</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -158,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/pressure1.html" class="sidebar-item-text sidebar-link active">Pressure I</a>
+  <a href="../notes/pressure1.html" class="sidebar-item-text sidebar-link">Pressure I</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -188,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/flow2.html" class="sidebar-item-text sidebar-link">Flow II [draft]</a>
+  <a href="../notes/flow2.html" class="sidebar-item-text sidebar-link active">Flow II [draft]</a>
   </div>
 </li>
       </ul>
@@ -218,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Pressure I</h1>
+<h1 class="title d-none d-lg-block">Flow II [draft]</h1>
 </div>
 
 
@@ -233,146 +233,92 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>There is a pressure drop across an object submerged in a fluid. Pressure is lowest at the top of the object and highest at the bottom. This pressure difference results in a buoyant force on the object.</p>
-<p>Pressure plays an important role throughout food processing. To understand pressure it is important to build up our understanding from simple to more complex cases.</p>
-<p>Several food processing operations require high pressures, including:</p>
-<ul>
-<li>Homogenisation: 30-300 bar</li>
-<li>Reverse Osmosis: 40-80 bar</li>
-<li>Ultrafiltration: 2-10 bar</li>
-</ul>
-<p>Other food processes require reduced pressures, such a vacuum evaporation, distillation and freeze-drying.</p>
-<div>
-<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_6.html"></iframe>
-</div>
-<p><a href="https://edibotopic.github.io/lecture-slides/FS2006_6.html">📽️ Direct link to slides for this lecture</a></p>
-<section id="pressure-in-static-fluids" class="level2">
-<h2 class="anchored" data-anchor-id="pressure-in-static-fluids">Pressure in Static Fluids</h2>
-<p>Pressure (<span class="math inline">\(P\)</span>) is defined as:</p>
-<p><span class="math display">\[P = \frac{F}{A}\]</span></p>
-<p>This gives <span class="math inline">\(P\)</span> the dimensions <span class="math inline">\([M LT^{-2} L^{-2}]\)</span> or — more simply — <span class="math inline">\([M L^{-1} T^{-2}]\)</span>.</p>
-<p>Consider a liquid in a container in which there is no submerged object. In such a system the pressure at a given point can be calculated as:</p>
-<p><span class="math display">\[P = \rho g h\]</span></p>
-<p>The <span class="math inline">\(\rho\)</span> corresponds to the density of the liquid and <span class="math inline">\(h\)</span> the height from the surface. As usual, <span class="math inline">\(g\)</span> is the acceleration due to gravity.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<hr>
+<div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Dimensions Check
+Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Does the second equation above yield the dimensions you expect?</p>
+<p>These notes will be updated as the lectures are delivered.</p>
 </div>
 </div>
-<p>The equation should <em>ring true</em> intuitively if you have ever experienced the increase in pressure when diving deeper into water. Nonetheless, it is counter-intuitive to many that it is merely the height (and not the volume) of water that determines the pressure. In practice, this means that very narrow columns of fluid can generate enormous pressures if the column is high enough (the hydrostatic paradox).</p>
+<section id="velocity-pipe-area-and-pressure" class="level2">
+<h2 class="anchored" data-anchor-id="velocity-pipe-area-and-pressure">Velocity, Pipe Area and Pressure</h2>
+<div>
+<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_12.html"></iframe>
+</div>
+<p><a href="https://edibotopic.github.io/lecture-slides/FS2006_12.html">📽️ Direct link to slides for this lecture</a></p>
+<p>We all know intuitively that what flows into a system must flow out. If you pour some water into a tank and add two fish, you would expect to recover the same quantity of each when the tank is drained.</p>
+<p>This can be summarised in the following equation:</p>
+<p><span class="math display">\[Q_{in} = Q_{out}\]</span></p>
+<p>This is important but unremarkable. We also know, however, that:</p>
+<p><span class="math display">\[v = \frac{Q}{A}\]</span></p>
+<p>or:</p>
+<p><span class="math display">\[Q = v \cdot A\]</span></p>
+<p>Therefore:</p>
+<p><span class="math display">\[v_{in} \cdot A_{in} = v_{out} \cdot A_{out}\]</span></p>
+<p>If we re-arrange to solve for <span class="math inline">\(v_{out}\)</span> we get an odd result:</p>
+<p><span class="math display">\[v_{out} = \frac{v_{in} \cdot A_{in}}{A_{out}}\]</span></p>
+<p>It is perhaps more obvious when the formula is represented as:</p>
+<p><span class="math display">\[v_{out} = v_{in} \cdot \frac{A_{in}}{A_{out}}\]</span></p>
+<p>This means that the velocity in a pipe increases when the pipe narrows. A second important effect during this narrowing is that pressure decreases (a derivation for this is included below but is only for those who want a deeper understanding).</p>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Intuition Behind the Pressure Equation
+Explanation for Pressure Drop with High Velocity
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Intuitively we have some notion that <span class="math inline">\(P\)</span> is associated with the weight <span class="math inline">\(W\)</span> of liquid. So we might expect (wrongly) that</p>
-<p><span class="math display">\[P = W\]</span></p>
-<p>However, this cannot be correct because weight is a force not a pressure. So we might write:</p>
-<p><span class="math display">\[F = W\]</span></p>
-<p>This is correct, but does not seem to tell us what we want to know, which is how to calculate <span class="math inline">\(P\)</span>. Now, to move forward we need to first consider that <span class="math inline">\(\frac{F}{A} = P\)</span>, so we know that we need to ultimately divide our <span class="math inline">\(F\)</span> value by an area (<span class="math inline">\(A\)</span>) value. Obviously, there is no <span class="math inline">\(A\)</span> value on the right-side of the equation, so we need to find one. To do this we consider that <span class="math inline">\(W = m.a\)</span> and in the liquid column the acceleration is due to gravity:</p>
-<p><span class="math display">\[F = m.g\]</span></p>
-<p>Next, we recognise that <span class="math inline">\(m = ρV\)</span>, so that:</p>
-<p><span class="math display">\[F = ρ.V.g\]</span></p>
-<p>Remember, we would like to find an <span class="math inline">\(A\)</span> value on the right side, so where is it? Well, consider that the dimensions of <span class="math inline">\(V\)</span> are <span class="math inline">\(L^3\)</span>, which can be the product of an area with dimensions <span class="math inline">\(L^2\)</span> and a length (<span class="math inline">\(l\)</span>) with dimensions <span class="math inline">\(L\)</span>. So we can re-write the equation as:</p>
-<p><span class="math display">\[F = ρ.A.l.g\]</span></p>
-<p>The <span class="math inline">\(A\)</span> value must refer to the cross-sectional area of the cylinder (i.e., a circle), while the <span class="math inline">\(l\)</span> value must refer to the height (<span class="math inline">\(h\)</span>) of liquid. The volume of a cylinder is the product of the cross-sectional area by its height. Now, we can replace <span class="math inline">\(l\)</span> by <span class="math inline">\(h\)</span> and divide both sides by <span class="math inline">\(A\)</span>:</p>
-<p><span class="math display">\[\frac{F}{A} = P = ρ.h.g\]</span></p>
+<p>The explanation for why pressure decreases when a pipe narrows is more complex. Bernoulli’s equation is usually used to describe the balance of pressures between two regions of pipe:</p>
+<p><span class="math display">\[\frac{P_1}{\rho g} + \frac{v_1^2}{2g} + h_1 = \frac{P_2}{\rho g} + \frac{v_2^2}{2g} + h_2\]</span></p>
+<p>On each side, the term with <span class="math inline">\(P\)</span> can be taken to mean “pressure”, <span class="math inline">\(v\)</span> velocity and <span class="math inline">\(h\)</span> height. In the systems discussed in the lecture there is no difference in height between the two regions. In addition, the velocity in the narrow region is very high relative to the wider region. For these reasons, we can remove the height terms (they are equal) and also the <span class="math inline">\(v_1^2\)</span> (a tiny value).</p>
+<p><span class="math display">\[\frac{P_1}{\rho g} = \frac{P_2}{\rho g} + \frac{v_2^2}{2g}\]</span></p>
+<p>To simplify we can bring the pressure term from the right to the left. As the pressure term from the right now subtracts from the left we can represent it as a pressure difference (<span class="math inline">\(\Delta P\)</span>):</p>
+<p><span class="math display">\[\frac{\Delta P}{\rho g} =  \frac{v_2^2}{2g}\]</span></p>
+<p>To isolate the <span class="math inline">\(v_2^2\)</span> we can multiple by <span class="math inline">\(2g\)</span> on both sides, which has the effect of cancelling the <span class="math inline">\(g\)</span> on the left:</p>
+<p><span class="math display">\[\frac{2 \Delta P}{\rho} =  v_2^2\]</span></p>
+<p>To simplify further we can take the square root of both sides:</p>
+<p><span class="math display">\[v_2 = \sqrt{\frac{2 \Delta P}{\rho}}\]</span></p>
+<p>Note: this implies that as we increase velocity (i.e., due to a narrowing in pipe area) there is also an increase in pressure drop (due a loss of pressure in the narrow region). This has been experimentally determined to be correct.</p>
 </div>
 </div>
 </section>
-<section id="pressure-head" class="level2">
-<h2 class="anchored" data-anchor-id="pressure-head">Pressure Head</h2>
-<p>There is one simple way of re-arranging the equation for hydrostatic pressure that is important to note. If both sides of the equation are divided by the product of <span class="math inline">\(\rho\)</span> and <span class="math inline">\(g\)</span> then we get the following:</p>
-<p><span class="math display">\[h = \frac{P}{\rho g}\]</span></p>
-<p>This is known as the “pressure head” and tells us the height of a column of liquid that can be supported by a given pressure.</p>
-<div class="callout callout callout-style-simple no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>If atmospheric pressure is <span class="math inline">\(101325 \ kg \ m^{-1} \ s^{-2}\)</span>, <span class="math inline">\(g\)</span> is <span class="math inline">\(9.81 \ m \ s^{-2}\)</span> and the density of water is <span class="math inline">\(1000 \ kg \ m^{-3}\)</span>, estimate the height of a column of water that can be supported at atmospheric pressure.</p>
-<p>Assume that</p>
-<p><span class="math display">\[h = \frac{P}{\rho g}\]</span></p>
-<p>Plugging in values:</p>
-<p><span class="math display">\[h = \frac{101325}{1000 \cdot 9.81}\]</span></p>
-<p><span class="math inline">\(h = 10.3 \ m\)</span></p>
-<p>Thus, the tendency of a column of liquid of a specific height to be supported by liquid at a specific pressure allows height (or “pressure head”) to be used as an index of pressure. The greater the pressure the greater the height. This is the basis of traditional <em>barometers</em> used to measure pressure, where a more dense liquid (e.g., mercury) is used to ensure that the barometer does not need to be excessively large as an instrument (can you tell from the equation why this is so?).</p>
-</div>
-</div>
-</div>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>We will encounter pressure head again when looking at Bernoulli’s equation, so you may need to return to these notes.</p>
-</div>
-</div>
-</section>
-<section id="absolute-and-gauge-pressure" class="level2">
-<h2 class="anchored" data-anchor-id="absolute-and-gauge-pressure">Absolute and Gauge Pressure</h2>
-<p>In the tour of the processing facilities at UCC several pressure gauges were shown. These gauges were reading <span class="math inline">\(0 \ bar\)</span>, yet atmospheric pressure is approximately <span class="math inline">\(1 \ bar\)</span>. If the pressure was really zero then the processing facility would be in a vacuum.</p>
-<p>The simple reason for this is that these pressure gauges do not give a readout of <em>absolute</em> pressure. Instead, they provide what is known as <em>gauge</em> pressure.</p>
-<p>Gauge pressure is simply the pressure of the system <strong>minus</strong> the atmospheric pressure. Hence, if you want to convert a gauge pressure to absolute pressure you <strong>add</strong> the atmospheric pressure.</p>
-<p>For example, the (gauge) pressure at the bottom of a tank of liquid is given by <span class="math inline">\(P = \rho g h\)</span> but to calculate the absolute pressure (<span class="math inline">\(P_A\)</span>) we would use <span class="math inline">\(P_A = P_S + \rho g h\)</span>, where <span class="math inline">\(P_S\)</span> is the pressure acting on the surface of the liquid (atmospheric).</p>
-<p>It is important to note that this distinction does not matter when it comes to <strong>pressure drop</strong>. To make sense of this statement, please review the box below.</p>
+<section id="homogenisation" class="level2">
+<h2 class="anchored" data-anchor-id="homogenisation">Homogenisation</h2>
+<p>A homogeniser is a piece of equipment that can be used to continuously reduce the size of solid particles or liquid droplets in a mixture.</p>
+<p>Its working principles is based on concepts encountered in previous sections (mainly <em>the influence of flow area on velocity and pressure</em>):</p>
+<ol type="1">
+<li>The liquid being pumped into a homogeniser is forced through a narrow orifice (or nozzle)</li>
+<li>The decrease in flow area increases velocity and therefore turbulence</li>
+<li>The decrease in velocity causes a pressure drop, which can cause cavitation</li>
+<li>The chaotic motion, cavitation effects and high shear results in particle size reduction</li>
+<li>Homogenisers are often operated at slightly elevated temperature to reduce the influence of viscosity</li>
+</ol>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Pressure drop
+Cavitation
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Consider a pipe through which a liquid is flowing from a region of high pressure to a region of low pressure. The first gauge reads <span class="math inline">\(2.0 \ bar\)</span> and the second gauge reads <span class="math inline">\(1.5 \ bar\)</span>. The pressure drop is therefore <span class="math inline">\(2.0 - 1.5 = 0.5 \ bar\)</span>.</p>
-<p>Now consider the same calculation, but this time we convert any gauge pressure into an absolute pressure by adding <span class="math inline">\(1.0 \ bar\)</span>:</p>
-<p><span class="math display">\[(2.0 + 1.0) - (1.5 + 1.0) = 0.5 \ bar\]</span></p>
-<p>As you can see, when determining pressure drop (often what we are interested in) this distinction is unimportant.</p>
+<p>At normal atmospheric pressure, when water is heated to 100 °C it boils. Boiling results in the formation of vapour (phase transition between liquid and gas) evidenced by the appearance of bubbles that form and collapse.</p>
+<p>A similar thing can happen when pressure drops while temperature is constant, which happens when liquid is accelerate to high velocities. The boiling point of a liquid decreases as pressure decreases, meaning that it can begin boiling at lower temperatures than normal.</p>
+<p>(We will see in the <strong>concentration</strong> section how reducing boiling point like this can be used to our advantage).</p>
+<p>When cavitation occurs in food processes (such as homogenisation) it leads to the formation of vapor bubbles in the liquid, which then collapse under the pressure of the surrounding liquid, releasing thermal energy that can contribute to particle size reduction.</p>
+<p><strong>If you want a colouful example to help understand this look up videos of the “pistol shrimp”, a shrimp that attacks threats underwater with a high-speed motion that causes cavitation to occur, creating bubbles that implode and sometimes shatter the hard shells of unsuspecting creatures.</strong></p>
 </div>
 </div>
-</section>
-<section id="from-static-to-movement" class="level2">
-<h2 class="anchored" data-anchor-id="from-static-to-movement">From Static to Movement</h2>
-<p>Fluid statics concerns the state of fluids “at rest” (not moving); however, as we saw in the example of Stoke’s law, we usually use these static systems is simplified models that help us understand more complex (moving) systems. So, while pressure can be created in a static liquid, we need to consider how this pressure can ultimately impact motion.</p>
-<p>A tank containing a liquid will exert pressure on the walls of the tank. The pressure will be greatest the deeper we dive below the surface. Place a pressure gauge just below the surface and one just above the bottom and there will be a difference in pressure.</p>
-<p>Now imagine there is a hole at the bottom of the tank. The pressure of the water inside the tank is high; however, the pressure outside the hole is the atmospheric pressure. As the pressure at the bottom of the tank is greater than the atmospheric pressure there will be a pressure drop from inside to outside.</p>
-<p>This will also be true if we connect a pipe to the hole. The pressure at the start of the pipe is the pressure due to the depth of liquid (high), while the pressure at the end of the pipe is the pressure due to the atmosphere (low).</p>
-<p>As you might expect, liquid will flow through the pipe, with the rate of flow determined by the pressure drop. While not a “pump” in the classic sense, this is the simplest model of a pump we can think of. To get liquid to flow from one location to another we need a pressure drop. Here, the pressure drop is created due to the height of the liquid above an outlet.</p>
-<p>Several questions can be raised at this point:</p>
-<ul>
-<li>To what extent does pressure drop determine flow-rate?</li>
-<li>How does viscosity influence flow-rate?</li>
-<li>Which pressure gauges are avaiable and how should they be selected?</li>
-</ul>
-<p>To answer some of these questions we will again need to shift slightly between statics and dynamics before focusing on dynamics in a dedicated way.</p>
-</section>
-<section id="question" class="level2">
-<h2 class="anchored" data-anchor-id="question">Question</h2>
-<p>Write the equation for hydrostatic pressure.</p>
-<p>Show that it yields the correct dimensions for pressure.</p>
-<p>Re-arrange the equation into a form for measuring “pressure head”.</p>
-<p>Explain why the latter form of the equation is useful.</p>
 
 
 </section>
@@ -628,13 +574,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../notes/stokes-law.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Stoke’s Law</span>
+      <a href="../notes/flow1.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Flow I [draft]</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../notes/pressure2.html" class="pagination-link">
-        <span class="nav-page-text">Pressure II</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../notes/slides.html" class="pagination-link">
+        <span class="nav-page-text">Slides</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

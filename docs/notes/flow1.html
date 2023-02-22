@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Food Process Design &amp; Optimisation - Flow</title>
+<title>Food Process Design &amp; Optimisation - Flow I [draft]</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../notes/flow2.html" rel="next">
+<link href="../notes/viscosity.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -72,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Flow</h1>
+      <h1 class="quarto-secondary-nav-title">Flow I [draft]</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -168,12 +170,37 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Appendix</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Fluid Dynamics</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/viscosity.html" class="sidebar-item-text sidebar-link">Viscosity</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/flow1.html" class="sidebar-item-text sidebar-link active">Flow I [draft]</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/flow2.html" class="sidebar-item-text sidebar-link">Flow II [draft]</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Appendix</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../notes/slides.html" class="sidebar-item-text sidebar-link">Slides</a>
@@ -191,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Flow</h1>
+<h1 class="title d-none d-lg-block">Flow I [draft]</h1>
 </div>
 
 
@@ -217,15 +244,19 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>These notes are written to accompany the lectures, not to replace them.</p>
+<p>These notes will be updated as the lectures are delivered.</p>
 </div>
 </div>
 <section id="flow" class="level1">
 <h1>Flow</h1>
 <p>Processes consist of a series of operations, each with an input and output. Materials flow between operations, and in modern food factories this flow is often continuous. A high rate of flow is often desired because it ensures a process is efficient (ratio of value flow out to value flow in). Changes in flow-rate — especially decreases — often indicate a problem, such as equipment blockage or material supply issues. The flow of food liquids is complex and involves an interplay between equipment properties (pipe geometry), food characteristics (viscosity) and flow behaviour (turbulence). Carefully controlling these factors can allow effective operations like homogenisation to be designed.</p>
+<div>
+<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_10.html"></iframe>
+</div>
+<p><a href="https://edibotopic.github.io/lecture-slides/FS2006_10.html">📽️ Direct link to slides for this lecture</a></p>
 <section id="quantities" class="level2">
 <h2 class="anchored" data-anchor-id="quantities">Quantities</h2>
-<p>There some quantities that are used to define flow that are important to remember. Please review the equations outlined below and try to understand them. The mathematics and physics knowledge required is not advanced (where it is this is indicated).</p>
+<p>There some quantities that are used to define flow that are important to remember. Please review the equations outlined below and try to understand them. The mathematics and physics knowledge required is not advanced.</p>
 <section id="volumetric-flow-rate" class="level3">
 <h3 class="anchored" data-anchor-id="volumetric-flow-rate">Volumetric Flow-rate</h3>
 <p>Flow-rate for liquids is usually given the symbol <span class="math inline">\(Q\)</span> and is defined as:</p>
@@ -243,7 +274,7 @@ Note
 <div class="callout-body-container callout-body">
 <p>Writing <span class="math inline">\(L \ h^{-1}\)</span> is equivalent to <span class="math inline">\(L/h\)</span>.</p>
 <p>Similarly, <span class="math inline">\(m \ s^{-2}\)</span> — the units of acceleration — can also be written <span class="math inline">\(m/s^{2}\)</span>.</p>
-<p>Do not let the exponents and negative numbers confuse youa and rewrite them if it helps.</p>
+<p>Do not let the exponents and negative numbers confuse you and rewrite them if it helps.</p>
 </div>
 </div>
 <p>A common method of measuring flow-rate in a lab is to periodically measure the volume collected over a certain period of time. For example, if 300 mL is collected from a pipe in 30 seconds we could convert this to a flow-rate by first converting mL → L:</p>
@@ -272,96 +303,9 @@ Note
 <p>Velocity is a <code>vector</code> quantity, so to be more precise we could write <span class="math inline">\(\overrightarrow{v}\)</span>. It also represents an <code>average</code> value, meaning that it represents the statistical average of a range of individual velocities. How this is normally represented is that a fluid moving through a pipe consists of <code>stream-lines</code>, each flowing in a specific direction. In <code>laminar</code> (non-turbulent) flow the maximum velocity is in the centre and the velocity at the edges is <span class="math inline">\(0\)</span>. This means that liquids flows in a “curved” fashion, with the fastest streamlines in the centre.</p>
 </section>
 </section>
-<section id="velocity-pipe-area-and-pressure" class="level2">
-<h2 class="anchored" data-anchor-id="velocity-pipe-area-and-pressure">Velocity, Pipe Area and Pressure</h2>
-<p>We all know intuitively that what flows into a system must flow out. If you pour some water into a tank and add two fish, you would expect to recover the same quantity of each when the tank is drained.</p>
-<p>This can be summarised in the following equation:</p>
-<p><span class="math display">\[Q_{in} = Q_{out}\]</span></p>
-<p>This is important but unremarkable. We also know, however, that:</p>
-<p><span class="math display">\[v = \frac{Q}{A}\]</span></p>
-<p>or:</p>
-<p><span class="math display">\[Q = v \cdot A\]</span></p>
-<p>Therefore:</p>
-<p><span class="math display">\[v_{in} \cdot A_{in} = v_{out} \cdot A_{out}\]</span></p>
-<p>If we re-arrange to solve for <span class="math inline">\(v_{out}\)</span> we get an odd result:</p>
-<p><span class="math display">\[v_{out} = \frac{v_{in} \cdot A_{in}}{A_{out}}\]</span></p>
-<p>It is perhaps more obvious when the formula is represented as:</p>
-<p><span class="math display">\[v_{out} = v_{in} \cdot \frac{A_{in}}{A_{out}}\]</span></p>
-<p>This means that the velocity in a pipe increases when the pipe narrows. A second important effect during this narrowing is that pressure decreases (a derivation for this is included below but is only for those who want a deeper understanding).</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>These two effects will later be used to explain how a homogeniser works.</p>
-<p>So take a note and don’t forget to make the connection.</p>
-</div>
-</div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Explanation for Pressure Drop with High Velocity (advanced topic)
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The explanation for why pressure decreases when a pipe narrows is more complex. Bernoulli’s equation is usually used to describe the balance of pressures between two regions of pipe:</p>
-<p><span class="math display">\[\frac{P_1}{\rho g} + \frac{v_1^2}{2g} + h_1 = \frac{P_2}{\rho g} + \frac{v_2^2}{2g} + h_2\]</span></p>
-<p>On each side, the term with <span class="math inline">\(P\)</span> can be taken to mean “pressure”, <span class="math inline">\(v\)</span> velocity and <span class="math inline">\(h\)</span> height. In the systems discussed in the lecture there is no difference in height between the two regions. In addition, the velocity in the narrow region is very high relative to the wider region. For these reasons, we can remove the height terms (they are equal) and also the <span class="math inline">\(v_1^2\)</span> (a tiny value).</p>
-<p><span class="math display">\[\frac{P_1}{\rho g} = \frac{P_2}{\rho g} + \frac{v_2^2}{2g}\]</span></p>
-<p>To simplify we can bring the pressure term from the right to the left. As the pressure term from the right now subtracts from the left we can represent it as a pressure difference (<span class="math inline">\(\Delta P\)</span>):</p>
-<p><span class="math display">\[\frac{\Delta P}{\rho g} =  \frac{v_2^2}{2g}\]</span></p>
-<p>To isolate the <span class="math inline">\(v_2^2\)</span> we can multiple by <span class="math inline">\(2g\)</span> on both sides, which has the effect of cancelling the <span class="math inline">\(g\)</span> on the left:</p>
-<p><span class="math display">\[\frac{2 \Delta P}{\rho} =  v_2^2\]</span></p>
-<p>To simplify further we can take the square root of both sides:</p>
-<p><span class="math display">\[v_2 = \sqrt{\frac{2 \Delta P}{\rho}}\]</span></p>
-<p>Note: this implies that as we increase velocity (i.e., due to a narrowing in pipe area) there is also an increase in pressure drop (due a loss of pressure in the narrow region). This has been experimentally determined to be correct.</p>
-</div>
-</div>
-</section>
-<section id="viscosity" class="level2">
-<h2 class="anchored" data-anchor-id="viscosity">Viscosity</h2>
-<p>Informally, viscosity is a measure of the resistance of a liquid to flow. It is a critical property in food that is important both in processing behaviour and in consumer acceptance.</p>
-<p>Viscosity is defined as the ratio of the deformation stress applied to a liquid and the extent of the resultant deformation. More formally, it is the ratio of shear stress to shear rate. A viscous liquid requires more shear to cause deformation or flow.</p>
-<p>For liquids to flow during food processing the viscosity of the liquid and the friction between the liquid and the equipment must be overcome. Liquids must be pressured using pumps to create a sufficient pressure drop across a pipe to ensure consistent flow of material.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-The Easiest Way to Understand Viscosity?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Perhaps the easiest way to measure and understand viscosity is the <strong>falling ball</strong>. Another advantage of thinking about viscosity this way is that it can be helpful to remember how emulsions and suspensions behave.</p>
-<hr>
-<p><a href="https://edibotopic.github.io/stokes-law/">Simulation to “re-discover” the equation that describes floating/sinking velocity</a></p>
-<hr>
-<p>The velocity of a falling ball in a liquid is given by (note — <em>there must be a density difference</em>):</p>
-<p><span class="math display">\[v = \frac{D^2 \cdot (\rho_{ball} - \rho_{liquid}) \cdot g }{18 \cdot \mu}\]</span></p>
-<p>As viscosity (<span class="math inline">\(\mu\)</span>) is below the line, this means that its increase results in a decrease in velocity — more viscous liquids create more <em>drag</em> on objects. One of the easiest and cheapest ways to measure viscosity is to take a ball of known dimensions (diameter, density) and place it in a liquid of known density. The time it takes for the ball to sink a certain number of centimeters can then be used to calculate velocity, which means we know every value in the equation except for viscosity. Re-arranging the equation allows us to solve for this value:</p>
-<p><span class="math display">\[\mu = \frac{D^2 \cdot (\rho_{ball} - \rho_{liquid}) \cdot g }{18 \cdot v}\]</span></p>
-<p><strong>Note: that diameter is squared in the equation is very important, and means that reducing the diameter of a particle or droplet (for example: by homogenisation) has a massive effect on its separation velocity.</strong></p>
-</div>
-</div>
-<p>The science of viscosity is complex and it is not the purpose of this module to explain it in detail. For now, consider some <em>general</em> facts about viscosity in a food context:</p>
-<ul>
-<li>Viscosity tends to decrease with increasing temperature unless some transformation occurs (i.e., if a protein solution is heated until the proteins denature then viscosity is likely to increase)</li>
-<li>Many (not all) liquids in food processing tend to be shear-thinning (i.e., products like yogurt and ketchup tend to becomes more liquid-like the more stress that is applied)</li>
-<li>Some liquids are “ideal” meaning there is a linear relationship between stress and deformation (e.g., liquids like oil, water and syrups generally deform to the same extent no matter how much force is applied)</li>
-</ul>
-</section>
 <section id="turbulence" class="level2">
 <h2 class="anchored" data-anchor-id="turbulence">Turbulence</h2>
-<p>Viscosity opposes the effects of turbulence during food processing. Turbulence represents phenomena associated with the chaotic motion of fluids.</p>
+<p>Turbulence represents phenomena associated with the chaotic motion of fluids.</p>
 <p>A high degree of turbulence is often desirable in many food operations, such as heating and mixing. Turbulence is calculated from a famous equation that returns the Re(ynold’s) number:</p>
 <p><span class="math display">\[Re = \frac{v \rho D}{\mu}\]</span></p>
 <p>Note that viscosity is below the line, meaning that a lower degree of turbulence is often observed in viscous systems.</p>
@@ -376,61 +320,9 @@ The Easiest Way to Understand Viscosity?
 <li>Turbulence can promote the disintegration of particles</li>
 </ul>
 <p>This last point helps explain the operation of a homogeniser.</p>
-</section>
-<section id="homogenisation" class="level2">
-<h2 class="anchored" data-anchor-id="homogenisation">Homogenisation</h2>
-<p>A homogeniser is a piece of equipment that can be used to continuously reduce the size of solid particles or liquid droplets in a mixture.</p>
-<p>Its working principles is based on concepts encountered in previous sections (mainly <em>the influence of flow area on velocity and pressure</em>):</p>
-<ol type="1">
-<li>The liquid being pumped into a homogeniser is forced through a narrow orifice (or nozzle)</li>
-<li>The decrease in flow area increases velocity and therefore turbulence</li>
-<li>The decrease in velocity causes a pressure drop, which can cause cavitation</li>
-<li>The chaotic motion, cavitation effects and high shear results in particle size reduction</li>
-<li>Homogenisers are often operated at slightly elevated temperature to reduce the influence of viscosity</li>
-</ol>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Cavitation
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>At normal atmospheric pressure, when water is heated to 100 °C it boils. Boiling results in the formation of vapour (phase transition between liquid and gas) evidenced by the appearance of bubbles that form and collapse.</p>
-<p>A similar thing can happen when pressure drops while temperature is constant, which happens when liquid is accelerate to high velocities. The boiling point of a liquid decreases as pressure decreases, meaning that it can begin boiling at lower temperatures than normal.</p>
-<p>(We will see in the <strong>concentration</strong> section how reducing boiling point like this can be used to our advantage).</p>
-<p>When cavitation occurs in food processes (such as homogenisation) it leads to the formation of vapor bubbles in the liquid, which then collapse under the pressure of the surrounding liquid, releasing thermal energy that can contribute to particle size reduction.</p>
-<p><strong>If you want a colouful example to help understand this look up videos of the “pistol shrimp”, a shrimp that attacks threats underwater with a high-speed motion that causes cavitation to occur, creating bubbles that implode and sometimes shatter the hard shells of unsuspecting creatures.</strong></p>
-</div>
-</div>
-</section>
-</section>
-<section id="conclusions" class="level1">
-<h1>Conclusions</h1>
-<ul>
-<li>All food processes involve a flow of materials</li>
-<li>The flow-rate into an operation should equal the flow-rate out</li>
-<li>The efficiency of many operations is determined by the flow-rate it outputs</li>
-<li>Converting from flow-rate to flow velocity reveals interesting facts about flow behaviour</li>
-<li>In general, a narrowing of flow area results in an increase in velocity and a decrease in pressure</li>
-<li>Increases in velocity can cause turbulence and cavitation, which can have positive effects (such as in homogenisation)</li>
-<li>Viscosity opposes turbulence, which can reduce the effectiveness of operations like homogenisation</li>
-<li>To overcome this, elevated temperature can be used to decrease viscosity</li>
-</ul>
-</section>
-<section id="topics-of-interest" class="level1">
-<h1>Topics of Interest</h1>
-<p>We do not have time in this module to go into these in detail, but here are some interesting topics to reflect on:</p>
-<ul>
-<li>Many people must be tube-fed their food because of various health conditions, including some premature babies born with low birth weights. Tube-feeding — similarly to what is described above — requires continuously pumping material through tubes/pipes. It has been shown that as much as 40% of the lipids in some of these tube feeds may never be delivered during these (apparently simple) tube-feeding operations for infants, which could have a significant effect on nutrient and calorie delivery. This is likely causes by the instability of the fat droplets, which could form deposits during pumping.</li>
-<li>Some companies have marketed “unhomogenised milk” in response to market demand for minimally-processed products and the nostalgic associations some people have for unhomogenised milk that would be delivered on the doorstep in glass bottles. In these campaigns, homogenisation is described as a “violent” operation that “damages”/“breaks” components in the food (implication: it does not just cause size reduction but something otherwise negative). Other companies, particularly those with products stocked in alternative or healthfood stores, often market their physically unstable products in a positive way, by saying that it is a “natural” phenomenon due to their choice not to use homogenisation.</li>
-<li>Is homogenisation bad? Homogenisation is one of the simplest operations in the sense that it typically does not involve any major chemical changes (unlike thermal processes). In certain cases, like tube-feeding, unhomogenised products may simply <em>not work</em>. However, some research has recently suggested that homogenisation changes the rate at which both lipids and proteins are digested. The surface area of the fat is increased through homogenisation, which can accelerate digestion, but proteins are also dispersed across the surface of the fat, which has been linked with increased digestion rate of protein also. Research in this area is in its early days, so it is difficult to draw definitive conclusions in terms of whether this is better or worse and in which circumstances it might matter.</li>
-</ul>
-<p><strong>References available on request.</strong></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -682,6 +574,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../notes/viscosity.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Viscosity</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../notes/flow2.html" class="pagination-link">
+        <span class="nav-page-text">Flow II [draft]</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
