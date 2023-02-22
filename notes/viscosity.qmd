@@ -1,0 +1,218 @@
+---
+title: Viscosity
+slide-format: revealjs
+css: ../styles.css
+execute:
+  echo: false
+search: true
+---
+---
+
+Informally, viscosity is a measure of the resistance of a liquid to flow.
+It is a critical property in food that is important both in terms of processing behaviour and in consumer acceptance.
+
+Viscosity is defined as the ratio of the deformation stress applied to a liquid and the extent of the resultant deformation.
+More formally, it is the ratio of shear stress to shear rate.
+A viscous liquid requires more shear to cause deformation (or flow).
+
+For liquids to flow during food processing the viscosity of the liquid must be overcome.
+Pumps to create a sufficient pressure drop across a pipe to ensure consistent flow of material.
+
+::: {.callout-tip}
+
+## The Easiest Way to Understand Viscosity?
+
+Perhaps the easiest way to measure and understand viscosity is the **falling ball**.
+Another advantage of thinking about viscosity this way is that it can be helpful to remember how emulsions and suspensions behave.
+
+---
+
+[Simulation of Stoke's Law](https://edibotopic.github.io/stokes-law/)
+
+---
+
+The velocity of a falling ball in a liquid is given by (note — *there must be a density difference*):
+
+$$v = \frac{D^2 \cdot (\rho_{ball} - \rho_{liquid}) \cdot g }{18 \cdot \mu}$$
+
+As viscosity ($\mu$) is below the line, this means that its increase results in a decrease in velocity — more viscous liquids create more *drag* on objects.
+One of the easiest and cheapest ways to measure viscosity is to take a ball of known dimensions (diameter, density) and place it in a liquid of known density.
+The time it takes for the ball to sink a certain number of centimeters can then be used to calculate velocity, which means we know every value in the equation except for viscosity.
+Re-arranging the equation allows us to solve for this value:
+
+$$\mu = \frac{D^2 \cdot (\rho_{ball} - \rho_{liquid}) \cdot g }{18 \cdot v}$$
+
+Note: that diameter is squared in the equation is very important, and means that a very small diameter may be required to test a liquid of low viscosity. 
+
+It also means that reducing the diameter of a particle or droplet (for example: by homogenisation) has a massive effect on its separation velocity.
+
+:::
+
+## Derivation of Viscosity, its Dimensions and Units
+
+Imagine a liquid medium positioned between two flat plates.
+The bottom plate is static while to the top plate can be moved.
+There is a distance $z$ between the plates and each has an area $A$ in contact with the liquid.
+A force $F$ is applied to the top plate to move it with a velocity $v$.
+
+A "no-slip" condition is assumed, in which the layer of liquid in immediate contact with a plate has a velocity equivalent to that plate.
+This implies that the liquid layer in contact with the top plate has a velocity, which we can call $v_{MAX}$ and that in contact with the static plate has zero velocity or $v_{MIN}$.
+Thus, there is a velocity gradient $\Delta v$ in the liquid from top to bottom.
+
+The equation describing this system is:
+
+$$F \propto \frac{\Delta v \cdot A}{\Delta z}$$
+
+To replace the proportional sign with an equality sign we add a proportionality constant $\mu$ — which represents viscosity:
+
+$$F = \mu \cdot \frac{\Delta v \cdot A}{\Delta z}$$
+
+To solve for viscosity and determine the units of viscosity first divide both sides of the equation by $A$, :
+
+$$\frac{F}{A} = \mu \cdot \frac{\Delta v}{\Delta z}$$
+
+::: {.callout-important}
+The form of the equation above is often represented with $\frac{F}{A}$ replaced by $\sigma$ and $\frac{v}{z}$ by $\dot{\gamma}$:
+
+$$\sigma = \mu \cdot \dot{\gamma}$$
+
+Remember that $\mu$ is a proportionality constant, which is a ratio between two terms; in this case the ratio between shear stress ($\sigma$) and shear rate ($\dot{\gamma}$):
+
+$$\mu = \frac{\sigma}{\dot{\gamma}}$$
+
+This is the simplest definition of viscosity, in words:
+
+> Viscosity is the ratio between shear stress and shear rate.
+
+According to these equations a plot of shear stress against shear rate for a given liquid yields a straight line defined by a slope that is the viscosity.
+:::
+
+Now (leaving out the $\Delta$ signs for simplicity) multiply both sides by $z$:
+
+$$\frac{F \cdot z}{A} = \mu$$
+
+Then divide both sides by $v$:
+
+$$\frac{F \cdot z}{A \cdot v} = \mu$$
+
+To determine the dimensions (and units) of viscosity substitute in the dimensions of each term on the left:
+
+$$\frac{[M L T^{-2}] \cdot [L]}{[L^2] \cdot [L T^{-1}]} = \mu$$
+
+Now cancel the [M], [L] and [T] dimensions and you should get (`check this yourself!`):
+
+$$[M L^{-1} T^{-1}]$$
+
+This gives the units $kg m^{-1} s^{-1}$.
+
+Note, however, that this is equivalent to the product of the dimensions of pressure and time:
+
+$$[M L^{-1} T^{-2}] \cdot [T]$$
+
+**This is why the units of $Pa.s$ make sense for viscosity**.
+
+## Ideal Liquids and Deviations from Ideality
+
+Viscosity can be considered the slope of a plot of shear stress against shear rate:
+
+$$\sigma = \mu \cdot \dot{\gamma}$$
+
+Equipment like viscometers and rheometers can be used to generate data that can be used to plot such curves.
+Many of these devices consist of a static bottom plate and a moving/rotating top plate (similar to the model described above) — this geometry is referred to as a "parallel plate".
+A liquid can be sheared between the two plates and its response (shear rate) measured, allowing a plot to be constructed.
+
+The equations discussed above, however, apply to liquids for which a plot of shear rate against shear stress yields a linear curve (shear rate increases linearly with shear stress).
+Such liquids are referred to as "ideal" or "Newtonian".
+Several liquids encountered in food processing are *approximately* Newtonian, including:
+
+- Water
+- Beer
+- Wine
+- Honey
+- Oil
+- Syrups
+
+::: {.callout-note}
+
+The name of Newton is invoked because Isaac Newton did significant early theoretical work on the viscosity of ideal physical systems.
+
+:::
+
+Several methods for measuring viscosity, including the `falling ball` and the `u-tube` assume that the liquid is Newtonian.
+However, there are also many liquids that are **non-Newtonian**.
+To understand what this means, imagine you are measuring the viscosity of two different liquids — oil and yogurt.
+You do not have a viscometer so you are just going to use a spoon, stirring each liquid with different degrees of intensity.
+What you will find is that the viscosity of the oil stays the same regardless of how intensely you stir, while the viscosity of the yogurt tends to decrease the more intensely you stir.
+The viscosity of the oil is independent of the shear stress, while for yogurt the viscosity decreases with increasing shear stress.
+Therefore, the yogurt is non-Newtonian and — more specifically — **shear-thinning**.
+Another example of a shear-thinning liquid is ketchup, which often must be shaken (sheared) before being squeezed through an orifice.
+The opposite type of liquid is also encountered, and is known as **shear-thickening**, an example being solutions of corn starch.
+
+::: {.callout-note}
+
+## Non-Newtonian Liquids
+
+- Shear-thinning: viscosity decreases with increasing shear.
+A plot of shear rate against shear rate will shown an initial linear region that then curves upwards at higher stresses.
+
+- Shear-thickening: viscosity increases with increasing shear.
+A plot of shear rate against shear rate will shown an initial linear region that then curves downwards at higher stresses.
+
+Measuring these liquids using techniques like the `faling ball` is inappropriate.
+Variable-sheer devices like rheometers are instead required.
+:::
+
+## General Facts About Viscosity
+
+The science of viscosity is complex and it is not the purpose of this module to explain it in detail.
+For now, consider some *general* facts about viscosity in a food context, that apply in many (if not all) cases:
+
+- Viscosity tends to decrease with increasing temperature unless some transformation occurs (i.e., if a protein solution is heated to the point that proteins denature or starch gelatinises then viscosity is likely to increase)
+- Viscosity opposes motion during food processing, including providing resistance against flow and resistance against turbulence
+- Many food processing operations occur at a temperature sufficiently high to reduce viscosity without inducing physico-chemical transformations, including pumping, mixing, filtration and centrifugation
+- Many (not all) liquids in food processing tend to be shear-thinning (i.e., products like yogurt and ketchup tend to becomes more liquid-like the more stress that is applied)
+- Some liquids are "ideal" meaning there is a linear relationship between stress and deformation (e.g., liquids like oil, water and syrups generally deform to the same extent no matter how much force is applied)
+
+## Viscosity as Momentum Flux
+
+Up to this point we have a limited concept of what viscosity *is*.
+Dimensional analysis can help us develop an intuition.
+
+Earlier we derived the following equation based on the two-plate system:
+
+$$\frac{F}{A} = \mu \cdot \frac{\Delta v}{\Delta z}$$
+
+This is sometimes written with a minus sign to represent that the velocity is decreasing as we move from the top plate to the bottom plate:
+
+$$\frac{F}{A} = -\mu \cdot \frac{\Delta v}{\Delta z}$$
+
+This also yields an equation that is similar to a variety of other *transfer equations* used by engineers.
+For example, look at the resemblance between this equation and that describing the rate of heat transfer ($q$) through a body (the flow of heat from a warm to a cold region):
+
+$$\frac{q}{A} = -k \cdot \frac{\Delta T}{\Delta z}$$
+
+The fraction on the far left of the viscosity transfer equation represents shear stress and the fraction on the right is shear rate.
+Note that shear stress has the same formula as pressure; however, it is distinct from pressure.
+In physics you encounter the concept of scalars and vectors; the first has a magnitude but no direction while the former has a magnitude and a direction.
+We have conveniently been ignoring this distinction in order to avoid introducing unecessary complexity; for example, when discussing Stoke's Law the velocity (a vector) either refers to a movement up (floating) or a movement down (sinking).
+On the other hand, when discussing pressure there is no associated direction; technically speaking, pressure is isotropic, meaning that pressure applied at a point is equal in all directions (the directions effectively cancel out).
+Shear stress is more like a vector than a scalar (to be precise it is a second-order tensor, but this is beyond our scope), in that it can be thought of as having an associated direction; for our purposes, the two directions can either be perpendicular to a surface (normal stress) or parallel to a surface (shear stress).
+The application of a shear stress to a liquid results in the liquid having a shear rate (it deforms in the direction of the shear stress).
+
+The dimensions of shear stress are equivalent to pressure: $[MLT^{-2}][L^{-2}]$.
+
+These dimensions are equivalent to the following: $[MLT^{-1}][T^{-1}][L^{-2}]$.
+
+From left to right, this reads "**momentum** per **time** per **area**", also known as "momentum flux".
+
+Note that momentum $p$ is defined usually as $p = m \cdot v$ (mass times velocity).
+
+The physical meaning of momentum flux in the context of viscosity can be explained as follows:
+
+> The top layer of liquid has the greatest velocity and therefore the greatest momentum.
+> The lowest layer of the liquid has the lowest momentum.
+> As the liquid is sheared from left to right momentum is transferred top-down.
+> Layers with higher momentum lose momentum to layers with lower momentum.
+> This results in a gradual loss of momentum between the top and bottom plate.
+
+Therefore there is shear being applied horizontally at the surface of the liquid and momentum transferring downwards.
