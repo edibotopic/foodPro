@@ -1,10 +1,10 @@
 ---
-title: Flow I [draft]
+title: Flow I
 slide-format: revealjs
 css: ../styles.css
 execute:
   echo: false
-search: false
+search: true
 ---
 ---
 
@@ -117,5 +117,76 @@ When a liquid is pumped at a high velocity it is more likely to transition into 
 - Turbulence can increase the rate of heat transfer during thermal processing
 - Turbulence can promote the disintegration of particles
 
-This last point helps explain the operation of a homogeniser.
+## Velocity, Turbulence and Residence Time
 
+### Problem
+
+Consider a pipe through which a cold liquid flows.
+The pipe is surrounded by a shell through which a hot liquid flows.
+This is a basic "shell-and-tube" heat exchanger.
+
+Over time heat transfers from the hot liquid to the cold liquid.
+This kind of equipment is often used to reduce levels of bacteria in a liquid.
+Depending on the bacteria present, specific time-temperature combinations are required.
+For example, a common pasteurisation treatment is 72°C × 15s.
+
+Exposing the liquid to this temperature for 15s will be expected to reduce bacteria to a safe level.
+That is: if a bacteria takes 15s to pass through a section of the pipe where the temperature is 72° then it will be inactivated.
+It is important that all of the product is heated at this temperature for 15s to ensure it is safe, but it is also desirable not to exceed this time (if possible) as it can cause quality loss.
+
+Here is the issue: in laminar conditions, the liquid is not all moving at a uniform velocity.
+Therefore, the bacteria present in the liquid are moving at different velocities and will therefore move through the heat exchanger in different times.
+This also means that there is no guarantee that a given bacteria will be exposed to the target temperature for 15s.
+
+### Theory
+
+The volumetric flow-rate is defined as $Q = \frac{V}{t}$.
+From this equation we can take the residence time to be:
+
+$$t = \frac{Q}{V}$$
+
+The target is $t (s) = 15$.
+
+The average velocity ($v_{AVE}$) is given by $v_{AVE} = \frac{Q}{A}$.
+The average residence time ($t_{AVE}$) can be calculated by dividing tube length ($L$) by average velocity:
+
+$$t_{AVE} = \frac{L \ (m)}{v_{AVE} \ (ms^{-1})}$$
+
+::: {.callout-note}
+Although there is one value for average velocity in reality the liquid moves at a different velocity depending on its position in the tube.
+
+Similarly, there is an average residence time but in reality there is a distribution of residence times.
+:::
+
+In laminar conditions ($Re < 2100$) the maximum velocity ($v_{MAX}$) is approximately double the average velocity:
+
+$$v_{MAX} = 2 \cdot v_{AVE}$$
+
+The average residence time at $v_{AVE}$ is 15s.
+It takes 15s for the average particle moving at this velocity to traverse the pipe.
+How long does it take a particle that is double the speed?
+The answer is: half the value (7.5s), which is the minimum time ($t_{MIN})$:
+
+$$t_{MIN} = \frac{t_{AVE}}{2}$$
+
+This means that there is a population of bacteria that have half the necessary residence time.
+
+### Solution
+
+One solution is simply to double the treatment time.
+If the liquid is heated for 30s, then the fastest moving particles will receive the necessary treatment time of 15s.
+
+However, this is not ideal, as the average particle will be exposed to a high temperature for twice the time that is necessary, which can lead to quality issues (e.g., cooked flavours, discolouration).
+While the product will be safe, it may not be acceptable from a sensory perspective.
+
+The preferred solution is to ensure that the flow is turbulent.
+In turbulent flow the distribution of velocities is less wide.
+The fastest moving particles are only 1.2 times as fast as the average:
+
+$$v_{MAX} = 1.2 \cdot v_{AVE}$$
+
+This means that their residence time is approximately 0.8 times the treatment time,
+compared to 0.5 times for laminar flow.
+
+So, instead of an increased time of $2 \times 15s$ only $1.2 \times 15s$ is needed.
+In turbulent conditions, a heating time of 18s results in the fastest moving particles receiving the heat treatment for 15s, while minimising negative quality effects associated with prolonged heating.

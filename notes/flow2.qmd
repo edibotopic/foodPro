@@ -1,5 +1,5 @@
 ---
-title: Flow II [draft]
+title: Flow II
 slide-format: revealjs
 css: ../styles.css
 execute:
@@ -115,5 +115,13 @@ The boiling point of a liquid decreases as pressure decreases, meaning that it c
 When cavitation occurs in food processes (such as homogenisation) it leads to the formation of vapor bubbles in the liquid, which then collapse under the pressure of the surrounding liquid, releasing thermal energy that can contribute to particle size reduction.
 
 **If you want a colouful example to help understand this look up videos of the "pistol shrimp", a shrimp that attacks threats underwater with a high-speed motion that causes cavitation to occur, creating bubbles that implode and sometimes shatter the hard shells of unsuspecting creatures.**
+
+:::
+
+::: {.callout-note}
+
+The lectures in fluid dynamics also contained material on mixing.
+
+The topic of mixing will be revisited in later lectures and notes will be provided in those sections.
 
 :::
