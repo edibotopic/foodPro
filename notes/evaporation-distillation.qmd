@@ -1,0 +1,111 @@
+---
+title: Evaporation and Distillation
+slide-format: revealjs
+css: ../styles.css
+execute:
+  echo: false
+search: true
+---
+---
+
+## Separations
+
+Many food operations are based on the separation of two or more components.
+These separation operations usually exploit some difference between the components to be separated.
+
+Consider an example that we have encountered multiple times: sedimentation/flotation.
+If a set of particles have a difference in density compared to the solvent they are dispersed in then they will tend to separate from the solvent over time.
+An operation like centrifugation exploits this difference and accelerates the separation effect.
+
+Consider a case where there are two sets of particles with approximately the same density but a significant difference in size.
+These could be separated using an appropriate filter with pores small enough to retain the larger particles but big enough to allow the passage of the smaller particles.
+
+::: {.callout-tip}
+
+A student interviewing for a work placement at a company she really liked was once given the following problem:
+
+> Imagine a solution in which there is a single particle.
+> How would you try to remove the particle?
+
+Questions like this are open-ended by design.
+A good approach to this kind of problem is to seek more information.
+
+In the context of separation we might ask:
+
+- What is the density of the particle relative to the solution?
+- What is the size of the particle?
+- Is the particle charged, and — if so — is it charged negative or positive?
+
+By asking such questions it is then possible to identify possible separation techniques that might be appropriate.
+
+:::
+
+## Evaporation
+
+If juice or milk is heated to its boiling point then a phase transition will occur, in which liquid water present in the system will be transformed into vapour.
+This vapour can then be removed.
+If sufficient water is removed in this manner then the solids (i.e., everything that is not water) will be concentrated.
+
+Evaporation can be considered a kind of separation process.
+In evaporation water is separated from solids.
+This operation has the purpose of converting a dilute liquid into a more concentrated liquid.
+The difference that is exploited is that the solids are not volatile while the water is volatile.
+
+Evaporation shares some apparent similarities with distillation and drying but *as an operation* it is different.
+Drying usually involves the phase transition of evaporation but typically results in a physical transformation in the material being dried (e.g., from a liquid to a powder).
+Distillation also involves the same phase transition but usually involves a mixture of two volatile liquids, where the goal is to increase the concentration of one relative to the other.
+
+::: {.callout-note}
+
+We will encounter evaporation again in the context of powder manufacture.
+The purpose of discussing it at this point is to distinguish it from distillation, as they are similar (at least superficially).
+
+:::
+
+## Distillation
+
+Distillation is one of the oldest separation techniques and is still widely used in a variety of industries.
+In the food industry, it is primarily associated with the production of distilled spirits.
+These products include vodka, gin and whisk(e)y.
+
+Most of these distillation processes start with a dilute ethanol solution.
+The aim of the distillation is increase the concentration of ethanol relative to water.
+Distillation exploits the fact that ethanol has a lower boiling point than water.
+Therefore, when a mixture of both is heated to its boiling point a sample of the resultant vapour will contain a greater quantity of ethanol.
+
+::: {.callout-note}
+
+During your lab distillation is achieved using an iso-thermal process in which pressure is adjusted rather than temperature.
+When pressure is decreased the boiling point of the mixture is reduced.
+If pressure is decreased sufficiently then vapour will be generated that is more enriched in the more volatile component.
+This vapour can then be collected and re:distilled as described by reducing pressure again, and so on.
+
+:::
+
+The vapour generated during heating of the mixture generates an ethanol-rich vapour that must then be collected.
+To collect the vapour the reverse phase transition is initiated by passing the vapour through a condenser.
+The condenser reduces the temperature of the vapour, resulting in its transformation back into a liquid (which is ethanol-rich).
+This condensed material can then be distilled a second time, with another cycle of heating-condensing resulting in an even greater concentration of ethanol.
+
+This process can be continued until an azeotrope is created, in which the vapour generated from the mixture has the same composition as the starting liquid — this renders further distillation pointless unless the process is modified using a vacuum or the inclusion of process aides.
+
+Industrial processes for products like whiskey involve further complexities, particularly with respect to the equipment and terminology involved; however, the above description suffices for a basic understanding of distillation.
+
+::: {.callout-important}
+
+Distillation is best understood using `liquid-vapour composition curves`, which are covered in the lecture that accompanied these notes.
+
+You are advised to revisit that lecture and recreate those curves yourself to understand them.
+
+A bonus lectures on whisk(e)y production is also provided on the Youtube playlist for those of you who are interested.
+
+:::
+
+<div>
+```{=html}
+<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_14.html"></iframe>
+```
+</div>
+
+[📽️ Direct link to slides for this lecture](https://edibotopic.github.io/lecture-slides/FS2006_14.html)
+
