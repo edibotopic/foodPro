@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Food Process Design &amp; Optimisation - Flow I [draft]</title>
+<title>Food Process Design &amp; Optimisation - Flow I</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Flow I [draft]</h1>
+      <h1 class="quarto-secondary-nav-title">Flow I</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -183,24 +183,44 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/flow1.html" class="sidebar-item-text sidebar-link active">Flow I [draft]</a>
+  <a href="../notes/flow1.html" class="sidebar-item-text sidebar-link active">Flow I</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/flow2.html" class="sidebar-item-text sidebar-link">Flow II [draft]</a>
+  <a href="../notes/flow2.html" class="sidebar-item-text sidebar-link">Flow II</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Appendix</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Separation Science</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/evaporation-distillation.html" class="sidebar-item-text sidebar-link">Evaporation and Distillation</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/membrane-filtration.html" class="sidebar-item-text sidebar-link">Membrane Filtration [todo]</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Appendix</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../notes/slides.html" class="sidebar-item-text sidebar-link">Slides</a>
@@ -218,7 +238,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Flow I [draft]</h1>
+<h1 class="title d-none d-lg-block">Flow I</h1>
 </div>
 
 
@@ -319,9 +339,54 @@ Note
 <li>Turbulence can increase the rate of heat transfer during thermal processing</li>
 <li>Turbulence can promote the disintegration of particles</li>
 </ul>
-<p>This last point helps explain the operation of a homogeniser.</p>
+</section>
+<section id="velocity-turbulence-and-residence-time" class="level2">
+<h2 class="anchored" data-anchor-id="velocity-turbulence-and-residence-time">Velocity, Turbulence and Residence Time</h2>
+<section id="problem" class="level3">
+<h3 class="anchored" data-anchor-id="problem">Problem</h3>
+<p>Consider a pipe through which a cold liquid flows. The pipe is surrounded by a shell through which a hot liquid flows. This is a basic “shell-and-tube” heat exchanger.</p>
+<p>Over time heat transfers from the hot liquid to the cold liquid. This kind of equipment is often used to reduce levels of bacteria in a liquid. Depending on the bacteria present, specific time-temperature combinations are required. For example, a common pasteurisation treatment is 72°C × 15s.</p>
+<p>Exposing the liquid to this temperature for 15s will be expected to reduce bacteria to a safe level. That is: if a bacteria takes 15s to pass through a section of the pipe where the temperature is 72° then it will be inactivated. It is important that all of the product is heated at this temperature for 15s to ensure it is safe, but it is also desirable not to exceed this time (if possible) as it can cause quality loss.</p>
+<p>Here is the issue: in laminar conditions, the liquid is not all moving at a uniform velocity. Therefore, the bacteria present in the liquid are moving at different velocities and will therefore move through the heat exchanger in different times. This also means that there is no guarantee that a given bacteria will be exposed to the target temperature for 15s.</p>
+</section>
+<section id="theory" class="level3">
+<h3 class="anchored" data-anchor-id="theory">Theory</h3>
+<p>The volumetric flow-rate is defined as <span class="math inline">\(Q = \frac{V}{t}\)</span>. From this equation we can take the residence time to be:</p>
+<p><span class="math display">\[t = \frac{Q}{V}\]</span></p>
+<p>The target is <span class="math inline">\(t (s) = 15\)</span>.</p>
+<p>The average velocity (<span class="math inline">\(v_{AVE}\)</span>) is given by <span class="math inline">\(v_{AVE} = \frac{Q}{A}\)</span>. The average residence time (<span class="math inline">\(t_{AVE}\)</span>) can be calculated by dividing tube length (<span class="math inline">\(L\)</span>) by average velocity:</p>
+<p><span class="math display">\[t_{AVE} = \frac{L \ (m)}{v_{AVE} \ (ms^{-1})}\]</span></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Although there is one value for average velocity in reality the liquid moves at a different velocity depending on its position in the tube.</p>
+<p>Similarly, there is an average residence time but in reality there is a distribution of residence times.</p>
+</div>
+</div>
+<p>In laminar conditions (<span class="math inline">\(Re &lt; 2100\)</span>) the maximum velocity (<span class="math inline">\(v_{MAX}\)</span>) is approximately double the average velocity:</p>
+<p><span class="math display">\[v_{MAX} = 2 \cdot v_{AVE}\]</span></p>
+<p>The average residence time at <span class="math inline">\(v_{AVE}\)</span> is 15s. It takes 15s for the average particle moving at this velocity to traverse the pipe. How long does it take a particle that is double the speed? The answer is: half the value (7.5s), which is the minimum time (<span class="math inline">\(t_{MIN})\)</span>:</p>
+<p><span class="math display">\[t_{MIN} = \frac{t_{AVE}}{2}\]</span></p>
+<p>This means that there is a population of bacteria that have half the necessary residence time.</p>
+</section>
+<section id="solution" class="level3">
+<h3 class="anchored" data-anchor-id="solution">Solution</h3>
+<p>One solution is simply to double the treatment time. If the liquid is heated for 30s, then the fastest moving particles will receive the necessary treatment time of 15s.</p>
+<p>However, this is not ideal, as the average particle will be exposed to a high temperature for twice the time that is necessary, which can lead to quality issues (e.g., cooked flavours, discolouration). While the product will be safe, it may not be acceptable from a sensory perspective.</p>
+<p>The preferred solution is to ensure that the flow is turbulent. In turbulent flow the distribution of velocities is less wide. The fastest moving particles are only 1.2 times as fast as the average:</p>
+<p><span class="math display">\[v_{MAX} = 1.2 \cdot v_{AVE}\]</span></p>
+<p>This means that their residence time is approximately 0.8 times the treatment time, compared to 0.5 times for laminar flow.</p>
+<p>So, instead of an increased time of <span class="math inline">\(2 \times 15s\)</span> only <span class="math inline">\(1.2 \times 15s\)</span> is needed. In turbulent conditions, a heating time of 18s results in the fastest moving particles receiving the heat treatment for 15s, while minimising negative quality effects associated with prolonged heating.</p>
 
 
+</section>
 </section>
 </section>
 
@@ -582,7 +647,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="../notes/flow2.html" class="pagination-link">
-        <span class="nav-page-text">Flow II [draft]</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Flow II</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

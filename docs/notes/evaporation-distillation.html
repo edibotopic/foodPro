@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Food Process Design &amp; Optimisation - Properties</title>
+<title>Food Process Design &amp; Optimisation - Evaporation and Distillation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../notes/membrane-filtration.html" rel="next">
+<link href="../notes/flow2.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,7 +63,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -72,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Properties</h1>
+      <h1 class="quarto-secondary-nav-title">Evaporation and Distillation</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -201,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/evaporation-distillation.html" class="sidebar-item-text sidebar-link">Evaporation and Distillation</a>
+  <a href="../notes/evaporation-distillation.html" class="sidebar-item-text sidebar-link active">Evaporation and Distillation</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -236,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Properties</h1>
+<h1 class="title d-none d-lg-block">Evaporation and Distillation</h1>
 </div>
 
 
@@ -251,7 +252,43 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="callout-warning callout callout-style-default callout-captioned">
+<hr>
+<section id="separations" class="level2">
+<h2 class="anchored" data-anchor-id="separations">Separations</h2>
+<p>Many food operations are based on the separation of two or more components. These separation operations usually exploit some difference between the components to be separated.</p>
+<p>Consider an example that we have encountered multiple times: sedimentation/flotation. If a set of particles have a difference in density compared to the solvent they are dispersed in then they will tend to separate from the solvent over time. An operation like centrifugation exploits this difference and accelerates the separation effect.</p>
+<p>Consider a case where there are two sets of particles with approximately the same density but a significant difference in size. These could be separated using an appropriate filter with pores small enough to retain the larger particles but big enough to allow the passage of the smaller particles.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A student interviewing for a work placement at a company she really liked was once given the following problem:</p>
+<blockquote class="blockquote">
+<p>Imagine a solution in which there is a single particle. How would you try to remove the particle?</p>
+</blockquote>
+<p>Questions like this are open-ended by design. A good approach to this kind of problem is to seek more information.</p>
+<p>In the context of separation we might ask:</p>
+<ul>
+<li>What is the density of the particle relative to the solution?</li>
+<li>What is the size of the particle?</li>
+<li>Is the particle charged, and — if so — is it charged negative or positive?</li>
+</ul>
+<p>By asking such questions it is then possible to identify possible separation techniques that might be appropriate.</p>
+</div>
+</div>
+</section>
+<section id="evaporation" class="level2">
+<h2 class="anchored" data-anchor-id="evaporation">Evaporation</h2>
+<p>If juice or milk is heated to its boiling point then a phase transition will occur, in which liquid water present in the system will be transformed into vapour. This vapour can then be removed. If sufficient water is removed in this manner then the solids (i.e., everything that is not water) will be concentrated.</p>
+<p>Evaporation can be considered a kind of separation process. In evaporation water is separated from solids. This operation has the purpose of converting a dilute liquid into a more concentrated liquid. The difference that is exploited is that the solids are not volatile while the water is volatile.</p>
+<p>Evaporation shares some apparent similarities with distillation and drying but <em>as an operation</em> it is different. Drying usually involves the phase transition of evaporation but typically results in a physical transformation in the material being dried (e.g., from a liquid to a powder). Distillation also involves the same phase transition but usually involves a mixture of two volatile liquids, where the goal is to increase the concentration of one relative to the other.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -261,37 +298,49 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If there are any errors, ambiguities or omissions in these notes please let me know.</p>
-<p>I can answer any questions you have in class or you can meet me during <strong>office hours</strong>.</p>
-<p>Keep in mind that you will likely need to revisit notes during the year as the material is covered.</p>
+<p>We will encounter evaporation again in the context of powder manufacture. The purpose of discussing it at this point is to distinguish it from distillation, as they are similar (at least superficially).</p>
 </div>
 </div>
-<p>Foods are complex biochemical systems. When processing foods it is often possible to <em>reduce</em> food to its physical properties. The following are some important physical properties:</p>
-<ul>
-<li>Surface area</li>
-<li>Density</li>
-<li>Viscosity</li>
-</ul>
-<div>
-<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_1.html"></iframe>
-</div>
-<p><a href="https://edibotopic.github.io/lecture-slides/FS2006_1.html">📽️ Direct link to slides for this lecture</a></p>
-<section id="productive-difference" class="level2">
-<h2 class="anchored" data-anchor-id="productive-difference">Productive Difference</h2>
-<p>When studying the world it is common to distinguish between qualities and quantities. Quality refers to food properties that are subjectively evaluated, whereas quantities are objectively counted or measured. Both are critical in food processing but we will largely restrict ourselves to quantity.</p>
-<p>This leads us to a further interesting distinction between intensive and extensive quantities. An extensive property is one that reduces in magnitude when the size of a food is decreased. On the other hand, if a hot food is split in two we do not expect the temperature of each half to be different.</p>
-<p>A curious fact is that differences in intensive properties often lead to change. These changes are often useful and are exploited in food processing. This can be referred to as a <em>productive difference</em>.</p>
 </section>
-<section id="transfer-equations" class="level2">
-<h2 class="anchored" data-anchor-id="transfer-equations">Transfer Equations</h2>
-<p>This module involves some mathematics but not a lot. In general, mathematics is used to clarify a concept or provide a new way of thinking about an idea.</p>
-<p>When there is a productive difference a change occurs. This change usually involves some kind of transfer.</p>
-<p>Such events can be described using transfer equations of the following form, where <span class="math inline">\(r\)</span> can be taken as <em>transfer rate</em>:</p>
-<p><span class="math display">\[r \propto k \cdot \frac{Drive}{Resistance}\]</span></p>
-<p>We will encounter some equations of this form and the idea is simple:</p>
-<blockquote class="blockquote">
-<p>there are properties to control that drive change and properties to control that resist that change</p>
-</blockquote>
+<section id="distillation" class="level2">
+<h2 class="anchored" data-anchor-id="distillation">Distillation</h2>
+<p>Distillation is one of the oldest separation techniques and is still widely used in a variety of industries. In the food industry, it is primarily associated with the production of distilled spirits. These products include vodka, gin and whisk(e)y.</p>
+<p>Most of these distillation processes start with a dilute ethanol solution. The aim of the distillation is increase the concentration of ethanol relative to water. Distillation exploits the fact that ethanol has a lower boiling point than water. Therefore, when a mixture of both is heated to its boiling point a sample of the resultant vapour will contain a greater quantity of ethanol.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>During your lab distillation is achieved using an iso-thermal process in which pressure is adjusted rather than temperature. When pressure is decreased the boiling point of the mixture is reduced. If pressure is decreased sufficiently then vapour will be generated that is more enriched in the more volatile component. This vapour can then be collected and re:distilled as described by reducing pressure again, and so on.</p>
+</div>
+</div>
+<p>The vapour generated during heating of the mixture generates an ethanol-rich vapour that must then be collected. To collect the vapour the reverse phase transition is initiated by passing the vapour through a condenser. The condenser reduces the temperature of the vapour, resulting in its transformation back into a liquid (which is ethanol-rich). This condensed material can then be distilled a second time, with another cycle of heating-condensing resulting in an even greater concentration of ethanol.</p>
+<p>This process can be continued until an azeotrope is created, in which the vapour generated from the mixture has the same composition as the starting liquid — this renders further distillation pointless unless the process is modified using a vacuum or the inclusion of process aides.</p>
+<p>Industrial processes for products like whiskey involve further complexities, particularly with respect to the equipment and terminology involved; however, the above description suffices for a basic understanding of distillation.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Distillation is best understood using <code>liquid-vapour composition curves</code>, which are covered in the lecture that accompanied these notes.</p>
+<p>You are advised to revisit that lecture and recreate those curves yourself to understand them.</p>
+<p>A bonus lectures on whisk(e)y production is also provided on the Youtube playlist for those of you who are interested.</p>
+</div>
+</div>
+<div>
+<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_14.html"></iframe>
+</div>
+<p><a href="https://edibotopic.github.io/lecture-slides/FS2006_14.html">📽️ Direct link to slides for this lecture</a></p>
 
 
 </section>
@@ -545,6 +594,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../notes/flow2.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Flow II</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../notes/membrane-filtration.html" class="pagination-link">
+        <span class="nav-page-text">Membrane Filtration [todo]</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
