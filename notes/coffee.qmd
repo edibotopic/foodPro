@@ -1,0 +1,130 @@
+---
+title: Coffee 
+slide-format: revealjs
+css: ../styles.css
+execute:
+  echo: false
+search: true
+---
+---
+
+It is a good time to consider an example of an *integrated process*.
+An integrated process is one in which there are multiple operations that are connected to achieve some goal.
+In this section we have been talking about separations, in which components are separated from each other by exploiting some difference.
+Probably the most everyday example of a separation is making tea or coffee.
+Assuming we are not using "instant" products, how we make coffee is by exposing solid tea leaves or coffee beans to a solvent — usually water.
+This kind of separation operation is known as **leaching**.
+
+In leaching, a solid material is exposed to a solvent that dissolves soluble constituents present in the solid matrix.
+For example, polyphenols, acids and caffeine are found in coffee beans, and are dissolved in hot water during brewing.
+The actual process — up the point of generating the extract — involves more steps than brewing, however.
+Prior to brewing the coffee beans must be conditioned to make the separation process of as efficient and effective as possible.
+
+## Process
+
+### Harvesting and Shipping
+
+Coffee beans are actually seeds from a fruit called the coffee cherry.
+They are produced in countries with an appropriate climate distributed along the so-called "bean belt".
+Top producers include Brazil, Columbia and Ethiopia.
+The fruits are harvested from coffee trees.
+
+The flesh is separated from the seeds, which are surrounded by a sticky mucilage.
+A significant amount of the mucilage is removed by washing (wet method) or drying (dry method).
+The resultant material is referred to as "green coffee beans".
+While extracts can be made from green beans this is relatively rare.
+
+Green beans are shipped around the world.
+They are supplied to producers at various scales, including
+coffee roasters who supply supermarkets and cafes, as well as
+large-scale industrial producers who manufacture canned, bottled
+and instant coffee.
+
+## Roasting
+
+The roasting process involves exposing green coffee beans to elevated
+temperatures between 90 and 230°C.
+The intensity of the process depends on the desired quality characteristics
+of the final coffee.
+During roasting the beans develop colour and aroma due to the Maillard browning reaction that occurs between reducing sugars and proteins, as well as caramelisation.
+Two characteristic "cracks" occur during roasting.
+The first crack (at 196°C) signifies that the coffee is approaching a light-medium roast, and the second (at 224°C) signifies that the coffee is approaching a dark roast.
+Controlling the roasting conditions dictates the sensory properties of the coffee.
+
+During roasting the coffee beans absorb heat energy (endothermic phase), initiating the chemical reactions that change their sensory properties.
+Moisture present inside the coffee beans gradually converts into vapour, increasing the vapour pressure inside the bean.
+Eventually, the vapour pressure becomes so high that it physically ruptures the structure of the bean releasing heat into the environment (exothermic phase).
+This phenomenon results in the two characteristic "cracks" that signal key stages of the roasting process.
+After the second crack, further changes occur, including the release of oils onto the surface of the bean.
+These and many other changes have practical consequences for the beans, including:
+
+- The loss of moisture makes the beans lighter to transport
+- The physical modifications to the bean make them easier to grind/mill
+- The release of oil makes beans more susceptible to oxidiation
+- Acids and antioxidants breakdown during more intense roasting
+
+During roasting a byproduct is generated known as "silverskin", at about 4-5% of the bean weight.
+This is residual mucilage from the coffee fruit that is separated from the bean during roasting at high temperatures.
+Scientists are seeking applications for this byproduct, which is produced in large volumes every year.
+
+## Grinding
+
+Grinding is a simple size-reduction step.
+Its purpose is to increase the surface area of the beans.
+Increasing the surface area results in more effective leaching during subsequent brewing.
+
+In general, the greater the size reduction the more energy input required during grinding.
+There are generally two categories of grinder: blade-style and burr-style.
+The two styles are analogous to a paddle-style mixer and rotor-stator that are encountered in industrial mixing.
+
+The advantage of the rotor-stator mixer is that it generally yields a more uniform particle size distribution.
+In this style of grinder the particles are collected having passed through a precise gap between the rotating element and the static element.
+This means that particles that are too large to pass through this gap will simply not be present in the material that is collected — in effect, it acts like a filter of size-classifier.
+On the other hand, once a blade-grinding process is stopped it is possible that there could be some large particles present.
+Rotor-stator/burr-style mixers are therefore prized for the consistency of the grind they produce, which also impacts the ultimate consistency of coffee that is produced.
+
+Just like there are multiple degrees of roasting that can be attained there are also multiple degrees of grinding.
+In the case of a rotor-stator, this is determined by the gap between the rotor and stator.
+Typically, coffee is produced in fine, medium and coarse grinds, which are suitable for extraction processes involving different pressure ranges.
+
+While a consumer or barista wanting to make the perfect cup of coffee can grind their coffee beans as finely as they wish, industrial manufacturers (e.g., instant coffee makers) need to carefully balance the trade-off between the increased yield associated with fine grinds (higher surface area -> greater extraction) and their reduced extraction speed (tighter packing of small particle -> slower extraction).
+
+## Extraction/leaching
+
+Interestingly, the extraction process can be understood in similar terms to filtration, which we encountered previously.
+
+Remember that in filtration we referred to Darcy's Law:
+
+$$J = \frac{TMP}{\mu \cdot R}$$
+
+This described how the flux of permeate ($J$) through a filter was proportional to the transmembrane pressure ($TMP$) across the filter, with resistance due to viscosity of the permeate ($\mu$) and resistances ($R$) due to the characteristics of the membrane and membrane fouling.
+Another common representation of Darcy's law is shown below:
+
+$$Q = -k \cdot \frac{A \cdot \Delta P}{\mu \cdot L}$$
+
+Here, $k$ is the permeability constant of a *packed bed* (the minus sign reflects the fact that flow is from a region of high to low pressure: don't worry about it), which could be sand (as Darcy originally studied) or coffee (which interest us here).
+The volumetric flow-rate of coffee $Q$ through a bed of coffee depends on the cross-sectional area of flow $A$.
+The resistance increases with the viscosity of the coffee $\mu$ and the length of the coffee bed $L$.
+
+Think about the impact of the relationships described by this equation on coffee extraction.
+Think of whole coffee beans, which have gaps between them that are visible without close inspection; these gaps constitute *pores* during extraction.
+Now imagine the same beans having been ground to a small size — the gaps/pores have also decreased in size, because smaller particles can fill these voids.
+We can assume then that the permeability of beans — represented by $k$ — decreases as we grind coffee more finely.
+For this reason we may need to create different amounts of pressure ($\Delta P$) depending on the type of coffee being made: espresso machines (which use pumps) are required for fine grinds, while water can flow under gravity (low pressure) through coarse grinds.
+Keep in mind, however, that finely ground coffee may also pack more densely than coarse coffee (note: it is difficult/impossible to compress whole coffee beans); for this reason, at equivalent weights, it may be possible to reduce the length of the coffee bed significantly for fine grinds (this may partially offset the reduced flow-rate).
+One further complication is that during extraction the composition of the coffee is changing, unlike in the previous filtration examples; this means that water will dissolve an increasing concentration of solids over the course of the extraction process, increasing viscosity and therefore reducing flow-rate.
+
+Generally, the impact of coffee grinding on extraction can be said to be as follows:
+
+- Increasing the **surface area** of particles accelerates the leaching of soluble molecules into water
+- Reducing **porosity** of the coffee bed reduces flow-rate, increasing the effective leaching time
+- At low porosities high **pressures** are required to permit acceptable rates of extraction
+
+The coffee process then, which ends with extraction, involves a careful interplay between roasting (reduces water, increases flavour/aroma, physically conditions particles), grinding (increases surface area, alters porosity) and extraction (leaches soluble constituents from roasted and ground coffee).
+
+**Coffee control charts** can be used to optimise the sensory characteristics of coffee.
+Depending on the ratio of coffee to water (grams per litre) and the strength of the coffee generated (measured by refractometer) it can be determined whether a balanced cup of coffee will be made.
+Generally, a bean:water ratio of 55-70 g/L is required.
+This should generate solids contents of 1.20-1.45%.
+If not, brewing time or grinding intensity may need to be adjusted to hit this range.
+An example of a classic coffee control chart can be found [at this link](https://sca.coffee/sca-news/25/issue-13/towards-a-new-brewing-chart) along with a description of recent research aimed at revising the classic chart.

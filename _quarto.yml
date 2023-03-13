@@ -27,12 +27,12 @@ website:
           - notes/viscosity.qmd
           - notes/flow1.qmd
           - notes/flow2.qmd
-          # - notes/mixing.qmd
       - section: "Separation Science"
         contents:
           - notes/evaporation-distillation.qmd
-          - notes/membrane-filtration.qmd
-      # - section: "Concentration & Drying"
+          - notes/membranes.qmd
+          - notes/coffee.qmd
+      # - section: "Powders"
       #   contents:
       #     - notes/concentration.qmd
       #     - notes/drying.qmd
