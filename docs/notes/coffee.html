@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Food Process Design &amp; Optimisation - Flow I</title>
+<title>Food Process Design &amp; Optimisation - Coffee</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../notes/flow2.html" rel="next">
-<link href="../notes/viscosity.html" rel="prev">
+<link href="../notes/slides.html" rel="next">
+<link href="../notes/membranes.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Flow I</h1>
+      <h1 class="quarto-secondary-nav-title">Coffee</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -183,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/flow1.html" class="sidebar-item-text sidebar-link active">Flow I</a>
+  <a href="../notes/flow1.html" class="sidebar-item-text sidebar-link">Flow I</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -213,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/coffee.html" class="sidebar-item-text sidebar-link">Coffee</a>
+  <a href="../notes/coffee.html" class="sidebar-item-text sidebar-link active">Coffee</a>
   </div>
 </li>
       </ul>
@@ -243,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Flow I</h1>
+<h1 class="title d-none d-lg-block">Coffee</h1>
 </div>
 
 
@@ -259,140 +259,56 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <hr>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>These notes will be updated as the lectures are delivered.</p>
-</div>
-</div>
-<section id="flow" class="level1">
-<h1>Flow</h1>
-<p>Processes consist of a series of operations, each with an input and output. Materials flow between operations, and in modern food factories this flow is often continuous. A high rate of flow is often desired because it ensures a process is efficient (ratio of value flow out to value flow in). Changes in flow-rate — especially decreases — often indicate a problem, such as equipment blockage or material supply issues. The flow of food liquids is complex and involves an interplay between equipment properties (pipe geometry), food characteristics (viscosity) and flow behaviour (turbulence). Carefully controlling these factors can allow effective operations like homogenisation to be designed.</p>
-<div>
-<iframe class="slide-deck" src="https://edibotopic.github.io/lecture-slides/FS2006_10.html"></iframe>
-</div>
-<p><a href="https://edibotopic.github.io/lecture-slides/FS2006_10.html">📽️ Direct link to slides for this lecture</a></p>
-<section id="quantities" class="level2">
-<h2 class="anchored" data-anchor-id="quantities">Quantities</h2>
-<p>There some quantities that are used to define flow that are important to remember. Please review the equations outlined below and try to understand them. The mathematics and physics knowledge required is not advanced.</p>
-<section id="volumetric-flow-rate" class="level3">
-<h3 class="anchored" data-anchor-id="volumetric-flow-rate">Volumetric Flow-rate</h3>
-<p>Flow-rate for liquids is usually given the symbol <span class="math inline">\(Q\)</span> and is defined as:</p>
-<p><span class="math display">\[Q = \frac{V}{t}\]</span></p>
-<p>The units are most commonly <span class="math inline">\(L \ h^{-1}\)</span> or <span class="math inline">\(m^3 \ h^{-1}\)</span>.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Writing <span class="math inline">\(L \ h^{-1}\)</span> is equivalent to <span class="math inline">\(L/h\)</span>.</p>
-<p>Similarly, <span class="math inline">\(m \ s^{-2}\)</span> — the units of acceleration — can also be written <span class="math inline">\(m/s^{2}\)</span>.</p>
-<p>Do not let the exponents and negative numbers confuse you and rewrite them if it helps.</p>
-</div>
-</div>
-<p>A common method of measuring flow-rate in a lab is to periodically measure the volume collected over a certain period of time. For example, if 300 mL is collected from a pipe in 30 seconds we could convert this to a flow-rate by first converting mL → L:</p>
-<p><span class="math display">\[\frac{300}{1000} = 0.3 \ L\]</span></p>
-<p>This means that 0.3 L is collected per 30 s, but we need the volume in an hour, so we do the following:</p>
-<p><span class="math display">\[0.3 \times 2 \times 60 = 36 \ L \ h^{-1}\]</span></p>
-<p>This quantity is known sometimes as the “volumetric flow-rate”. If units for mass (e.g., kg) are used instead then it “mass flow rate”.</p>
-</section>
-<section id="velocity-of-flow" class="level3">
-<h3 class="anchored" data-anchor-id="velocity-of-flow">Velocity of flow</h3>
-<p>The volumetric flow-rate (<span class="math inline">\(Q\)</span>) has the units <span class="math inline">\(m^3 \ s^{-1}\)</span>.</p>
-<p>We know that a common way of expressing velocity is meters-per-second. From the units above we can expect that to calculate velocity of flow we simply divide <span class="math inline">\(Q\)</span> by an area <span class="math inline">\(A\)</span>:</p>
-<div class="callout callout callout-style-simple no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Why can we “expect” this? Because to convert <span class="math inline">\(m^3\)</span> to <span class="math inline">\(m\)</span> (or <span class="math inline">\(m^1\)</span>) we need to divide by <span class="math inline">\(m^2\)</span>, when these values are divided the exponents subtract like so: <span class="math inline">\(\frac{m^3}{m^2} = m^{3-2} = m^1 = m\)</span>.</p>
-</div>
-</div>
-</div>
-<p><span class="math display">\[v = \frac{Q}{A}\]</span></p>
-<p>The area in this case is the cross-sectional area of flow. In food engineering calculations this is nearly always the area of a disc (because we are usually dealing with pipes).</p>
-<p>The velocity is often required in equations where the flow-rate cannot be used (you need to understand that they are different). For example, the Reynold’s number used to define turbulence uses velocity not flow-rate.</p>
-<p>Velocity is a <code>vector</code> quantity, so to be more precise we could write <span class="math inline">\(\overrightarrow{v}\)</span>. It also represents an <code>average</code> value, meaning that it represents the statistical average of a range of individual velocities. How this is normally represented is that a fluid moving through a pipe consists of <code>stream-lines</code>, each flowing in a specific direction. In <code>laminar</code> (non-turbulent) flow the maximum velocity is in the centre and the velocity at the edges is <span class="math inline">\(0\)</span>. This means that liquids flows in a “curved” fashion, with the fastest streamlines in the centre.</p>
+<p>It is a good time to consider an example of an <em>integrated process</em>. An integrated process is one in which there are multiple operations that are connected to achieve some goal. In this section we have been talking about separations, in which components are separated from each other by exploiting some difference. Probably the most everyday example of a separation is making tea or coffee. Assuming we are not using “instant” products, how we make coffee is by exposing solid tea leaves or coffee beans to a solvent — usually water. This kind of separation operation is known as <strong>leaching</strong>.</p>
+<p>In leaching, a solid material is exposed to a solvent that dissolves soluble constituents present in the solid matrix. For example, polyphenols, acids and caffeine are found in coffee beans, and are dissolved in hot water during brewing. The actual process — up the point of generating the extract — involves more steps than brewing, however. Prior to brewing the coffee beans must be conditioned to make the separation process of as efficient and effective as possible.</p>
+<section id="process" class="level2">
+<h2 class="anchored" data-anchor-id="process">Process</h2>
+<section id="harvesting-and-shipping" class="level3">
+<h3 class="anchored" data-anchor-id="harvesting-and-shipping">Harvesting and Shipping</h3>
+<p>Coffee beans are actually seeds from a fruit called the coffee cherry. They are produced in countries with an appropriate climate distributed along the so-called “bean belt”. Top producers include Brazil, Columbia and Ethiopia. The fruits are harvested from coffee trees.</p>
+<p>The flesh is separated from the seeds, which are surrounded by a sticky mucilage. A significant amount of the mucilage is removed by washing (wet method) or drying (dry method). The resultant material is referred to as “green coffee beans”. While extracts can be made from green beans this is relatively rare.</p>
+<p>Green beans are shipped around the world. They are supplied to producers at various scales, including coffee roasters who supply supermarkets and cafes, as well as large-scale industrial producers who manufacture canned, bottled and instant coffee.</p>
 </section>
 </section>
-<section id="turbulence" class="level2">
-<h2 class="anchored" data-anchor-id="turbulence">Turbulence</h2>
-<p>Turbulence represents phenomena associated with the chaotic motion of fluids.</p>
-<p>A high degree of turbulence is often desirable in many food operations, such as heating and mixing. Turbulence is calculated from a famous equation that returns the Re(ynold’s) number:</p>
-<p><span class="math display">\[Re = \frac{v \rho D}{\mu}\]</span></p>
-<p>Note that viscosity is below the line, meaning that a lower degree of turbulence is often observed in viscous systems.</p>
-<p>For our purposes it might be sufficient to remember that turbulence is proportional to velocity (it increases when velocity increases):</p>
-<p><span class="math display">\[Re ∝ v\]</span></p>
-<p>and inversely proportional to viscosity (it decreases when viscosity increases):</p>
-<p><span class="math display">\[Re ∝ \frac{1}{\mu}\]</span></p>
-<p>When a liquid is pumped at a high velocity it is more likely to transition into chaotic motion, which can be preferable in specific situations:</p>
+<section id="roasting" class="level2">
+<h2 class="anchored" data-anchor-id="roasting">Roasting</h2>
+<p>The roasting process involves exposing green coffee beans to elevated temperatures between 90 and 230°C. The intensity of the process depends on the desired quality characteristics of the final coffee. During roasting the beans develop colour and aroma due to the Maillard browning reaction that occurs between reducing sugars and proteins, as well as caramelisation. Two characteristic “cracks” occur during roasting. The first crack (at 196°C) signifies that the coffee is approaching a light-medium roast, and the second (at 224°C) signifies that the coffee is approaching a dark roast. Controlling the roasting conditions dictates the sensory properties of the coffee.</p>
+<p>During roasting the coffee beans absorb heat energy (endothermic phase), initiating the chemical reactions that change their sensory properties. Moisture present inside the coffee beans gradually converts into vapour, increasing the vapour pressure inside the bean. Eventually, the vapour pressure becomes so high that it physically ruptures the structure of the bean releasing heat into the environment (exothermic phase). This phenomenon results in the two characteristic “cracks” that signal key stages of the roasting process. After the second crack, further changes occur, including the release of oils onto the surface of the bean. These and many other changes have practical consequences for the beans, including:</p>
 <ul>
-<li>Turbulence can decrease the tendency for particles to form deposits on equipment surfaces</li>
-<li>Turbulence can increase the rate of heat transfer during thermal processing</li>
-<li>Turbulence can promote the disintegration of particles</li>
+<li>The loss of moisture makes the beans lighter to transport</li>
+<li>The physical modifications to the bean make them easier to grind/mill</li>
+<li>The release of oil makes beans more susceptible to oxidiation</li>
+<li>Acids and antioxidants breakdown during more intense roasting</li>
 </ul>
+<p>During roasting a byproduct is generated known as “silverskin”, at about 4-5% of the bean weight. This is residual mucilage from the coffee fruit that is separated from the bean during roasting at high temperatures. Scientists are seeking applications for this byproduct, which is produced in large volumes every year.</p>
 </section>
-<section id="velocity-turbulence-and-residence-time" class="level2">
-<h2 class="anchored" data-anchor-id="velocity-turbulence-and-residence-time">Velocity, Turbulence and Residence Time</h2>
-<section id="problem" class="level3">
-<h3 class="anchored" data-anchor-id="problem">Problem</h3>
-<p>Consider a pipe through which a cold liquid flows. The pipe is surrounded by a shell through which a hot liquid flows. This is a basic “shell-and-tube” heat exchanger.</p>
-<p>Over time heat transfers from the hot liquid to the cold liquid. This kind of equipment is often used to reduce levels of bacteria in a liquid. Depending on the bacteria present, specific time-temperature combinations are required. For example, a common pasteurisation treatment is 72°C × 15s.</p>
-<p>Exposing the liquid to this temperature for 15s will be expected to reduce bacteria to a safe level. That is: if a bacteria takes 15s to pass through a section of the pipe where the temperature is 72° then it will be inactivated. It is important that all of the product is heated at this temperature for 15s to ensure it is safe, but it is also desirable not to exceed this time (if possible) as it can cause quality loss.</p>
-<p>Here is the issue: in laminar conditions, the liquid is not all moving at a uniform velocity. Therefore, the bacteria present in the liquid are moving at different velocities and will therefore move through the heat exchanger in different times. This also means that there is no guarantee that a given bacteria will be exposed to the target temperature for 15s.</p>
+<section id="grinding" class="level2">
+<h2 class="anchored" data-anchor-id="grinding">Grinding</h2>
+<p>Grinding is a simple size-reduction step. Its purpose is to increase the surface area of the beans. Increasing the surface area results in more effective leaching during subsequent brewing.</p>
+<p>In general, the greater the size reduction the more energy input required during grinding. There are generally two categories of grinder: blade-style and burr-style. The two styles are analogous to a paddle-style mixer and rotor-stator that are encountered in industrial mixing.</p>
+<p>The advantage of the rotor-stator mixer is that it generally yields a more uniform particle size distribution. In this style of grinder the particles are collected having passed through a precise gap between the rotating element and the static element. This means that particles that are too large to pass through this gap will simply not be present in the material that is collected — in effect, it acts like a filter of size-classifier. On the other hand, once a blade-grinding process is stopped it is possible that there could be some large particles present. Rotor-stator/burr-style mixers are therefore prized for the consistency of the grind they produce, which also impacts the ultimate consistency of coffee that is produced.</p>
+<p>Just like there are multiple degrees of roasting that can be attained there are also multiple degrees of grinding. In the case of a rotor-stator, this is determined by the gap between the rotor and stator. Typically, coffee is produced in fine, medium and coarse grinds, which are suitable for extraction processes involving different pressure ranges.</p>
+<p>While a consumer or barista wanting to make the perfect cup of coffee can grind their coffee beans as finely as they wish, industrial manufacturers (e.g., instant coffee makers) need to carefully balance the trade-off between the increased yield associated with fine grinds (higher surface area -&gt; greater extraction) and their reduced extraction speed (tighter packing of small particle -&gt; slower extraction).</p>
 </section>
-<section id="theory" class="level3">
-<h3 class="anchored" data-anchor-id="theory">Theory</h3>
-<p>The volumetric flow-rate is defined as <span class="math inline">\(Q = \frac{V}{t}\)</span>. From this equation we can take the residence time to be:</p>
-<p><span class="math display">\[t = \frac{Q}{V}\]</span></p>
-<p>The target is <span class="math inline">\(t (s) = 15\)</span>.</p>
-<p>The average velocity (<span class="math inline">\(v_{AVE}\)</span>) is given by <span class="math inline">\(v_{AVE} = \frac{Q}{A}\)</span>. The average residence time (<span class="math inline">\(t_{AVE}\)</span>) can be calculated by dividing tube length (<span class="math inline">\(L\)</span>) by average velocity:</p>
-<p><span class="math display">\[t_{AVE} = \frac{L \ (m)}{v_{AVE} \ (ms^{-1})}\]</span></p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Although there is one value for average velocity in reality the liquid moves at a different velocity depending on its position in the tube.</p>
-<p>Similarly, there is an average residence time but in reality there is a distribution of residence times.</p>
-</div>
-</div>
-<p>In laminar conditions (<span class="math inline">\(Re &lt; 2100\)</span>) the maximum velocity (<span class="math inline">\(v_{MAX}\)</span>) is approximately double the average velocity:</p>
-<p><span class="math display">\[v_{MAX} = 2 \cdot v_{AVE}\]</span></p>
-<p>The average residence time at <span class="math inline">\(v_{AVE}\)</span> is 15s. It takes 15s for the average particle moving at this velocity to traverse the pipe. How long does it take a particle that is double the speed? The answer is: half the value (7.5s), which is the minimum time (<span class="math inline">\(t_{MIN})\)</span>:</p>
-<p><span class="math display">\[t_{MIN} = \frac{t_{AVE}}{2}\]</span></p>
-<p>This means that there is a population of bacteria that have half the necessary residence time.</p>
-</section>
-<section id="solution" class="level3">
-<h3 class="anchored" data-anchor-id="solution">Solution</h3>
-<p>One solution is simply to double the treatment time. If the liquid is heated for 30s, then the fastest moving particles will receive the necessary treatment time of 15s.</p>
-<p>However, this is not ideal, as the average particle will be exposed to a high temperature for twice the time that is necessary, which can lead to quality issues (e.g., cooked flavours, discolouration). While the product will be safe, it may not be acceptable from a sensory perspective.</p>
-<p>The preferred solution is to ensure that the flow is turbulent. In turbulent flow the distribution of velocities is less wide. The fastest moving particles are only 1.2 times as fast as the average:</p>
-<p><span class="math display">\[v_{MAX} = 1.2 \cdot v_{AVE}\]</span></p>
-<p>This means that their residence time is approximately 0.8 times the treatment time, compared to 0.5 times for laminar flow.</p>
-<p>So, instead of an increased time of <span class="math inline">\(2 \times 15s\)</span> only <span class="math inline">\(1.2 \times 15s\)</span> is needed. In turbulent conditions, a heating time of 18s results in the fastest moving particles receiving the heat treatment for 15s, while minimising negative quality effects associated with prolonged heating.</p>
+<section id="extractionleaching" class="level2">
+<h2 class="anchored" data-anchor-id="extractionleaching">Extraction/leaching</h2>
+<p>Interestingly, the extraction process can be understood in similar terms to filtration, which we encountered previously.</p>
+<p>Remember that in filtration we referred to Darcy’s Law:</p>
+<p><span class="math display">\[J = \frac{TMP}{\mu \cdot R}\]</span></p>
+<p>This described how the flux of permeate (<span class="math inline">\(J\)</span>) through a filter was proportional to the transmembrane pressure (<span class="math inline">\(TMP\)</span>) across the filter, with resistance due to viscosity of the permeate (<span class="math inline">\(\mu\)</span>) and resistances (<span class="math inline">\(R\)</span>) due to the characteristics of the membrane and membrane fouling. Another common representation of Darcy’s law is shown below:</p>
+<p><span class="math display">\[Q = -k \cdot \frac{A \cdot \Delta P}{\mu \cdot L}\]</span></p>
+<p>Here, <span class="math inline">\(k\)</span> is the permeability constant of a <em>packed bed</em> (the minus sign reflects the fact that flow is from a region of high to low pressure: don’t worry about it), which could be sand (as Darcy originally studied) or coffee (which interest us here). The volumetric flow-rate of coffee <span class="math inline">\(Q\)</span> through a bed of coffee depends on the cross-sectional area of flow <span class="math inline">\(A\)</span>. The resistance increases with the viscosity of the coffee <span class="math inline">\(\mu\)</span> and the length of the coffee bed <span class="math inline">\(L\)</span>.</p>
+<p>Think about the impact of the relationships described by this equation on coffee extraction. Think of whole coffee beans, which have gaps between them that are visible without close inspection; these gaps constitute <em>pores</em> during extraction. Now imagine the same beans having been ground to a small size — the gaps/pores have also decreased in size, because smaller particles can fill these voids. We can assume then that the permeability of beans — represented by <span class="math inline">\(k\)</span> — decreases as we grind coffee more finely. For this reason we may need to create different amounts of pressure (<span class="math inline">\(\Delta P\)</span>) depending on the type of coffee being made: espresso machines (which use pumps) are required for fine grinds, while water can flow under gravity (low pressure) through coarse grinds. Keep in mind, however, that finely ground coffee may also pack more densely than coarse coffee (note: it is difficult/impossible to compress whole coffee beans); for this reason, at equivalent weights, it may be possible to reduce the length of the coffee bed significantly for fine grinds (this may partially offset the reduced flow-rate). One further complication is that during extraction the composition of the coffee is changing, unlike in the previous filtration examples; this means that water will dissolve an increasing concentration of solids over the course of the extraction process, increasing viscosity and therefore reducing flow-rate.</p>
+<p>Generally, the impact of coffee grinding on extraction can be said to be as follows:</p>
+<ul>
+<li>Increasing the <strong>surface area</strong> of particles accelerates the leaching of soluble molecules into water</li>
+<li>Reducing <strong>porosity</strong> of the coffee bed reduces flow-rate, increasing the effective leaching time</li>
+<li>At low porosities high <strong>pressures</strong> are required to permit acceptable rates of extraction</li>
+</ul>
+<p>The coffee process then, which ends with extraction, involves a careful interplay between roasting (reduces water, increases flavour/aroma, physically conditions particles), grinding (increases surface area, alters porosity) and extraction (leaches soluble constituents from roasted and ground coffee).</p>
+<p><strong>Coffee control charts</strong> can be used to optimise the sensory characteristics of coffee. Depending on the ratio of coffee to water (grams per litre) and the strength of the coffee generated (measured by refractometer) it can be determined whether a balanced cup of coffee will be made. Generally, a bean:water ratio of 55-70 g/L is required. This should generate solids contents of 1.20-1.45%. If not, brewing time or grinding intensity may need to be adjusted to hit this range. An example of a classic coffee control chart can be found <a href="https://sca.coffee/sca-news/25/issue-13/towards-a-new-brewing-chart">at this link</a> along with a description of recent research aimed at revising the classic chart.</p>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -646,13 +562,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../notes/viscosity.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Viscosity</span>
+      <a href="../notes/membranes.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Membrane Filtration</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../notes/flow2.html" class="pagination-link">
-        <span class="nav-page-text">Flow II</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../notes/slides.html" class="pagination-link">
+        <span class="nav-page-text">Slides</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

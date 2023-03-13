@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Food Process Design &amp; Optimisation - Stoke’s Law</title>
+<title>Food Process Design &amp; Optimisation - Membrane Filtration</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../notes/pressure1.html" rel="next">
-<link href="../notes/quantities.html" rel="prev">
+<link href="../notes/coffee.html" rel="next">
+<link href="../notes/evaporation-distillation.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Stoke’s Law</h1>
+      <h1 class="quarto-secondary-nav-title">Membrane Filtration</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -153,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/stokes-law.html" class="sidebar-item-text sidebar-link active">Stoke’s Law</a>
+  <a href="../notes/stokes-law.html" class="sidebar-item-text sidebar-link">Stoke’s Law</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -208,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/membranes.html" class="sidebar-item-text sidebar-link">Membrane Filtration</a>
+  <a href="../notes/membranes.html" class="sidebar-item-text sidebar-link active">Membrane Filtration</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -243,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Stoke’s Law</h1>
+<h1 class="title d-none d-lg-block">Membrane Filtration</h1>
 </div>
 
 
@@ -258,234 +258,195 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><code>Fluid Statics</code> is the science of liquid systems at rest. The fact that the liquid is “at rest” does not mean nothing is happening.</p>
-<p>As this topic can get quite technical we will start with a relevant food example that brings together some concepts we have encountered already.</p>
-<p>In food processing it is often in our interest to exploit some kind of <em>productive difference</em>. Successful exploitation of such differences allow us to generate a useful change. Productive differences and the changes they induce are often captured in equations. Dimensional analysis can help us to reason about these equations.</p>
-<p>These ideas are here reinforced with the example of systems in which particles are dispersed in a liquid.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>There are no slides associated with this lecture. Please interact with the app below to develop your intuition for the topics discussed.</p>
-</div>
-</div>
-<div>
-<iframe class="slide-deck" src="https://edibotopic.github.io/stokes-law/">
-</iframe>
-</div>
-<p>🔗 <a href="https://edibotopic.github.io/stokes-law">Click here for a full-screen version</a></p>
-<section id="pressure-density-and-buoyancy" class="level1">
-<h1>Pressure, Density and Buoyancy</h1>
-<p>In a liquid, the pressure increases with depth from the surface. When an object is submerged in a liquid there is more pressure at its bottom than at its top. This pressure drop results in the phenomenon of <em>buoyancy</em>, which is the tendency of a liquid to exert an upward force on a submerged object that opposes the object’s weight (which would otherwise tend to pull it downards). The force is equivalent to the weight of the fluid displaced by the object.</p>
-<div class="callout callout callout-style-simple no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Remember, weight is mass times gravitational acceleration, and therefore a force (<span class="math inline">\(F = ma\)</span>).</p>
-</div>
-</div>
-</div>
-<p>The density of the object determines if it sinks or floats. If the object’s density is less than the surrounding fluid, it will float. The reason is that the fluid, which has the greater density, contains more mass/weight in a given volume compared to the object. The buoyant (upward) force, which equals the weight of the fluid displaced, is thus greater than the weight of the object (downward force).</p>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The above statements about the physics of buoyancy are for background. If you are confused, read through the statements carefully again. Still confused? Move on to the section on Stoke’s Law, which is more important in this module.</p>
-</div>
-</div>
-<p>The key point is that sinking or floating requires a <strong>density difference</strong>.</p>
-</section>
-<section id="stokes-law" class="level1">
-<h1>Stoke’s Law</h1>
-<p>Food scientists usually use Stoke’s Law to reason about systems in which particles are dispersed in a liquid. This equation accounts for numerous factors relevant to food systems that can be controlled during processing.</p>
-<p>We are interested in floating or sinking, which is characterised by a <em>velocity</em>. This velocity is then a function of some set of physical parameters. We know one already: <em>density difference</em>. These changes also depend on gravity, which can be captured with the constant for gravitational acceleration.</p>
-<p>To find the full set of parameters requires some knowledge of the real world. Alternatively, if you are not the observant type, <a href="https://edibotopic.github.io/stokes-law/">play with the sliders to explore the effect of the parameters</a>.</p>
-<p>The answers to the following should be obvious enough but if not expand the box below to confirm.</p>
-<blockquote class="blockquote">
-<p>Do you think large or small particles fall quicker?</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Do particles fall more quickly in water or honey?</p>
-</blockquote>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Expand for Answers
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Large stones fall quicker than small pebbles in water.</p>
-<p>Things fall slowly in honey.</p>
-<p>Clearly then, particle <em>diameter</em> and solvent <em>viscosity</em> must be considered.</p>
-</div>
-</div>
-</div>
-<p>We can say then that the velocity is a function of particle diameter, density difference, gravitational acceleration and viscosity.</p>
-<p>Some of these will <code>drive</code> the change and some will <code>resist</code> the change:</p>
-<p><span class="math display">\[v = \frac{drive}{resist}\]</span></p>
-<p>The viscosity is the only factor that resists the change. Thus, velocity is proportional to the other parameters and inversely proportion to viscosity.</p>
+<hr>
+<p>Many raw materials in food processing are complex mixtures of many different components. For a variety of reasons, it is often desirable to concentrate or fractionate mixtures into sub-sets of their components. In dairy processing, for example, this is often practiced to create new ingredients. These ingredients may have specific <em>bio-functional</em> (e.g., nutrition) or <em>techno-functional</em> (e.g., stabilisation) attributes that make them useful in applications.</p>
+<p>A major issue affecting membrane processes in the food industry is <em>fouling</em>. Fouling is simply to formation of a solid deposit on the membrane surface over time. This can lead to several problems, including reduced flow-rates, altered membrane selectivity, process shut-downs and increased cleaning requirements.</p>
+<p>Membrane filtration is a large, complex area of study. These notes and the associated lecture are only a brief introduction.</p>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Writing the Equation with Some Educated Guesses
+Fractionation and concentration
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Based on what we know so far we can <em>guess</em> that velocity (<span class="math inline">\(v\)</span>) is proportional to particle diameter (<span class="math inline">\(D\)</span>), density difference (<span class="math inline">\(\Delta \rho\)</span>) and gravitational acceleration (<span class="math inline">\(g\)</span>): We can write this more succintly as:</p>
-<p><span class="math display">\[v \propto (D,\Delta \rho,g)\]</span></p>
-<p>We also know that viscosity (<span class="math inline">\(\mu\)</span>) tends to resist floating and sinking (e.g., <span class="math inline">\(v\)</span> is inversely proportional to <span class="math inline">\(\mu\)</span>).</p>
-<p><span class="math display">\[v \propto \frac{1}{\mu}\]</span></p>
-<p>Putting this information together we have the following (incorrect) equation:</p>
-<p><span class="math display">\[v ≈ \frac{D \cdot \Delta \rho \cdot g}{\mu}\]</span></p>
-<p>Why is this incorrect (?) — because the dimensions on the left don’t match those on the right. <strong>You are strongly advised to check this yourself.</strong></p>
-<p>The dimensions for <span class="math inline">\(v\)</span> are <span class="math inline">\([L T^{-1}]\)</span> but the right gives <span class="math inline">\([T^{-1}]\)</span>.</p>
-<p>Assuming we have identified the correct parameters, what can we do to correct the dimensions?</p>
-<p>The most obvious solution is to square the diameter term, yielding:</p>
-<p><span class="math display">\[v ≈ \frac{D^2 \cdot \Delta \rho \cdot g}{\mu}\]</span></p>
-<p>The equation now has all the correct terms: the velocity is proportion to the square of the diameter, which is also known from experiments.</p>
-<p>An empirical factor of <span class="math inline">\(18\)</span> is also usually included based on experimental observations:</p>
-<p><span class="math display">\[v = \frac{D^2 \cdot \Delta \rho \cdot g}{18\mu}\]</span></p>
+<p>“Concentration” usually refers to a process by which all components of a certain class are recovered by a membrane. For example, reverse osmosis of fruit juice is a concentration process in which all the solid components are recovered while the water is removed. As another example, ultrafiltration of whey is a concentration process in which all of the protein is recovered while smaller molecules and water are removed.</p>
+<p>“Fractionation” often refers to more subtle filtration processes in which components within a class might be separated. For example, microfiltration can be used to separate proteins based on their molecular weights.</p>
 </div>
 </div>
-<section id="importance-to-processing" class="level2">
-<h2 class="anchored" data-anchor-id="importance-to-processing">Importance to Processing</h2>
-<p>There are two contexts in which Stoke’s Law becomes important in a food processing context.</p>
+<section id="types-of-filtration" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-filtration">Types of filtration</h2>
+<section id="dead-end" class="level3">
+<h3 class="anchored" data-anchor-id="dead-end">Dead-end</h3>
+<p>A distinction is usually made between “dead-end” and “cross-flow” filtration. The former involves a type of filtration that is similar to the common use of filter paper in laboratories. A feed material flows perpendicularly towards the filter surface, with some material being retained (e.g., crystals) and others permeating (e.g., water). It is typically observed that this kind of filtration results in a rapid decline in permeation rate. While this is a minor inconvenience in a laboratory, it can be a major problem at industrial scale.</p>
+<p>The reason for the decline in permeation rate is a loss of pressure and membrane fouling. Pressure (<span class="math inline">\(P\)</span>) in such a system is given by <span class="math inline">\(P = \rho g h\)</span>, where <span class="math inline">\(h\)</span> is the height of the liquid above the filter surface. Fouling is simply the accumulation of retained components on the membrane surface, which increases resistance against the flow of permeate. Common strategies to overcome these issues in a laboratory context might be:</p>
+<ul>
+<li>Adding more feed to the system (e.g., increasing pressure)</li>
+<li>Displacing the fouling deposits with a glass rod (e.g., increase shear near the membrane surface)</li>
+<li>Stopping the filtration and replacing the filter</li>
+</ul>
+</section>
+<section id="cross-flow" class="level3">
+<h3 class="anchored" data-anchor-id="cross-flow">Cross-flow</h3>
+<p>Most membrane operations in industries like dairy involve cross-flow filtration. In cross-flow filtration the feed liquid flows a<strong>cross</strong> or parallel to the membrane surface. The feed then continuously removes fouling material from the membrane surface over time. Generally, this gives far superior performance to dead-end flow; however, it is not perfect and gradual fouling is still a problem.</p>
+<p>When attempting to develop strategies to maximise permeate flux it is useful to consider Darcy’s equation:</p>
+<p><span class="math display">\[J = \frac{TMP}{\mu \cdot R}\]</span></p>
+<p><span class="math inline">\(J\)</span> signifies permeate flux (probably because <span class="math inline">\(F\)</span> is already taken for “force”), <span class="math inline">\(TMP\)</span> stands for <strong>T</strong>rans <strong>M</strong>embrane <strong>P</strong>ressure, <span class="math inline">\(µ\)</span> for permeate viscosity and <span class="math inline">\(R\)</span> for hydraulic resistance. To generate permeate a pressure drop must exist from the feed-side to the permeate-side. Pressure is supplied by a pump and through the closing of a valve on the retentate line.</p>
+<p>For a filtration process to be productive and efficient it is typically preferable that permeate flux be <em>rapid</em> and <em>sustainable</em>. Intuitively, reading the equation above, it would seem obvious that a high <span class="math inline">\(TMP\)</span> and a low <em>viscosity</em> would yield the best outcome in this regard. The <span class="math inline">\(R\)</span> value can really be understood as the sum of two terms, one being the resistance due to the membrane and the other due to the fouling layer. In obvious symbols this can be written:</p>
+<p><span class="math display">\[R = R_m + R_f\]</span></p>
+<p>To some extent, <span class="math inline">\(R_m\)</span> is outside of our control, as it depends on the conditions under which the membrane was manufactured and the type of membrane process we are running. For example, in order of pore-size membrane processes fall into the following general categories:</p>
+<div class="callout callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>microfiltration &gt; ultrafiltration &gt; nanofiltration &gt; reverse osmosis</p>
+</div>
+</div>
+</div>
+<p>Reverse osmosis (RO) involves the smallest pores, which only let water molecules through. The pores in nanofiltration (NF) membranes are larger and allow the passage of monovalent ions as well as water. Ultrafiltration (UF) lets sugars and divalent ions permeate, in addition to monovalents and water. Microfiltration (MF) membranes can be selected to retain bacteria and/or fat and/or some proteins, while allowing smaller molecules permeate.</p>
+<p>It should be obvious that the smaller the pore-size, the greater the resistance the membrane resists the flow of permeate. This can be understood as one reason why the amount of pressure required for each category is in the order:</p>
+<div class="callout callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>RO &gt; NF &gt; UF &gt; MF</p>
+</div>
+</div>
+</div>
+<p>NF processes will simply require greater pressures than MF processes, which is a limitation associated with the construction of the membrane itself.</p>
+<p>What is under the control of the processor to a greater extent is resistance due to fouling and the viscosity of process fluid.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+MWCO
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Within a specific membrane category, like UF, membranes can be purchased at different molecular-weight cut-off (MWCO) values. MWCO determines which molecules will be blocked from passing through the membrane. For example, in milk and whey the smallest protein is α−lactalbumin, which has a molecular weight (MW) of 14 kDa. If the goal is to concentrate all protein the it is thus sufficient to select a MWCO that will ensure that this smallest protein does not permeate, as it follows logically that the larger proteins will not permeate if this condition is met. For this reason, UF of milk and whey is commonly performed using MWCOs of ~10 kDa.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="optimising-for-permeate-flux" class="level2">
+<h2 class="anchored" data-anchor-id="optimising-for-permeate-flux">Optimising for permeate flux</h2>
+<p>Declines in flux during filtration are common and typically caused by fouling of the membrane surface. The results in an increase in hydraulic resistance (<span class="math inline">\(R\)</span> in Darcy’s equation). Fouling is a complex phenomenon which can be simply understood as the deposition of molecules at the surface of the membrane and, in some cases, inside the membrane pores themselves. An advantage of cross-flow filtration is that the feed material moves across the membrane surface during pumping, which contributes to the continuous removal of the fouling layer during filtration - this is not perfect, however.</p>
+<section id="permeate-viscosity" class="level3">
+<h3 class="anchored" data-anchor-id="permeate-viscosity">Permeate viscosity</h3>
+<p>Most liquids decrease in viscosity as temperature increases. This is true unless a qualitative change occurs, such as when proteins denature and aggregate to form larger structures that impart greater viscosity. For these reasons a temperatures of approximately 40-60°C have been common for filtration processes in the dairy industry (not too low, not too high), for example.</p>
+<p>Darcy’s Law includes a viscosity parameter that refers to permeate viscosity. The viscosity of permeate generated during filtration is typically low (similar to water). However, minor changes in permeate viscosity associated with temperature can have a significant effect on permeate flux.</p>
+</section>
+<section id="cross-flow-turbulence-and-retentate-viscosity" class="level3">
+<h3 class="anchored" data-anchor-id="cross-flow-turbulence-and-retentate-viscosity">Cross-flow, turbulence and retentate viscosity</h3>
+<p>In cross-flow filtration the feed flows parallel to the membrane surface, contributing to the removal of foulant. However, the effectiveness of this cross-flow mechanism is dependent on the turbulence generated by the feed flow. Turbulence is typically defined for pipes using the Re(ynold’s) number:</p>
+<p><span class="math display">\[Re = \frac{v \cdot D \cdot \rho}{\mu}\]</span></p>
+<p>The higher the <span class="math inline">\(Re\)</span> the greater the turbulence. Two important factors in this equation are velocity (<span class="math inline">\(v\)</span>) and viscosity (<span class="math inline">\(\mu\)</span>). Turbulence is directly proportion to the former and inversely proportional to the latter. In cross-flow filtration, maximising <span class="math inline">\(v\)</span> is achieved by ensuring a sufficiently high feed-flow rate is attained.</p>
+<p>Retentate/feed viscosity can increase substantially during filtration due to an increased concentration of the feed. The increased viscosity can reduce cross-flow velocity and turbulence of the feed, which can contribute to fouling. Diafiltration — the addition of water to the feed during filtration — helps maintain a low viscosity. For the production of high-protein materials like whey protein isolate using filtration diafiltration is necessary.</p>
+<p>The use of feed spacers, mesh-like structures that disrupt flow and generate turbulence are also common in most miodern cross-flow filtration systems.</p>
+</section>
+<section id="critical-flux" class="level3">
+<h3 class="anchored" data-anchor-id="critical-flux">Critical flux</h3>
+<p>From Darcy’s Law it can be assume that <span class="math inline">\(J\)</span> increases linearly with <span class="math inline">\(TMP\)</span>. In reality, this is a simplification, and <span class="math inline">\(J\)</span> plateaus beyond a certain “critical flux”. This creates a distinction between the linear (pressure-dependent) and plateau (pressure-independent) regions. The most severe fouling is associated the the pressure-independent region, which therefore should be avoided.</p>
+<p>Ideally, the highest TMP should be chosen in the pressure-dependant region of the J−TMP curve; this means that if you adjusted the pressure in stepwise increments you would find a linear region that eventually transitions into a plateau — the idea is to select the TMP before that plateau is reached, as the plateau is associated with high degrees of fouling. This requires a trade-off between short-term and long-term productivity, as the initial sacrifice in flux should pay off in longer run-times without requirements for process shutdown and cleaning.</p>
+</section>
+<section id="anti-fouling-technology" class="level3">
+<h3 class="anchored" data-anchor-id="anti-fouling-technology">Anti-fouling technology</h3>
+<p>Membrane fouling is a continued problem in the food industry. Scientists and engineers are investigating multiple approaches to minimise this phenomenon, such as:</p>
+<ul>
+<li>Optimising spacer mesh design to promote internal turbulence</li>
+<li>Fabrication and modification of membrane polymers to repel depositing molecules</li>
+<li>Use of ultrasonication probes that physically remove fouled material</li>
+<li>Application of “dynamic membranes” that rotate or vibrate to disrupt foulant</li>
+</ul>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+UTP
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A very successful technology that was developed several years ago is Uniform-Transmembrane Pressure (UTP). The <span class="math inline">\(TMP\)</span> value we calculate is actually an average of the pressure on the feed side (pressure on feed and retenate):</p>
+<p><span class="math display">\[TMP = \frac{P_{f} + P_{r}}{2}\]</span></p>
+<p>There is a pressure drop <span class="math inline">\(\Delta P\)</span> from the feed to the retentate, while the pressure on the opposite (permeate) side of the membrane is uniformly atmospheric.</p>
+<p>This means that the <span class="math inline">\(TMP\)</span> at individual points of the membrane surface is variable. Put simply: the TMP nearest the feed inlet is highest and that nearest the retentate outlet is lowest.</p>
+<p>Consider that the “driving force” for separation in a filtration process is TMP. The above situation means that a significant amount of the separation is happening in a small proportion of the membrane area (near the feed inlet).</p>
+<p>UTP is an effort to ensure that <span class="math inline">\(TMP\)</span> is approximately equal throughout the length of the membrane. This can be achieved, for example, by recirculating the permeate on the permeate side of the membrane, such that after permeate is collected it is pumped on the permeate side from a position corresponding to the feed inlet (opposite side of membrane). This creates a high pressure region at the permeate inlet that reduces <span class="math inline">\(TMP\)</span> at that point. The pressure at the permeate outlet is still atmospheric pressure, meaning that the TMP has only been reduced at the feed inlet, solving the problem of unequal TMP across the membrane length.</p>
+</div>
+</div>
+<p>Examples of two recent developments in this area are briefly described below.</p>
+<section id="charged-membranes" class="level4">
+<h4 class="anchored" data-anchor-id="charged-membranes">Charged membranes</h4>
+<p>Most membrane processes to concentrate or fractionate proteins are based on pores being small enougn to physically repel larger molecules. By virtue of the molecules making physical contact with the membrane surface, however, these molecules can become associated with fouling layers.</p>
+<p>A recently-developed approach is to use larger pores that are activated with an electrostatic charge. For example, in a feed containing negatively charged proteins of 10 kDa in size a membrane can be selected with a MWCO of 100 kDa but that is modified to have a negative charge.</p>
+<p>This system ensures that:</p>
 <ol type="1">
-<li>Recovery of the dispersed phase to generate a product</li>
-<li>Stabilising the dispersion to improve product quality</li>
+<li>The proteins are repelled through electrostic forces</li>
+<li>Fouling is mitigated by limiting protein-membrane contact</li>
+<li>Membrane resistance is decreased due to the high MWCO</li>
+<li>A high and sustainable permeate flux is created due to 1-3</li>
 </ol>
-<p>These two situations have opposing goals, but Stoke’s Law helps in both cases.</p>
-<section id="recovery" class="level3">
-<h3 class="anchored" data-anchor-id="recovery">Recovery</h3>
-<p>If the goal is separation we can target parameters that increase sinking/floating velocity.</p>
-<p>For example, particles can be aggregated/flocculated to increase their diameter.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p>It is not possible to change gravity, but we can use centrifuges to apply an increased g-force.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<p>When using a centrifuge an elevated temperature can be used to reduce viscosity; in this, way parameters can be manipulated simultaneously to achieve the desired effect.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<p>Such charged membranes have been demonstrated to be successful at lab- and pilot-scale but have been adopted to a limited extent in the food industry to date.</p>
+</section>
+<section id="low-temperature-processing" class="level4">
+<h4 class="anchored" data-anchor-id="low-temperature-processing">Low-temperature processing</h4>
+<p>A somewhat counter-intuitive finding in recent years is that operating filtration plants at close to refrigeration temperatures can have benefits for ensuring more sustainable flux values.</p>
+<p>The mechanism behind this is unclear at this point but what is apparent is that sacrificing the high initial fluxes associated with warm filtration can result in longer process runs, less down-time and reduced cleaning costs. This sacrifice in initial productivity to ensure long-term productivity is analogous to operation at sub-critical flux.</p>
+<p>It is not all good news, however, as larger pumps may be required to handle the more viscous feed material and there may also be associated refrigeration costs. Nonetheless, several dairy companies have begun to transition to low-temperature processing.</p>
+</section>
+</section>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<section id="streams" class="level3">
+<h3 class="anchored" data-anchor-id="streams">Streams</h3>
+<p>There are three streams to consider during any filtration process: the feed, retentate and permeate. During filtration the feed is separated into the retentate and permeate. In a benchtop process the retentate is commonly recirculated back to the feed, which becomes increasingly concentrated over time.</p>
+</section>
+<section id="concentration-factor" class="level3">
+<h3 class="anchored" data-anchor-id="concentration-factor">Concentration factor</h3>
+<p>As permeate volume (<span class="math inline">\(P_V\)</span>) increases the feed volume (<span class="math inline">\(F_V\)</span>) decreases. Typically there is a target volume concentration factor (<span class="math inline">\(VCF\)</span>) that can be used to estimate the increase in protein content in the feed but also to set a limit on the process:</p>
+<p><span class="math display">\[VCF = \frac{F_v}{F_v - P_v}\]</span></p>
+<p>Hence, if you start with <span class="math inline">\(1 \ L\)</span> of feed, generate <span class="math inline">\(670 \ mL\)</span> of permeate you will have achieved a <span class="math inline">\(VCF\)</span> of <span class="math inline">\(3×\)</span>. If the starting protein concentration was <span class="math inline">\(3\%\)</span> the concentration afterwards would be roughly <span class="math inline">\(3 \ × \ 3 = 9\)</span>. An efficient filtration process is one that has a high permeate flux that is sustainable over time. Flux is the flow-rate of permeate per unit of membrane area and typically has the units <span class="math inline">\(L \ m^{−2} \ h^{−1}\)</span>.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Note
+Converting Flow Data
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>We will discuss technology like centrifuges in more detail in later sections in the module. For now, it is sufficient to know that centrifuges accelerate sinking/floating by spinning a sample around a central axis at high speeds.</p>
-<p>You are encouraged to look them up in the meantime if you want to know more.</p>
+<p>Consider that you have measured <span class="math inline">\(10 \ mL\)</span> of permeate in <span class="math inline">\(30 \ seconds\)</span> and the membrane area used was <span class="math inline">\(0.1 \ m^2\)</span>:</p>
+<p><strong><span class="math inline">\(mL\)</span> to <span class="math inline">\(L\)</span></strong> : 10 ÷ 1000 = 0.01</p>
+<p><strong><span class="math inline">\(L \ 30s^{−1}\)</span> to <span class="math inline">\(L \ h^{−1}\)</span></strong> : 0.01 × 2 × 60 = 1.2</p>
+<p><strong><span class="math inline">\(L h^{−1}\)</span> to <span class="math inline">\(L \ m^{−2} \ h^{−1}\)</span></strong> : 1.2 ÷ 0.1 = 12</p>
+<p>The answer is:</p>
+<p><span class="math display">\[12 \ L \ m^{-2} \ h^{-1}\]</span></p>
 </div>
 </div>
 </section>
-<section id="stabilisation" class="level3">
-<h3 class="anchored" data-anchor-id="stabilisation">Stabilisation</h3>
-<p>When the goal is stabilisation (preventing separation) a different approach is necessary.</p>
-<p>Decreasing particle diameter will decrease separation velocity, and this can be achieved with homogenisation.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Homogenisers are covered in later sections — they force a dispersion through a narrow gap, which breaks dispersed particles into smaller-sized particles.</p>
-</div>
-</div>
-<p>When formulating the product — if appropriate — a thickener can be added to increase viscosity.</p>
 </section>
-<section id="operations-and-their-inverses" class="level3">
-<h3 class="anchored" data-anchor-id="operations-and-their-inverses">Operations and their Inverses</h3>
-<p>There is sometimes confusion among students about situations in which an idea or equation can be leveraged to achieve two opposing goals, in this case <em>separation</em> and <em>stabilisation</em>. Of course, which operation we are interested in depends on <em>context</em> (what are you processing? who are your customers?). However, it is valuable to be able to apply an idea/equation in these different contexts, rather than being restricted to one.</p>
-<p>In general, many operations (<span class="math inline">\(O\)</span>) have an <code>inverse</code> (<span class="math inline">\(O^{-1})\)</span>. This is a useful mental shortcut for remembering multiple operations.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th><span class="math inline">\(O\)</span></th>
-<th><span class="math inline">\(O^{-1}\)</span></th>
-<th>Examples</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>heating</td>
-<td>cooling</td>
-<td>pasteurising/refrigerating</td>
-</tr>
-<tr class="even">
-<td>drying</td>
-<td>rehydrating</td>
-<td>spray-drying/dissolution</td>
-</tr>
-<tr class="odd">
-<td>comminution</td>
-<td>aggregation</td>
-<td>mincing/granulation</td>
-</tr>
-<tr class="even">
-<td>separation</td>
-<td>stabilisation</td>
-<td>filtration/homogenisation</td>
-</tr>
-<tr class="odd">
-<td>concentration</td>
-<td>dilution</td>
-<td>evaporation/washing</td>
-</tr>
-</tbody>
-</table>
-<p>Can you think of other examples?</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Question
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Your company is interested in recovering a plant protein from process waste. Laboratory results show that the protein aggregates in the presence of calcium and that the aggregates sink. Early tests indicate that the viscosity of the solution decreases at 50C.</p>
-<p>Provide a clear rationale, using appropriate equations, for the design of an operation to recover the proteins.</p>
-</div>
-</div>
+<section id="diafiltration" class="level2">
+<h2 class="anchored" data-anchor-id="diafiltration">Diafiltration</h2>
+<p>Diafiltration is simply a “washing” step. It reduces the viscosity of the feed and improves filtration performance.</p>
+<p>It is typically done in batch or continuous mode. For example, batch diafiltration might involve removing 50% of feed volume of permeate, followed by replacing that volume in the feed with water, which is then subsequently removed again.</p>
+<p>In practice, continuous diafiltration is more common as it is more effective in maintaining filtration performance. This method involves continuously adding water to the feed at the same rate as which permeate is being removed. At the end of the filtration process the water that has been added can then be removed.</p>
 
 
 </section>
-</section>
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>This requires knowledge of the chemistry of a specific system<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>in such cases <span class="math inline">\(g\)</span> may be replaced with a term representing centrifugal force<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -736,13 +697,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../notes/quantities.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Quantities</span>
+      <a href="../notes/evaporation-distillation.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Evaporation and Distillation</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../notes/pressure1.html" class="pagination-link">
-        <span class="nav-page-text">Pressure I</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../notes/coffee.html" class="pagination-link">
+        <span class="nav-page-text">Coffee</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
