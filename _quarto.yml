@@ -32,22 +32,11 @@ website:
           - notes/evaporation-distillation.qmd
           - notes/membranes.qmd
           - notes/coffee.qmd
-      # - section: "Powders"
-      #   contents:
-      #     - notes/concentration.qmd
-      #     - notes/drying.qmd
-      # - section: "Bulk Solids Science"
-      #   contents:
-      #     - notes/powder-technology.qmd
-      #     - notes/flowability.qmd
-      # - section: "Bulk Solids Science"
-      #   contents:
-      #     - notes/powder-technology.qmd
-      #     - notes/flowability.qmd
-      # - section: "Integrated Processes"
-      #   contents:
-      #     - notes/process-flow.qmd
-      #     - notes/formulation.qmd
+      - section: "Powders"
+        contents:
+          - notes/concentration-drying.qmd
+          - notes/bulksolids.qmd
+          - notes/mixing.qmd
       # - section: "Sustainable processing"
       #   contents:
       #     - notes/concept.qmd
