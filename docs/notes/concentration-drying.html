@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Food Process Design &amp; Optimisation - Drying</title>
+<title>Food Process Design &amp; Optimisation - Concentration and Drying</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../notes/bulksolids.html" rel="next">
+<link href="../notes/coffee.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -72,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Drying</h1>
+      <h1 class="quarto-secondary-nav-title">Concentration and Drying</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -218,12 +220,37 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Appendix</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Powders</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/concentration-drying.html" class="sidebar-item-text sidebar-link active">Concentration and Drying</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/bulksolids.html" class="sidebar-item-text sidebar-link">Bulk Solids Science</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/mixing.html" class="sidebar-item-text sidebar-link">Mixing Technology</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">Appendix</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../notes/slides.html" class="sidebar-item-text sidebar-link">Slides</a>
@@ -241,7 +268,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Drying</h1>
+<h1 class="title d-none d-lg-block">Concentration and Drying</h1>
 </div>
 
 
@@ -257,8 +284,107 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <hr>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Concentration refers to an operation where water is removed to concentrate solids. <em>Solids</em> usually refers to any components that are not water. Thus, concentration involves no fractionation of components in the solids, meaning there is not change in the relative proportion of protein and sugar, for example. There are several advantages to concentration, including:</p>
+<ul>
+<li>Reduced weight due to water removal</li>
+<li>Decreased microbial growth due to lower water content/activity</li>
+</ul>
+<p>In addition, concentration is commonly applied to liquid systems prior to operations like spray-drying, due to the energy efficiency of the concentration operations.</p>
+<section id="evaporation" class="level2">
+<h2 class="anchored" data-anchor-id="evaporation">Evaporation</h2>
+<p>Evaporation usually refers to a phase change (<span class="math inline">\(liquid \to vapour\)</span>) that occurs when the temperature of a liquid is increased above its boiling point (<span class="math inline">\(T_B\)</span>).</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Scientists often distinguish between evaporation and boiling as two distinct types of <strong>vapourisation</strong>, where evaporation can occur at temperatures below boiling temperature (think of a water puddle that dries out on a cold Irish day) and involves generation of vapour at the liquid surface, while boiling occurs at or above boiling temperature (water in a kettle) and involves generation of vapour throughout the bulk of the liquid.</p>
+<p>I am not convinced that this distinction is critical to understanding evaporation <em>as an operation</em>, so I will typically use “evaporation” to refer to the generation of vapour. You are free to explore the technical distinction further if you wish.</p>
+</div>
+</div>
+<p><span class="math inline">\(T_B = 100 °C\)</span> for water in normal atmospheric pressure. Even at room temperature, some water molecules gain sufficient energy to become vapour but they are very few in number. As temperature increases, and approaches <span class="math inline">\(T_B\)</span>, the number of water molecules entering the vapour phase increases, resulting in a progressively greater <em>vapour pressure</em>. You can imagine the vapour pressure (<span class="math inline">\(T_V\)</span>) as being opposed by the atmospheric pressure — as the vapour pressure increases from a small value (at 20 °C) to a big value (at 100 °C), evaporation is able to proceed more rapidly as the vapour mor easily overcomes the atmospheric pressure. When <span class="math inline">\(T_V\)</span> exceeds (or equals) <span class="math inline">\(T_B\)</span> then boiling occurs, resulting in rapid vapourisation.</p>
+<p>An evaporator is a machine designed to promote the evaporation of a liquid with dissolved solids (i.e., dissolved substances) so that it becomes more concentrated. In food processing <strong>evaporation</strong> often refers to an <em>operation</em> in which an evaporator is used to concentrate a liquid food or beverage (<em>via</em> the mechanism of evaporation).</p>
+<p>By <em>more concentrated</em> we mean <strong>more concentrated in solids (everything that is not water)</strong>.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Technically, both evaporators and driers involve the phase change of evaporation (as does other operations such as distillation).</p>
+<p>A way to distinguish them is to remember that an evaporator does not change the form of its input. So while a spray-drier transforms a liquid into a powder, an evaporator merely changes the properties of a liquid — the liquids become more concentrated</p>
+<p>As we will see, they are frequently used together.</p>
+</div>
+</div>
+<p>A simple evaporator would consist of an open tank heated to a high temperature (at or approaching boiling temperature). There are several reasons why this would be a bad approach, however, due to the high temperatures involved:</p>
+<ol type="1">
+<li>Nutrients may become degraded</li>
+<li>Energy costs will likely be high</li>
+<li>Undesirable chemical changes may occur</li>
+</ol>
+<p>For these and other reasons, a specific evaporator design — the <em>multi-effect falling-film evaporator</em> — is common.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+The Story of How the Evaporator was Invented
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you benefit from human interest stories when learning technical material I would recommend the tale of how <a href="https://www.acs.org/content/acs/en/education/whatischemistry/landmarks/norbertrillieux.html#multiple-effect-evaporator">Norbert Rilliuex</a> developed the multi-effect evaporator technology that is largely still in use today.</p>
+</div>
+</div>
+</section>
+<section id="evaporator-design" class="level2">
+<h2 class="anchored" data-anchor-id="evaporator-design">Evaporator Design</h2>
+<p>The evaporator has several important design features that allow it to work effectively. The multiple “effects” refer to <strong>stages</strong> where the evaporation will occur. Each stage consists of an enclosed chamber containing a series of tall, <strong>vertical tubes</strong>. The liquid to be concentrated falls down the inner walls of these tubes as a film. In the first stage <strong>steam</strong> is pumped into the shell that surrounds the tubes, heating the film through the walls of the tubes. A <strong>vacuum</strong> pump is used to reduce pressure in each effect (a partial vacuum is created, removing air molecules that would otherwise oppose vapour pressure), meaning that the boiling temperature of the liquid is reduced. In the first stage, the concentrate is separated from the vapour, both are then passed into the second stage, which operates at a <strong>lower pressure</strong> than the first — at this lower pressure the vapour can act as the heating medium, promoting the evaporation of more water from the concentrate. This process can be repeated across up to seven stages, with pressure decreasing at each successive stage as the liquid becomes more concentrated and the vapour is continuously recycled to use as the heating medium (instead of steam). Vapour is collected at the end of the operation and cooled into liquid water by a <strong>condenser</strong> — this water can then be used to generate steam to initiate the evaporation process again.</p>
+<p>To summarise:</p>
+<section id="vacuum" class="level3">
+<h3 class="anchored" data-anchor-id="vacuum">Vacuum</h3>
+<p>A vacuum is pulled in the evaporator to reduce the boiling point of the liquid. This means that temperatures as low as 60-70 °C can be used to generate vapour rather than the more severe 100°C.</p>
+</section>
+<section id="effects" class="level3">
+<h3 class="anchored" data-anchor-id="effects">Effects</h3>
+<p>“Effects” refer to stages in the evaporator where the liquid is concentrated, and in each stage there is some vapour removed. The liquid becomes more concentrated with each stage making it more difficult to evaporate water using hot vapour. For this reason, the pressure is reduced in each successive stage. There can be up to seven effects in a commercial evaporator — the more effects that are used the greater the efficiency because more vapour (from the product) can be used as heating medium (instead of steam). This efficiency is an investment, as more effects increase capital costs.</p>
+</section>
+<section id="films" class="level3">
+<h3 class="anchored" data-anchor-id="films">Films</h3>
+<p>Liquid is pumped to the top of the evaporator. From there, the liquid falls as a film down the inner walls of a long, vertical tube. The liquid is heated by steam circulating outside of the tube. As the liquid falls by gravity the vapour generated separates from the liquid. In most evaporators each stage consists of a large number of these tubes.</p>
+</section>
+<section id="condenser" class="level3">
+<h3 class="anchored" data-anchor-id="condenser">Condenser</h3>
+<p>Vapour can be turned back into liquid water by a condenser. This water can then be used (boiled) to generate steam that can be used in the evaporation process.</p>
+</section>
+</section>
+<section id="applications-and-issues" class="level2">
+<h2 class="anchored" data-anchor-id="applications-and-issues">Applications and Issues</h2>
+<p>Evaporators can be used to make liquid, concentrated products like evaporated juices and milk. As they are highly energy-efficient, they are often used in conjunction with more energy-intensive driers.</p>
+<p>During evaporation, the concentration of solids increases, which causes an increase in viscosity. This may also cause some molecules to be pushed passed their solubility limit. The combination of high viscosity and reduced solubility can occsionally cause fouling issues (build up of deposits in evaporator tubes). For example, in whey systems calcium phosphate may begin to precipitate, which is exacerbated by the fact that calcium phosphate is less soluble in warm temperatures.</p>
+</section>
+<section id="alternatives-to-evaporation" class="level2">
+<h2 class="anchored" data-anchor-id="alternatives-to-evaporation">Alternatives to Evaporation</h2>
+<p>There are non-thermal alternatives to evaporation that can remove water.</p>
+<p>Many of these are based on membrane filtration; for example, Reverse Osmosis involves the use of membranes that have pores that only allow the permeation of water (allowing the removal of water as solids are concentrated).</p>
+<p>The name “Reverse Osmosis” distinguishes it from the phenomenon of Osmosis. Osmosis occurs when on one side of a membrane there is a high concentration of osmotically-active substances and on the other there is a low concentration. Common dissolved solids (or “solutes”), like salts, sugars and proteins, are osmotically-active. For example, when vegetables are added to a salty brine the high concentration of salt results in water moving (via osmosis) from the inside of cell membranes to the brine, resulting in a characteristic “pickling” effect. In membrane-based concentration the opposite (or reverse) goal is pursued — water must be removed from the solution containing osmotically-active components (salts, sugars, proteins, etc.). To achieve this pumps and valves are used to increase pressure on the concentrate side, overcoming osmosis.</p>
+<ul>
+<li>Osmosis: water flows from region of low solute concentration to high solute concentration due to natural osmotic pressure differences</li>
+<li>Reverse osmosis: water flows from region of high solute concentration to low solute concentration due to pressures induced by pumps and valves</li>
+</ul>
+<p>Reverse Osmosis may be favoured because it can be operated at even lower temperatures than vacuum evaporation (refrigeration to room temperature); however, membrane filtration processes are severely limited by viscosity development when concentration increases. This means that solid concentrations of 20-25% solids may be possible with reverse osmosis, but this may need to be supplemented with evaporation to achieve higher concentrations (40-60% solids).</p>
+</section>
+<section id="drying" class="level2">
+<h2 class="anchored" data-anchor-id="drying">Drying</h2>
 <p>Drying involves a substantial removal of water from a food. While evaporation can increase the solids of a liquid feed to 50-60%, drying can achieve further increases to 90-95%. In other words, a powder will typically have a final moisture content of approximately 5-10%.</p>
 <p>The drying of food products results in a significant increase in shelf-life and a range of other practical benefits, including reduced weight, which reduces transit requirements. For export-led food industries — like Ireland’s — the powder format is a critical output. While you might be familiar with powders from the supermarket (e.g., milk powder, cocoa powder), massive quantities of powder are also traded between companies; for example, one company might supply cocoa powder to a second who uses it to make cake products.</p>
 </section>
@@ -284,8 +410,8 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>Despite these caveats, a well-manufactured powder should have a shelf-life of 12-24 months, especially if carefully packaged and stored.</p>
 </section>
-<section id="drying" class="level2">
-<h2 class="anchored" data-anchor-id="drying">Drying</h2>
+<section id="spray-drying" class="level2">
+<h2 class="anchored" data-anchor-id="spray-drying">Spray-drying</h2>
 <p>Some industrial drying systems resemble a common kitchen oven. The <em>tray drier</em> consists of heating elements, fans, food trays and an exhaust. The fan draws air into the drier, with the air being heated by the elements, before passing over the food, initiating evaporation of moisture. Moist vapor is then removed in the exhaust. Such systems can be augmented to optimise drying performance; for example, a vacuum pump can be used to reduce pressure in the drier and thereby decrease the temperatures the food needs to be expose to in order for drying to occur. Such a system is a batch method of drying and is not suitable for liquids.</p>
 <p>For the continuous drying of liquid feeds the spray-drier is common. A spray drier consists of a large cylindrical chamber that tapers into a conical section at the bottom. Feed (typically concentrated feed from an evaporator) is pumped to the top of the vessel and through a nozzle. As the liquid passes through the nozzle it is transformed into a fine mist. This phenomenon is known as “atomisation” and dramatically increases the surface area of the material to be dried. Hot air is simultaneously fed into the chamber, and the high temperature difference between the liquid and the air, combined with the large surface area of the droplets, results in rapid evaporation.</p>
 <p>The exact temperatures vary according to the processor and the product, but generally the temperature of air at the inlet of the drier can be as high as 130°C, while the temperature at the outlet can be as low as 65°C. This difference reflects the impact of evaporative cooling, which occurs when heat energy contained in liquid water is lost in the vapor during evaporation. The impact of evaporative cooling also means — importantly — that the liquid being dried does not itself reach temperatures approaching the inlet temperature (which could cause significant quality degradation); in this regard, the outlet temperature (a much lower value) is more reflective of the moderate temperatures to which the components in the liquid are exposed.</p>
@@ -550,6 +676,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../notes/coffee.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Coffee</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../notes/bulksolids.html" class="pagination-link">
+        <span class="nav-page-text">Bulk Solids Science</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

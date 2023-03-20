@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Food Process Design &amp; Optimisation - Bulk Solids Science</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../notes/mixing.html" rel="next">
+<link href="../notes/concentration-drying.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Bulk Solids Science</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Food Process Design &amp; Optimisation</a> 
+        <div class="sidebar-tools-main">
+    <a href="" title="" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-github"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/edibotopic/foodPro">
+          Source Code
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/edibotopic/foodPro/issues">
+          Report a Bug
+          </a>
+        </li>
+    </ul>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Introduction</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Overview</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Food Physics</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/quantities.html" class="sidebar-item-text sidebar-link">Quantities</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Fluid Statics</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/stokes-law.html" class="sidebar-item-text sidebar-link">Stoke’s Law</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/pressure1.html" class="sidebar-item-text sidebar-link">Pressure I</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/pressure2.html" class="sidebar-item-text sidebar-link">Pressure II</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Fluid Dynamics</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/viscosity.html" class="sidebar-item-text sidebar-link">Viscosity</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/flow1.html" class="sidebar-item-text sidebar-link">Flow I</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/flow2.html" class="sidebar-item-text sidebar-link">Flow II</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Separation Science</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/evaporation-distillation.html" class="sidebar-item-text sidebar-link">Evaporation and Distillation</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/membranes.html" class="sidebar-item-text sidebar-link">Membrane Filtration</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/coffee.html" class="sidebar-item-text sidebar-link">Coffee</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Powders</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/concentration-drying.html" class="sidebar-item-text sidebar-link">Concentration and Drying</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/bulksolids.html" class="sidebar-item-text sidebar-link active">Bulk Solids Science</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/mixing.html" class="sidebar-item-text sidebar-link">Mixing Technology</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">Appendix</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/slides.html" class="sidebar-item-text sidebar-link">Slides</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Bulk Solids Science</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<hr>
+<p>Most of food science is devoted to the study of liquids and solids. There is comparatively little time spent in traditional food science courses on another category of materials known as <em>bulk solids</em>. Powders are a kind of bulk solid, and many food processes in a country like Ireland either begin or end with a powder. For a product like infant formula, the process often <em>both begins and ends</em> with a powder.</p>
+<p>Understanding how powders work and how their behaviour can be predicted is important. While a range of standard methods for products like dairy powders have been in existence for many years they often give unreliable or unactionable data for more recently-developed powders. This is especially true of solubility tests, for a which a range of dynamic tests have now been developed to characterise the rate of rehydration and the rate-limiting stage of rehydration.</p>
+<p>These notes will focus on only two properties of powders - flowability and solubility - complex properties that are affected by a broad range of factors.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/bulk_collapse.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Issues with bulk solids, ranging from silo collapse (top) to floating powder (bottom)</figcaption><p></p>
+</figure>
+</div>
+<section id="what-is-a-powder" class="level1">
+<h1>What is a Powder?</h1>
+<p>A powder is a dispersed system. It consists of two phases, <em>discrete solid particles</em> dispersed in a <em>continuous gas phase</em>. For simple chemicals like sodium chloride this is a sufficient description, but for biological systems like food powders there is often two gas phases.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/bulk_phases.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Bulk solids are somewhat between what we think of as fluids and solids</figcaption><p></p>
+</figure>
+</div>
+<p>That there are two gas phases has implications for how powders behave. That there is pockets of air between particles means that powders are typically <em>compressible</em>. That there is air within particles means that they tend to <em>float</em> on liquid surfaces for extended periods.</p>
+<p>The <em>bulk density</em> of a powder is therefore a function of the relative levels of different molecules of low density (e.g., lipids) and high density (e.g., minerals), in addition to the total volume of each gas phase. As powders are compressible the bulk density can change depending on the pressures (or stresses) they are exposed to, which will be discussed in greater detail later on.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/bulk_range.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Categorisation of bulk solids by particle size</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="a-focus-on-flowability-and-solubility" class="level1">
+<h1>A focus on flowability and solubility</h1>
+<p>Powders are expected to flow from a variety of vessels: spoons, cups, sachets, cans, hoppers. At the consumer level this can lead to frustration if a powder does not flow as expected, but for the manufacturer it can be disastrous: the failure of a powder to flow can mean reduced process efficiency, the halting of a process line or even the eventual collapse of equipment like silos. <em>Flowability</em> is simply the capacity of the powder to move under an applied stress. Like solids, bulk solids have a critical stress that causes them to yield or “fail” resulting in flow. However, the flow behaviour of powders is pretty unique and requires a different set of tools to understand and study.</p>
+<p>In addition, most (though not all) powders are expected to dissolve rapidly and completely. If a powder contains some kind of magic molecule that has some important function (nutrition, sensory, stabilisation) then that function will not be realised unless the powder has dissolved effectively.</p>
+<p>One first encounters solubility in chemistry classes, where simple salts (NaCl) and sugars (glucose) are dissolved in water. We are told that there is a well-defined concentration below which a solution will be obtained and above which a supersaturated system prone to crystallisation. Many food powders do not have such neat dividing lines. A powder may be highly soluble, but require tremendous inputs of energy and time to reach that point, often requiring technological intervention.</p>
+<section id="particle-properties-and-bulk-properties" class="level2">
+<h2 class="anchored" data-anchor-id="particle-properties-and-bulk-properties">Particle properties and bulk properties</h2>
+<p>It is important to distinguish between <em>particle properties</em> and <em>bulk properties</em>. Any powder has two density values, a particle density and a bulk density. More generally, it is often useful to distinguish between three categories of properties for powders:</p>
+<ol type="1">
+<li><strong>Bulk</strong>: characteristic of the entire assemblage of particles</li>
+<li><strong>Particle</strong>: characteristic of the theoretical average particle</li>
+<li><strong>Surface</strong>: characteristic of the total bulk surface</li>
+</ol>
+<p>Bulk density is more commonly measured, as it requires less specialist equipment and is in many cases a more useful predictor of powder behaviour. Particle density, which requires gas pycnometry to measure, can be a useful predictor of properties like dustiness and sinkability, but is rarely measured in practice.</p>
+<p><strong>Table 1.</strong> Non-exhaustive list of methods for measuring particle and bulk properties</p>
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 27%">
+<col style="width: 6%">
+<col style="width: 23%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Particle</strong></th>
+<th><strong>Method(s)</strong></th>
+<th></th>
+<th><strong>Bulk</strong></th>
+<th><strong>Method(s)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Size</em></td>
+<td>Sieving</td>
+<td></td>
+<td><em>Bulk density</em></td>
+<td>Volumeter</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Scattering</td>
+<td></td>
+<td><em>Flowability</em></td>
+<td>Repose</td>
+</tr>
+<tr class="odd">
+<td><em>Shape</em></td>
+<td>Microscopy</td>
+<td></td>
+<td></td>
+<td>Shear cell</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Fractal analysis</td>
+<td></td>
+<td><em>Rehydration</em></td>
+<td>Static</td>
+</tr>
+<tr class="odd">
+<td><em>Density</em></td>
+<td>Pycnometry</td>
+<td></td>
+<td></td>
+<td>Dynamic</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="some-important-bulk-properties" class="level2">
+<h2 class="anchored" data-anchor-id="some-important-bulk-properties">Some important bulk properties</h2>
+<section id="bulk-density" class="level3">
+<h3 class="anchored" data-anchor-id="bulk-density">Bulk Density</h3>
+<p>The bulk density (<span class="math inline">\(\rho_b = \frac{Bulk \ mass}{Bulk \ volume}\)</span>) is a dynamic property, which tends to change depending on time and stress. It is common to see single values for bulk density reported, but it is important to remember that each powder has - essentially - a <em>bulk density graph</em>.</p>
+<p>A powder exerts a self-weight on itself. This means that the stresses created within the powder can result in time-consolidation, and when the powder becomes compressed its bulk density will increase. The mechanism involves some combination of particle reorientation and the void-filling action of small particles, which is the subject of continued work in the literature.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/bulk_compress.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Example of a bulk density curve for two different powders. The green curve indicates a high density powder that as a low compressibility, while the red curve indicates a low density powder with a high compressibility</figcaption><p></p>
+</figure>
+</div>
+<p>The test for measuring bulk density is common, inexpensive and simple. A known mass of powder is filled into a graduated cylinder, which is then tapped a specific amount of times. The difference in volume between consecutive tappings gives an indication of the compressibility. Changes in bulk density during the course of a food process can also be used to probe the origins of quality defects. For example, an agglomerated powder may have an altered bulk density or compressibility owing to particle breakage occurring during pneumatic conveying - by measuring these properties before and after conveying the root-cause of this issue can be identified.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/bulk_density.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">There can be air within and between particles, which has a significant impact on bulk density. Changes in bulk density can have a knock-on effect for the nutrient density of scooped powders</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="flowability" class="level3">
+<h3 class="anchored" data-anchor-id="flowability">Flowability</h3>
+<p>The flowability of a powder consists of a complex set of properties that determine the relative ease with which it can be stored in vessels and moved between vessels. Any of the following might be considered problems caused by poor flowability:</p>
+<ul>
+<li>The formation of a <em>stable arch</em> at the outlet of a hopper that prevents flow</li>
+<li>The development of <em>stagnant regions</em> of powder at the inner walls of a silo</li>
+<li>The tendency of a powder to <em>suddenly “flood”</em> or avalanche when poured</li>
+<li>The <em>onset of stickiness</em> in a powder during storage</li>
+<li>The <em>segregation of powders</em> (particularly power mixtures) based on particle size or density</li>
+</ul>
+<p>Each of these problems in their own right has an extensive scientific and engineering literature that covers their various intricacies. It won’t be possible to cover all of these issues here, so later we will try to drive towards some of the major recurrent concepts and issues.</p>
+</section>
+<section id="some-important-particle-properties" class="level3">
+<h3 class="anchored" data-anchor-id="some-important-particle-properties">Some important particle properties</h3>
+<section id="particle-shape" class="level4">
+<h4 class="anchored" data-anchor-id="particle-shape">Particle shape</h4>
+<p>Taken broadly, food powders have an enormous variety of particle shapes. While milk powders and protein concentrates contain approximately spherical particles, herbs and spices contain a variety of shapes ranging from fibres to stars. Salt crystals are cubic, and so on.</p>
+<p>To an extent, the shape is determined by the processor. For example, the shape of a milk powder can be controlled during the agglomeration step. The shape formed during manufacture is not <em>fixed</em>, however, and can undergo changes during handling. Critically, with respect to agglomerates, they can become fragmented when colliding with solid surfaces, especially during conveying. The friability of agglomerates is determined by their shape, with compact shapes being more stable than branching, irregular ones.</p>
+<p>Given the large size of powder particles (micrometre to millimetre scale) it is relatively cheap for a company to invest in shape characterisation. In most cases a cheap light microscope will suffice. I have had some success using a light microscope and video camera attachment purchased from Amazon, so there is not a huge barrier to entry here. Free software is also available online to process the resultant images and data. More expensive methods of shape characterisation have recently been developed that offer more immediate statistical power. If you are considering one of these options my suggestion would be to try a light microscope first - if you are not using one of these already why would you consider a more expensive and sophisticated option?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/bulk_shape.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Particles in powders can range widely in terms of shape</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="particle-size" class="level4">
+<h4 class="anchored" data-anchor-id="particle-size">Particle size</h4>
+<p>One of the most commonly measured values for food powders is particle size. A general rule-of-thumb is that powders with larger particle sizes flow better. However, a direct correlation between particle size and flowability has never been demonstrated for a set of powders, indicating that flowability cannot be reduced to this property alone.</p>
+<p>In terms of solubility, it is also generally the case that larger particle sizes are associated with more soluble powders, but the cause of the large particle size must be considered. An agglomerated powder is not more soluble by virtue of its large particle diameter, it is more soluble because of the channels created between smaller particles during agglomeration. So we can determined that a powder has been agglomerated by measuring size, which is a predictor of solubility, but a non-agglomerated powder with a large particle size is not necessarily a very soluble powder.</p>
+<p>Particle size is also increasingly a method to track the dispersion of particles during rehydration. This is the slowest part of the process for certain powders. If you are working with a powder that is slow to disperse having a reliable method to track the process can be an important first step in solving the problem. Light-scattering equipment like the Malvern Mastersizer are common in QC labs and in the food industry are probably most commonly used for measuring oil droplet size to determine emulsion stability. However, they can also be used for measuring powder particle size before, during and after rehydration. Thus, while a comparatively low-tech option like a sieve stack can adequately measure the particle size of dry powders, light-scattering techniques can be more flexibly applied to a broader range of problems.</p>
+</section>
+<section id="surface-composition" class="level4">
+<h4 class="anchored" data-anchor-id="surface-composition">Surface composition</h4>
+<p>The composition of a particle in a non-segregated powder is taken to be equivalent to the bulk composition of the whole powder. We expect that if we take a whey protein isolate it will have a protein content of around 90%, and that each particle will also have this approximate composition.</p>
+<p>This is not a guarantee that the surface composition is equivalent to the bulk though. In powders like these, even when there is a high protein content, the surface can be found to be enriched in other molecules, like water and lipids. This is important to remember for at least two reasons:</p>
+<ol type="1">
+<li>The molecules can facilitate particle-particle interactions that cause flow issues</li>
+<li>The presence of hydrophobic materials at the surface can repel water during rehydration</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/bulk_sand.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">The presence of liquid water of fat on particle surfaces builds cohesion between particles</figcaption><p></p>
+</figure>
+</div>
+<p>The factors that influence surface composition are numerous. In sugar-rich powders, water sorption by amorphous sugars can lead to crystallisation and the release of water into the bulk. In lipid-rich powders, elevated temperatures during storage or transport have been shown to cause the release of liquid fat on particle surfaces. In both cases, there would be a consequence for flowability and solubility. Methods to measure surface properties have become more common in the literature, especially x-ray photoelectron spectroscopy. If access to such equipment is not possible it is worth keeping in mind that the stickiness issue in your high-protein powder could be a fat issue, and to experiment with solving this problem experimentally, i.e., do fat-targeting surfactants help (?), or does the issue become more pronounced above the melting point of the principal fats in your powder?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/bulk_surface.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Components can be differentially distributed across the particle structure, affecting functionality</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="flow-problems" class="level2">
+<h2 class="anchored" data-anchor-id="flow-problems">Flow problems</h2>
+<p>In a powder at rest there are stresses acting vertically and horizontally. Unlike in a liquid, the extent of these stresses is not necessarily equal. The vertical stresses tend to predominate, but occasionally the horizontal stresses can drive materials to the silo walls. The section of a silo where the walls converge is known as the hopper, and in this region some of the vertical stresses can be transferred radially outwards to the hopper walls. This arching effect is similar to architectural arches, which can hold a greater load than a horizontal beam because of the radial stresses in the arch. An arch like this can be very difficult to unblock.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/bulk_depth.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">The green curve illustrates what we would expect for a silo containing pure water, with stress increasing linearly with depth. The behaviour is far more complex for a powder (blue) in which regions of low stress can develop at the outlet, causing blockages</figcaption><p></p>
+</figure>
+</div>
+<p>Arching is common in hoppers that are designed for <em>mass flow</em>. These usually have steep walls designed so that the first material that is added to a silo is the first material that leaves it. Hoppers that are not designed this way may exhibit <em>core flow</em>, in which the first material added is the last to be discharged. This results in a large proportion of the internal volume of the silo consisting of stagnant powder. A narrow core in this volume is where the powder flows through. This phenomenon is sometimes called <em>rat-holing</em>.</p>
+<p>Both arching and rat-holing are problematic for different reasons. Arching can effectively halt a process. Rat-holing, on the other hand, reduces the effective capacity of the silo and can cause quality deterioration in the stagnant zones. They can technically be resolved by appropriate silo design. Given the dynamic nature of food processing, it may not always be possible to have a perfectly designed hopper for each and every use-case. However, analytical methods including powder flow testers can give data on the propensity of a powder to exhibit these flow problems, which can inform procurement decisions or manufacturing strategies.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/bulk_regimes.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">A silo can be divided between bin and hopper sections. Steep hopper walls are required to facilitate mass flow - if this condition is not met core-flow will result</figcaption><p></p>
+</figure>
+</div>
+<section id="when-powders-are-and-arent-like-water" class="level3">
+<h3 class="anchored" data-anchor-id="when-powders-are-and-arent-like-water">When powders are and aren’t like water</h3>
+<p>When you dive deep into a body of water the pressure acting on your body increases linearly. This is not true of powders. Strangely, if you keep adding powder to a silo, and continuously weigh the quantity of powder added, a point will be reached where there is apparently no further increase in weight as powder is added. This was recognised many years ago by the German engineer H.A. Janssen, and relates to the fact that some of the weight of the powder is transmitted laterally towards the walls, which - in effect - “hold it up”.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/bulk_janssen.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">The original experiment of Janssen, showing that at some point as a vessel is being filled with grain it stops registering a weight increase</figcaption><p></p>
+</figure>
+</div>
+<p>If the powder is divided into discrete chunks or “slices”, similar to a situation where there are stacks of powder in a warehouse or factory floor, then the behaviour is more similar to water. You should keep in mind in these cases that there is a linear increase in compressive stress as the depth increases in this stack. This means that bags positioned toward the bottom of the stack are more likely to undergo negative changes associated with compression.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/bulk_wall.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">When a volume of powder is divided into discrete chunks the vertical pressure or stress (<span class="math inline">\(P_v\)</span>) can be calculated as per a liquid. A modified version of the classic equation for hydrostatic pressure can be used for non-discrete masses of powder when supplemented with additional parameters, including a wall friction value (<span class="math inline">\(\mu_w\)</span>) obtainable from shear cell testing.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="studying-flowability" class="level3">
+<h3 class="anchored" data-anchor-id="studying-flowability">Studying Flowability</h3>
+<p>There are many basic tests for flowability that despite being relatively inexpensive but are still uncommonly used in practice.</p>
+<p>The <em>angle of repose</em> involves allowing a known quantity of powder to flow through a funnel and fall a specific height onto a flat surface. The angle between the top of the pile and the horizontal surface is then measured. The smaller the angle the greater the propensity to flow.</p>
+<p>The <em>compressibility</em> can be measured based on data from a standard tapped bulk density test. The degree to which a powder is compressible is taken to be the extent to which the bulk volume (and bulk density by extension) changes during tapping. A powder that is more compressible is more likely to cake during storage and transport.</p>
+<p>Other tests like the <em>angle of spatula</em> and the <em>angle of fall</em> are also used on occasion but the reader can investigate these similarly low-tech options themselves, as information on their use is freely available online.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/bulk_heap.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Angle of repose test</figcaption><p></p>
+</figure>
+</div>
+<p>More powerful but expensive are shear cell testers. There is a number of such devices available, including the Jenike tester, the Schulze ring tester, the Brookfield powder flow tester and Freeman Technology’s powder rheometer. All of these devices vary widely in terms of their cost and ease-of-use. The last two options are probably the most accessible option from a routine testing point of view.</p>
+<p>These flow testers basically function by applying a vertical stress to a volume of the powder to be tested. This vertical stress is applied until a precise degree of compression is achieved. At this point the powder is subject to shearing forces and the shear required for the powder to “fail” (or flow) is measured. This process is then repeated at multiple compression loads to generate a flow function. The steeper the flow function curve the more cohesive the powder is. the powder is measured prior to the experiment and the device measures the powder volume during testing, meaning that it generates a bulk density curve. The combination of stress and bulk density data allows estimations to be made as to what design requirements might be need for the powder to flow effectively from a hopper. In addition, a special wall friction geometry can be used to determine the degree to which the powder will flow against the stainless steel surfaces found in hoppers and silos.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/bulk_shear.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Example output from a shear cell test with results for a very cohesive and an easy flowing powder</figcaption><p></p>
+</figure>
+</div>
+<section id="storage" class="level4">
+<h4 class="anchored" data-anchor-id="storage">Storage</h4>
+<p>In both cases it has been recognised that the manufacture and storage of these powders can have a dramatic impact on their subsequent rehydration performance. Generally, it is preferable that powders be stored in such a way that there is limited water absorption from the surrounding air. In addition, low temperature storage of powders promotes a better retention of solubility (and flowability) for that matter.</p>
+<p>An interesting case study is an Irish producer of dairy powders for export. After freshly manufacturing a dairy powder it is tested in the lab and found to have excellent rehydration performance. Subsequently, it is exported to its destination in another country and found to have terrible rehydration performance. So what happened? Well, it is likely that <em>en route</em> to its destination it was exposed to temperatures far in excess of the average Irish laboratory. In a truck in a warm country the ambient temperature can easily exceed 50 degrees Celsius, temperatures which are known to cause negative effects on powder solubility. In the absence of a means to ensure refrigerated trucking of the powders, lab functionality tests may need to factor in temperature abuse occurring during transit.</p>
+</section>
+<section id="manufacturing" class="level4">
+<h4 class="anchored" data-anchor-id="manufacturing">Manufacturing</h4>
+<p>The intricacies of powder manufacture are such that it is not possible to give a detailed account of a range of powders and the strategies that can be employed to influence rehydration performance. At best, we can focus on some powders that we at UCC have spent some time researching. One such set of powders is Milk Protein Concentrates (MPCs) and related powders (Micellar Casein Concentrates, Milk Protein Isolates). The manufacturing process for an MPC is relatively straightforward:</p>
+<ol type="1">
+<li>Pasteurise milk</li>
+<li>Ultrafilter/diafilter to concentrate protein</li>
+<li>Evaporate to remove water</li>
+<li>Spray dry to generate powder</li>
+</ol>
+<p>The underlying causes are still unclear, but somewhere between 2 and 3 a set of physicochemical changes occur that result in these powders being very slow to rehydrate.</p>
+<p>What is known is that the during ultrafiltration much of the volume of the suspension becomes occupied with casein micelles, which are pushed close together. In addition, the mineral profile of the suspension is dramatically changed, especially when water is added during diafiltration.</p>
+<p>When the suspensions are evaporated the caseins are pushed even closer together. After drying, MPC powders can consist of particles that contain casein micelles fused tightly together at their surface. These kinds of particles are then very slow to disperse. This effect seems to become worse in non-ideal storage conditions (i.e., eleveated temperature).</p>
+<p>A non-exhaustive list of strategies to address this problem are categorised below:</p>
+<ul>
+<li><strong>During manufacture:</strong>
+<ul>
+<li><em>Diafilter with mineral solutions:</em> this seems to limit the influence of changes in mineral equilibrium on resultant solubility issues and is the subject of a number of patents</li>
+<li><em>High-shear treatment pre-drying:</em> this has been shown in some studies to result in less aggregation of micelles during evaporation and dryiung. A variety of tools have been tested, including high pressure homogenisation and ultrasonication</li>
+<li><em>Agglomeration of the powder:</em> a traditional approach to improving powder solubility. This improves the wetting of MPCs but can worsen their dispersibility, which is a net loss in rehydration capacity.</li>
+</ul></li>
+<li><strong>After manufacture:</strong>
+<ul>
+<li><em>Dissolution in mineral solutions:</em> this might involve rehydrating the powder in salt solutions, chelator preparations or even milk (if making a high-protein milk). This, of course, may have an impact on composition and nutritional properties. In the case of using chelators, it can fundamentally alter the functionality of the ingredient</li>
+<li><em>High energy mixing:</em> a common approach, where temperature is elevated to ~50C in combination with rapid agitation. More sophisticated (but expensive) technologies like ultrasonication have also been demonstrated to work in research.</li>
+<li><em>Choice of lower protein MPCs:</em> most of the issues relating to solubility are encountered when protein content exceeds 75%. When it comes to MPCs there are a variety of them available, ranging from 40% to 90% protein. A question that should be asked when formulating a product using one of these powders is: how high does the protein content need to be in this ingredient for our application? Exceeding 80% protein may required further effort and investment to ensure the powder isn’t creating problems in your product.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="measuring-rehydration" class="level3">
+<h3 class="anchored" data-anchor-id="measuring-rehydration">Measuring rehydration</h3>
+<p>A large range of techniques have been developed in recent years to study rehydration dynamically, including particle sizing, conductivity testing and air release measurements. The applicability of these methods to different stages is illustrated graphically below.</p>
+<p>In terms of measuring whether a powder has fully solubilised, the standard tests still apply. An effective method is to apply a gentle centrifugation after a period of rehydration. This will separate the insoluble material from the solution. If you have prepared a 10% solids solution then the solids content of the solution after centrifugation should be 10%. This is an easy test, but the key thing to remember is that you must apply the test after the powder has been exposed to <em>relevant rehydration conditions</em>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/bulk_stages.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">The stages of rehydration and their measurement</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="concluding-remarks" class="level1">
+<h1>Concluding remarks</h1>
+<p>Everything discussed here does not override basic principles that apply during the handling of powders.</p>
+<p>Mixing vessels should be appropriately designed to maximise mixing efficiency. This means that large vortices should be avoided and agitator geometries selected that are appropriate for a given powder. The installation of baffles can limit the growth of a vortex, promoting turbulence (<span class="math inline">\(Re = \frac{d^2 \cdot N \cdot \rho}{\mu}\)</span>) and increasing capacity in the process.</p>
+<p>In terms of flowability, the impact of hopper design should not be neglected. Poorly flowing powders may need silos to be lined with a low-friction material to ensure effective flow or specialised discharge meters at the outlet. In addition, there is no guarantee that different powders will flow with similar ease in the same hopper. Powder flow testing can identify these problems before they happen.</p>
+</section>
+<section id="links-click-to-open" class="level1">
+<h1>Links (click to open)</h1>
+<p><em>Technical papers</em> from Dietmar Schulze:</p>
+<p><a href="https://www.dietmar-schulze.de/aufsaetze_e.html">www.dietmar-schulze.de/aufsaetze_e.html</a></p>
+<p>Powder <em>flow glossary</em> by Brookfield:</p>
+<p><a href="https://www.brookfieldengineering.com/brookfield-university/learning-center/learn-about-powder-flow-analysis/powder-flow-glossary">www.brookfieldengineering.com/brookfield-university/learning-center/learn-about-powder-flow-analysis/powder-flow-glossary</a></p>
+<p>Flowability of <em>milk powders</em> for chocolate manufacture:</p>
+<p><a href="https://hal.archives-ouvertes.fr/hal-00895602/document">https://hal.archives-ouvertes.fr/hal-00895602/document</a></p>
+<hr>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../notes/concentration-drying.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Concentration and Drying</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../notes/mixing.html" class="pagination-link">
+        <span class="nav-page-text">Mixing Technology</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Copyright 2023, Shane Crowley</div>
+  </div>
+</footer>
+
+
+
+</body></html>
