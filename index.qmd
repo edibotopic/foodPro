@@ -6,7 +6,7 @@ execute:
   echo: false
 ---
 
-This website contains notes and information for the module *Food Process Design & Optimisation*.
+This website contains notes and information for the module *Food Process Design & Optimisation* ("Food Pro" for short).
 
 ## Lectures and Schedule
 
