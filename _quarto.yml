@@ -3,9 +3,11 @@ project:
   output-dir: docs
 
 website:
-  title: "Food Process Design & Optimisation"
+  title: "Food Pro"
   page-footer: "Copyright 2023, Shane Crowley" 
   reader-mode: false
+  repo-url: https://github.com/edibotopic/foodPro
+  repo-actions: [edit, issue]
   page-navigation: true
   sidebar:
     style: 'floating'
@@ -40,22 +42,10 @@ website:
             # - section: "Appendix"
             # contents:
             # - notes/slides.qmd
-          # - notes/review.qmd
-          # - notes/reflections.qmd
-          # - notes/interactions.qmd
-          # - notes/syllabus.qmd
-      - notes/about.qmd
-    tools:
-      - icon: github
-        menu:
-          - text: Source Code
-            url: https://github.com/edibotopic/foodPro
-          - text: Report a Bug
-            url: https://github.com/edibotopic/foodPro/issues
-
-
+      # - about.qmd
 format:
   html:
     theme: 
       light: [theme.scss]
       dark: [superhero]
+    toc: true
