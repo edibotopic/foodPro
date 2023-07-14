@@ -37,22 +37,14 @@ website:
           - notes/concentration-drying.qmd
           - notes/bulksolids.qmd
           - notes/mixing.qmd
-      # - section: "Sustainable processing"
-      #   contents:
-      #     - notes/concept.qmd
-      #     - notes/implementation.qmd
-      # - section: "Advanced Topics"
-      #   contents:
-      #     - notes/digestion.qmd
-      #     - notes/scale.qmd
-      - section: "Appendix"
-        contents:
-          - notes/slides.qmd
+            # - section: "Appendix"
+            # contents:
+            # - notes/slides.qmd
           # - notes/review.qmd
           # - notes/reflections.qmd
           # - notes/interactions.qmd
           # - notes/syllabus.qmd
-      # - notes/about.qmd
+      - notes/about.qmd
     tools:
       - icon: github
         menu:
