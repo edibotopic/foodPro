@@ -7,17 +7,6 @@ execute:
 search: false
 ---
 
-::: {.callout-warning}
-## Note
-
-If there are any errors, ambiguities or omissions in these notes please let me know.
-
-I can answer any questions you have in class or you can meet me during **office hours**.
-
-Keep in mind that you will likely need to revisit notes during the year as the material is covered. 
-
-:::
-
 Foods are complex biochemical systems.
 When processing foods it is often possible to *reduce* food to its physical properties.
 The following are some important physical properties:

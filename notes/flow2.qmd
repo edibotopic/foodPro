@@ -8,12 +8,6 @@ search: false
 ---
 ---
 
-::: {.callout-warning}
-
-These notes will be updated as the lectures are delivered.
-
-:::
-
 ## Velocity, Pipe Area and Pressure
 
 <div>

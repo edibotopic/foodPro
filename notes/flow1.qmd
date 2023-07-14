@@ -8,12 +8,6 @@ search: true
 ---
 ---
 
-::: {.callout-warning}
-
-These notes will be updated as the lectures are delivered.
-
-:::
-
 # Flow
 
 Processes consist of a series of operations, each with an input and output.
